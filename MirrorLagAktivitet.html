@@ -4,10 +4,10 @@
     <style>
       .everythingSpan {
         border: 15px solid rgb(66, 109, 248);
-        width: 700px;
+        width: 750px;
         margin: auto;
         position: relative;
-        top: 60px;
+        top: 120px;
       }
       div {
         border-bottom: solid 1.5px black;
@@ -23,11 +23,11 @@
       .numberColor {
         color: rgb(66, 109, 248);
       }
-      button {
+      .button1 {
         font-size: 80px;
         margin: 20px;
         position: absolute;
-        bottom: 200px;
+        bottom: 120px;
         color: rgb(66, 109, 248);
       }
       .LowerRightCorner {
@@ -35,6 +35,20 @@
       }
       .LowerLeftCorner {
         left: 480px;
+      }
+      .chatButton {
+        position: absolute;
+        bottom: 24px;
+        right: 0;
+        font-size: 60px;
+        color: rgb(66, 109, 248);
+      }
+      .menuButton {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 50px;
+        color: tomato;
       }
     </style>
   </head>
@@ -68,8 +82,11 @@
         <span class="numberColor"><b>8</b>.</span> Være snille med hverandre
       </div>
     </div>
-    <button class="LowerLeftCorner">◀</button>
-    <button class="LowerRightCorner">▶</button>
+    <button class="menuButton"><b>Menu</b></button>
+    <button class="LowerLeftCorner button1">◀</button>
+    <button class="LowerRightCorner button1">▶</button>
+    <button class="chatButton">Chat ▶</button>
+
     <script></script>
   </body>
 </html>
