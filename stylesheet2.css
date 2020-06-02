@@ -1,0 +1,174 @@
+* {
+    font-family: Arial;
+}
+.page {
+    background-color: blue;
+    user-select: none;
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 8fr 1fr;
+    grid-auto-rows: 1fr 20fr 2fr;
+    grid-template-areas:'page progressbar page2'
+                        'page survey page2'
+                        'page notepad page2';
+}
+body {
+    margin: 0;
+}
+h2{
+    font-size: 30px;
+}
+h4 {
+    font-size: 20px;
+}
+h5 {
+    float: left;
+    width: 200px;
+    color: red;
+    font-size: 17px;
+    margin-left:100px;
+}
+h6 {
+    float: right;
+    width: 200px;
+    color: red;
+    font-size: 17px;
+    margin-right:130px;
+}
+.progressBar {
+    background-color: red;
+    grid-area: progressbar;
+}
+.progressBarInside {
+    background-color: saddlebrown;
+    height: 100%;
+    width: 16.6%;
+}
+.survey {
+    background-color: yellow;
+    grid-area: survey;
+    text-align: center;
+    overflow: auto;
+    /* height:100%;
+    position: fixed;
+    margin: 0; */
+}
+hr {
+    clear: both;
+    margin-top: 100px;
+}
+.buttonContainer {
+    color: transparent;
+    position: relative;
+    padding-left: 0px;
+    padding-right: 0px;
+    user-select: none;
+    cursor: pointer;
+    border-style: solid;
+    right: 6px;
+    top: 25px;
+    margin: 3%;
+    /* width: 20px; */
+    /* margin-top: 400px; */
+}
+/* lag button */
+.createCustomButton {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(245, 245, 245);
+    border-radius: 50%;
+    border: 2.5px;
+    border-color: #2196F3;
+    border-style: solid;
+}
+/* skjul tidligere radio */
+.buttonContainer input {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+  }
+  /* farge på hover på custom radio */
+.buttonContainer:hover input ~ .createCustomButton { 
+    background-color: #ccc;
+  }
+  /* farge på checked på custom radio */
+.buttonContainer input:checked ~ .createCustomButton {
+    background-color: #2196F3;
+  }
+.radio1 {
+    height: 54px;
+    width: 54px;
+}
+.radio2 {
+    height: 47px;
+    width: 47px;
+    margin-top: 3.5px;
+}
+.radio3 {
+    height: 40px;
+    width: 40px;
+    margin-top: 7px;
+}
+.radio4 {
+    height: 35px;
+    width: 35px;
+    margin-top: 9.5px;
+}
+.page2 {
+    grid-area: page2;
+    background-color: transparent;
+}
+/* .survey::-webkit-scrollbar {
+    width: 5px;
+  } */
+/*
+.style::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  } 
+.style::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+  }
+.style::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+}
+.style::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+} */
+.style::-webkit-scrollbar-thumb
+{
+	background-color: #c92424;
+	border: 2px solid #555555;
+}
+.notepad {
+    padding: 12px 20px;
+    background-color: #f8f8f8;
+    border-radius: 4px;
+    border: 2px solid #ccc; 
+    grid-area: notepad;
+}
+.back {
+    font-size: 50px;
+    position: absolute;
+    bottom: 0;
+    padding-left: 20px;
+    color: red;
+}
+
+.forward {
+    text-align: end;
+    font-size: 50px;
+    position:absolute;
+    bottom:0;
+    right:0;
+    padding-right: 20px;
+    color: red;
+    /* width:100%; */
+    /* height:60px; */
+}
