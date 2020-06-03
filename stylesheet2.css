@@ -49,9 +49,7 @@ h6 {
     grid-area: survey;
     text-align: center;
     overflow: auto;
-    /* height:100%;
-    position: fixed;
-    margin: 0; */
+
 }
 hr {
     clear: both;
@@ -68,8 +66,6 @@ hr {
     right: 6px;
     top: 25px;
     margin: 3%;
-    /* width: 20px; */
-    /* margin-top: 400px; */
 }
 /* lag button */
 .createCustomButton {
@@ -169,6 +165,4 @@ hr {
     right:0;
     padding-right: 20px;
     color: red;
-    /* width:100%; */
-    /* height:60px; */
 }
