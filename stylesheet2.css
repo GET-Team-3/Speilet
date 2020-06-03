@@ -2,7 +2,7 @@
     font-family: Arial;
 }
 .page {
-    background-color: blue;
+    background-color: rgb(246, 250, 252);
     user-select: none;
     display: grid;
     height: 100vh;
@@ -15,52 +15,71 @@
 body {
     margin: 0;
 }
-h2{
-    font-size: 30px;
+.theme {
+    color: gray;
+    font-size: 35px;
+    padding-top: 20px;
 }
-h4 {
+.questions {
+    color: darkgray;
     font-size: 20px;
 }
-h5 {
+.lowScoreAnswer {
+    display: inline-block;
     float: left;
-    width: 200px;
-    color: red;
+    width: 300px;
+    color: darkgray;
     font-size: 17px;
-    margin-left:100px;
+    position: relative;
+    left: 50px;
 }
-h6 {
-    float: right;
-    width: 200px;
-    color: red;
+.highScoreAnswer {
+    display: inline-block;
+    width: 300px;
+    color: darkgray;
     font-size: 17px;
-    margin-right:130px;
+    float: right;
+    position: relative;
+    bottom: 15px;
+    right: 60px;
 }
 .progressBar {
-    background-color: red;
+    background-color: rgb(246, 250, 252);
     grid-area: progressbar;
+    box-shadow: 0 4px 8px 0 #f6fdff, 0 6px 20px 0 #eef2f3;
 }
 .progressBarInside {
-    background-color: saddlebrown;
+    color: gray;
+    background-color: #c9ebf2;
     height: 100%;
     width: 16.6%;
+    text-align: end;
+    box-shadow: 0 4px 8px 0 #f6fdff, 0 6px 20px 0 #eef2f3;
+    padding-top: 7px;
+    padding-right: 5px;
 }
 .survey {
-    background-color: yellow;
+    background-color: white;
+    border: solid white 5px;
     grid-area: survey;
     text-align: center;
     overflow: auto;
-
+    box-shadow: 0 4px 8px 0 #f6fdff, 0 6px 20px 0 #eef2f3;
 }
 hr {
     clear: both;
-    margin-top: 100px;
+    margin-top: 50px;
+    border: solid #c9ebf2 1px;
 }
 .buttonContainer {
     color: transparent;
     position: relative;
-    padding-left: 0px;
-    padding-right: 0px;
-    user-select: none;
+    /* padding-left: 15px;
+    padding-right: 15px; */
+    /* user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none; */
     cursor: pointer;
     border-style: solid;
     right: 6px;
@@ -70,99 +89,165 @@ hr {
 /* lag button */
 .createCustomButton {
     position: absolute;
-    top: 0;
+    /* top: 0;
     left: 0;
-    background-color: rgb(245, 245, 245);
+    /* background-color: rgb(246, 250, 252); */
     border-radius: 50%;
     border: 2.5px;
-    border-color: #2196F3;
+    border-color: #c9ebf2;
     border-style: solid;
+    /* margin: 50px; */
 }
 /* skjul tidligere radio */
 .buttonContainer input {
     position: absolute;
     opacity: 0;
     height: 0;
-    width: 0;
   }
   /* farge på hover på custom radio */
 .buttonContainer:hover input ~ .createCustomButton { 
-    background-color: #ccc;
+    background-color: #ecf6f8;
   }
-  /* farge på checked på custom radio */
-.buttonContainer input:checked ~ .createCustomButton {
-    background-color: #2196F3;
-  }
-.radio1 {
-    height: 54px;
-    width: 54px;
-}
-.radio2 {
-    height: 47px;
-    width: 47px;
-    margin-top: 3.5px;
-}
-.radio3 {
-    height: 40px;
-    width: 40px;
-    margin-top: 7px;
-}
-.radio4 {
-    height: 35px;
-    width: 35px;
-    margin-top: 9.5px;
-}
 .page2 {
     grid-area: page2;
     background-color: transparent;
 }
-/* .survey::-webkit-scrollbar {
-    width: 5px;
-  } */
-/*
-.style::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  } 
-.style::-webkit-scrollbar-thumb {
-    background-color: darkgrey;
-    outline: 1px solid slategrey;
-  }
-.style::-webkit-scrollbar-track
-{
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-    background-color: #F5F5F5;
-}
-.style::-webkit-scrollbar
-{
-	width: 10px;
-	background-color: #F5F5F5;
-} */
-.style::-webkit-scrollbar-thumb
-{
-	background-color: #c92424;
-	border: 2px solid #555555;
-}
 .notepad {
-    padding: 12px 20px;
     background-color: #f8f8f8;
     border-radius: 4px;
-    border: 2px solid #ccc; 
     grid-area: notepad;
+    border: solid white 5px; 
+    box-shadow: 0 4px 8px 0 #f6fdff, 0 6px 20px 0 #eef2f3;
 }
-.back {
-    font-size: 50px;
-    position: absolute;
-    bottom: 0;
-    padding-left: 20px;
-    color: red;
+.notepad:focus {
+    outline: none;
+}
+::-webkit-scrollbar {
+    background-color: lightgray;
+    width: 8px;
 }
 
-.forward {
-    text-align: end;
+::-webkit-scrollbar-thumb {
+    background-color: #AEAEAE;
+}
+p {
     font-size: 50px;
-    position:absolute;
-    bottom:0;
-    right:0;
-    padding-right: 20px;
-    color: red;
+    background-color: transparent;
+    color: #b7d9e0;
+    border: solid rgb(246, 250, 252) 2px;
+    border-radius: 50%;
+    margin: 30px;
+    cursor: pointer;
+}
+.bH {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+.bV {
+    position: absolute;
+    bottom: 0px;
+}
+.one {
+    border-color: rgb(233, 113, 109);
+    height: 54px;
+    width: 54px;
+}
+.two {
+    border-color: rgb(219, 147, 146);
+    height: 47px;
+    width: 47px;
+    margin-top: 3.5px;
+
+}
+.three {
+    border-color: rgb(224, 182, 181);
+    height: 40px;
+    width: 40px;
+    margin-top: 7px;
+}
+.four {
+    border-color: rgb(187, 187, 187);
+    height: 35px;
+    width: 35px;
+    margin-top: 9.5px;
+}
+.five {
+    border-color: rgb(177, 196, 177);
+    height: 40px;
+    width: 40px;
+    margin-top: 7px;
+}
+.six {
+    border-color: rgb(131, 175, 131);
+    height: 47px;
+    width: 47px;
+    margin-top: 3.5px;
+}
+.seven {
+    border-color: rgb(94, 143, 88);
+    height: 54px;
+    width: 54px;
+}
+.labelOne {
+   /* float: left; */
+   border-style: solid;
+}
+.labelTwo {
+    padding-right: 25px;
+    margin-left: 50px;
+    /* float: left; */
+}
+.labelThree {
+    padding-right: 25px;
+    margin-left: 20px;
+
+    /* float: left; */
+}
+.labelFour {
+    padding-right: 25px;
+    /* float: left; */
+    margin-right: 10px;
+}
+.labelFive {
+    padding-right: 22px;
+    /* float: left; */
+}
+.labelSix {
+    padding-right: 25px;
+    /* float: left; */
+}
+.labelSeven {
+    padding-right: 25px;
+    /* float: left; */
+    margin-left: 20px;
+}
+.buttonContainer input:checked ~ .one {
+    background-color: rgb(233, 113, 109);
+  }
+.buttonContainer input:checked ~ .two {
+    background-color: rgb(219, 147, 146);
+  }
+.buttonContainer input:checked ~ .three {
+    background-color: rgb(224, 182, 181);
+  }
+.buttonContainer input:checked ~ .four {
+    background-color: rgb(187, 187, 187);
+  }
+.buttonContainer input:checked ~ .five {
+    background-color: rgb(177, 196, 177);
+  }
+.buttonContainer input:checked ~ .six {
+    background-color: rgb(131, 175, 131);
+  }
+.buttonContainer input:checked ~ .seven {
+    background-color: rgb(94, 143, 88);
+  }
+.tete {
+    width: 500px;
+    height: 100px;
+    display: inline-block;
+    position: relative;
+    bottom: 5px;
+    right: 10px;
 }
