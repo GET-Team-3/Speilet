@@ -142,9 +142,9 @@ hr {
 ::-webkit-scrollbar {
     /* width: 20px; */
     /* color: red; */
-    background-color: red;
+    background-color: dimgray;
     width: 8px;
 }
 ::-webkit-scrollbar-thumb {
-    background-color: darkmagenta;
+    background-color: orangered;
 }
