@@ -8,6 +8,176 @@
 </head>
 <body>
     <div id="content"></div>
-    <script src="model.js"></script>    
+    <script src="model.js"></script>
+    
+    <script>
+        updateView();
+        function updateView() {
+            if (model.page == 'surveyView') surveyView();
+        }
+        function surveyView() {
+            document.getElementById('content').innerHTML = `
+                <div class="page">
+            <p class="bV">◀</p>
+            <div class="progressBar">
+                <div class="progressBarInside">1/6</div>
+            </div>
+            <div class="survey">
+                <h2 class="theme">${model.theme[0]}</h2>
+                <hr>
+                <h4 class="questions">${model.question[0].quest1}</h4>
+                <h5 class="lowScoreAnswer">${model.negativeStatement[0].negative1}</h5>
+
+                <div class="tete">
+                    <label class="buttonContainer labelOne">
+                        <input name="question1" type="radio" id="one" value="1">
+                        <span class="createCustomButton radio1 one"></span>
+                    </label>
+                    <label class="buttonContainer labelTwo">
+                        <input name="question1" type="radio" id="two" value="2">
+                        <span class="createCustomButton radio2 two"></span>
+                    </label>
+                    <label class="buttonContainer labelThree">
+                        <input name="question1" type="radio" id="three" value="3">
+                        <span class="createCustomButton radio3 three"></span>
+                    </label>
+                    <label class="buttonContainer labelFour">
+                        <input name="question1" type="radio" id="four" value="4">
+                        <span class="createCustomButton radio4 four"></span>
+                    </label>
+                    <label class="buttonContainer labelFive">
+                        <input name="question1" type="radio" id="five" value="5">
+                        <span class="createCustomButton radio3 five"></span>
+                    </label>
+                    <label class="buttonContainer labelSix">
+                        <input name="question1" type="radio" id="six" value="6">
+                        <span class="createCustomButton radio2 six"></span>
+                    </label>
+                    <label class="buttonContainer labelSeven">
+                        <input name="question1" type="radio" id="seven" value="7">
+                        <span class="createCustomButton radio1 seven"></span>
+                    </label>
+                </div>
+                <h6 class="highScoreAnswer">${model.positiveStatement[0].positive1}</h6> 
+                <hr>
+        
+                <h4 class="questions">${model.question[0].quest2}</h4>
+                <h5 class="lowScoreAnswer">${model.negativeStatement[0].negative2}</h5>
+
+                <div class="tete">
+                    <label class="buttonContainer labelOne">
+                        <input name="question2" type="radio" id="one" value="1">
+                        <span class="createCustomButton radio1 one"></span>
+                    </label>
+                    <label class="buttonContainer labelTwo">
+                        <input name="question2" type="radio" id="two" value="2">
+                        <span class="createCustomButton radio2 two"></span>
+                    </label>
+                    <label class="buttonContainer labelThree">
+                        <input name="question2" type="radio" id="three" value="3">
+                        <span class="createCustomButton radio3 three"></span>
+                    </label>
+                    <label class="buttonContainer labelFour">
+                        <input name="question2" type="radio" id="four" value="4">
+                        <span class="createCustomButton radio4 four"></span>
+                    </label>
+                    <label class="buttonContainer labelFive">
+                        <input name="question2" type="radio" id="five" value="5">
+                        <span class="createCustomButton radio3 five"></span>
+                    </label>
+                    <label class="buttonContainer labelSix">
+                        <input name="question2" type="radio" id="six" value="6">
+                        <span class="createCustomButton radio2 six"></span>
+                    </label>
+                    <label class="buttonContainer labelSeven">
+                        <input name="question2" type="radio" id="seven" value="7">
+                        <span class="createCustomButton radio1 seven"></span>
+                    </label>
+                </div>
+                <h6 class="highScoreAnswer">${model.positiveStatement[0].positive2}</h6> 
+
+                <hr>
+        
+                <h4 class="questions">${model.question[0].quest3}</h4>
+                <h5 class="lowScoreAnswer">${model.negativeStatement[0].negative3}</h5>
+
+                <div class="tete">
+                    <label class="buttonContainer labelOne">
+                        <input name="question3" type="radio" id="one" value="1">
+                        <span class="createCustomButton radio1 one"></span>
+                    </label>
+                    <label class="buttonContainer labelTwo">
+                        <input name="question3" type="radio" id="two" value="2">
+                        <span class="createCustomButton radio2 two"></span>
+                    </label>
+                    <label class="buttonContainer labelThree">
+                        <input name="question3" type="radio" id="three" value="3">
+                        <span class="createCustomButton radio3 three"></span>
+                    </label>
+                    <label class="buttonContainer labelFour">
+                        <input name="question3" type="radio" id="four" value="4">
+                        <span class="createCustomButton radio4 four"></span>
+                    </label>
+                    <label class="buttonContainer labelFive">
+                        <input name="question3" type="radio" id="five" value="5">
+                        <span class="createCustomButton radio3 five"></span>
+                    </label>
+                    <label class="buttonContainer labelSix">
+                        <input name="question3" type="radio" id="six" value="6">
+                        <span class="createCustomButton radio2 six"></span>
+                    </label>
+                    <label class="buttonContainer labelSeven">
+                        <input name="question3" type="radio" id="seven" value="7">
+                        <span class="createCustomButton radio1 seven"></span>
+                    </label>
+                </div>
+                <h6 class="highScoreAnswer">${model.positiveStatement[0].positive3}</h6> 
+
+                <hr>
+            
+                <h4 class="questions">${model.question[0].quest4}</h4>
+                <h5 class="lowScoreAnswer">${model.negativeStatement[0].negative4}</h5>
+
+                <div class="tete">
+                    <label class="buttonContainer labelOne">
+                        <input name="question4" type="radio" id="one" value="1">
+                        <span class="createCustomButton radio1 one"></span>
+                    </label>
+                    <label class="buttonContainer labelTwo">
+                        <input name="question4" type="radio" id="two" value="2">
+                        <span class="createCustomButton radio2 two"></span>
+                    </label>
+                    <label class="buttonContainer labelThree">
+                        <input name="question4" type="radio" id="three" value="3">
+                        <span class="createCustomButton radio3 three"></span>
+                    </label>
+                    <label class="buttonContainer labelFour">
+                        <input name="question4" type="radio" id="four" value="4">
+                        <span class="createCustomButton radio4 four"></span>
+                    </label>
+                    <label class="buttonContainer labelFive">
+                        <input name="question4" type="radio" id="five" value="5">
+                        <span class="createCustomButton radio3 five"></span>
+                    </label>
+                    <label class="buttonContainer labelSix">
+                        <input name="question4" type="radio" id="six" value="6">
+                        <span class="createCustomButton radio2 six"></span>
+                    </label>
+                    <label class="buttonContainer labelSeven">
+                        <input name="question4" type="radio" id="seven" value="7">
+                        <span class="createCustomButton radio1 seven"></span>
+                    </label>
+                </div>
+                <h6 class="highScoreAnswer">${model.positiveStatement[0].positive4}</h6> 3
+                <hr>
+            </div>
+            <input type="text" class="notepad" placeholder="Notes"/>
+            <div class="page2">
+                <p class="bH">▶</p>
+            </div>
+        </div>
+            `;
+        }
+    </script>
 </body>
 </html>

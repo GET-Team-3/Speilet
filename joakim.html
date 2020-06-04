@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+        <label class="buttonContainer labelOne">
+            <input name="question1" type="radio" id="one" value="1">
+            <span class="createCustomButton radio1 one"></span>
+        </label>
+        <label class="buttonContainer labelTwo">
+            <input name="question1" type="radio" id="two" value="2">
+            <span class="createCustomButton radio2 two"></span>
+        </label>
+        <label class="buttonContainer labelThree">
+            <input name="question1" type="radio" id="three" value="3">
+            <span class="createCustomButton radio3 three"></span>
+        </label>
+        <label class="buttonContainer labelFour">
+            <input name="question1" type="radio" id="four" value="4" onclick="getPoints(this.value)">
+            <span class="createCustomButton radio4 four"></span>
+        </label>
+        <label class="buttonContainer labelFive">
+            <input name="question1" type="radio" id="five" value="5">
+            <span class="createCustomButton radio3 five"></span>
+        </label>
+        <label class="buttonContainer labelSix">
+            <input name="question1" type="radio" id="six" value="6">
+            <span class="createCustomButton radio2 six"></span>
+        </label>
+        <label class="buttonContainer labelSeven">
+            <input name="question1" type="radio" id="seven" value="7">
+            <span class="createCustomButton radio1 seven" input onchange="controllerfunction(this)"></span>
+
+            checked.value (som punkt i array?)
+
+        </label>
+
+        <button onclick="dealWithTheIDs()", id="scroptbutton">click 4 scropt</button>
+    
+</body>
+
+<script>
+// håndtering av ID-er.
+
+function dealWithTheIDs() {
+
+var ID1 = document.getElementById("one"); 
+
+if (ID1.checked==true) {
+    alert("the selected value is: " +ID1.value)
+}
+
+
+}
+
+for (let i = 0; i < 5; i++) {
+    questions[i]
+questions[1,2,3,4]
+
+questions[0].checked + questions[1].checked + questions[2].checked + questions[4].checked {
+    button.enabled
+}
+}
+
+questions[0] {positive[0].value=7}
+
+function getPoints(answer) {
+    console.log(answer);
+}
+
+</script>
+</html>
+
