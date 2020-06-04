@@ -1,7 +1,12 @@
 const model = {
     user: null, //{name: '', contact: '',  answer: [], note: []},
     theme: ['Trygt og støttende læringsmiljø', 'Tydelige felles mål', 'Beste praksis er standard', 'Selvledelse og god daglig drift', 'Kontinuerlig forbedring. Litt bedre hver dag.', 'Deling av kunnskap'],
-    question: [
+    survey: [
+        {question: '', positiveStatement: '', negativeStatement: ''},
+        {question: '', positiveStatement: '', negativeStatement: ''},
+        {question: '', positiveStatement: '', negativeStatement: ''},
+        {question: '', positiveStatement: '', negativeStatement: ''},
+
         {quest1: 'Vi har ydmyke og trygge ledere', quest2: 'Vi anerkjenner og utnytter forskjellighet', quest3: 'Åpenhet for nye ideer (som ikke passer inn)', quest4: 'Tid til refleksjon og læring'},
         {quest1: 'Vi har et konstant og langsiktig nyttig formål', quest2: 'Vårt team har egne mål knyttet til samfunnsoppdraget', quest3: 'Vi samler systematisk inn data om vår kvalitet', quest4: 'Brukerne/kundene er alltid i fokus'},
         {quest1: 'Den beste arbeidsmåten er vår standard', quest2: 'Alle får opplæring i god praksis', quest3: 'Vi har kjøreregler alle følger', quest4: 'Vi evaluerer etterlevelse av god praksis'},
@@ -26,6 +31,7 @@ const model = {
         {negative1: '', negative2: 'Lærdommer går ofte i glemmeboka fordi det er for mye hast', negative3: 'Når flinke folk slutter, forsvinner ofte verdifull kunnskap', negative4: ''},
     ],
     page: 'surveyView',
+    count: 0,
     date: '',
     selfAssessmentSessionName: '',
     progressBar: '',
