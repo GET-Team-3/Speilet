@@ -36,5 +36,5 @@ const model = {
     counter: 0,
     date: '',
     selfAssessmentSessionName: '',
-    progressBar: '',
+    progressBar: 16.666666666666668,
 };
