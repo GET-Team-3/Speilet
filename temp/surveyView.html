@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speilet</title>
+    <link rel="stylesheet" href="stylesheet2.css">
+    <script src="model.js"></script>
+</head>
+<body>
+    <div id="content"></div>
+    <script>
+        updateView();
+        function updateView() {
+            // if (model.page == 'registrationView') registrationView();
+            if (model.page == 'surveyView') surveyView();
+        }
+        function surveyView() {
+            document.getElementById('content').innerHTML = `
+                <div class="page">
+            <p class="bV">◀</p>
+            <div class="progressBar">
+                <div class="progressBarInside">1/6</div>
+            </div>
+            <div class="survey">
+            <h2 class="theme">${0}</h2>
+            <hr>
+            ${makeQuestionRow()}
+            </div>
+            <input type="text" class="notepad" placeholder="Notes"/>
+            <div class="page2">
+                <p class="bH">▶</p>
+            </div>
+        </div>
+            `;
+        }
+
+        function makeQuestionRow() {
+            let html = '';
+            let teller = model.questionCounter + 4;
+            for (model.questionCounter; model.questionCounter < teller; model.questionCounter++) {
+            // for (let index = model.questionCounter; index < teller; index++) {
+                console.log(model.questionCounter);
+                html += `
+                    <h4 class="questions">${model.survey[model.questionCounter].question}</h4>
+                    <h5 class="lowScoreAnswer">${model.survey[model.questionCounter].negativeStatement}</h5>
+                    <div class="tete">
+                        ${makeRadioButton()}
+                    </div>
+                    <h6 class="highScoreAnswer">${model.survey[model.questionCounter].positiveStatement}</h6>
+                    <hr>
+                `;
+            }
+            return html;
+        }
+
+        function makeRadioButton() {
+            let html = '';
+            for (let i = 1; i < 8; i++) {
+                html += `
+                    <label class="buttonContainer label${i}">
+                        <input name="question${model.questionCounter}" type="radio" id="radio${model.questionCounter}${i}" value="${i}">
+                        <span class="createCustomButton radio${i}"></span>
+                    </label>
+                `;
+            }
+            return html;
+        }
+    </script>
+</body>
+</html>

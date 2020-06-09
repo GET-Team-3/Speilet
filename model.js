@@ -33,7 +33,7 @@ const model = {
         {question: 'Kontinuerlig opplæring og trening', positiveStatement: 'Hos oss driver vi systematisk videreopplæring', negativeStatement: undefined},
     ],
     page: 'surveyView',
-    count: 0,
+    counter: 0,
     date: '',
     selfAssessmentSessionName: '',
     progressBar: '',

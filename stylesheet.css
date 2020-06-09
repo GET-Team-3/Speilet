@@ -25,7 +25,7 @@ body {
     font-size: 20px;
 }
 .lowScoreAnswer {
-    display: inline-block;
+    /* display: inline-block; */
     float: left;
     width: 300px;
     color: darkgray;
@@ -34,11 +34,11 @@ body {
     left: 50px;
 }
 .highScoreAnswer {
-    display: inline-block;
+    /* display: inline-block; */
     width: 300px;
     color: darkgray;
     font-size: 17px;
-    float: right;
+    float: right;    
     position: relative;
     bottom: 15px;
     right: 60px;
@@ -148,102 +148,8 @@ p {
     position: absolute;
     bottom: 0px;
 }
-.one {
-    border-color: rgb(233, 113, 109);
-    height: 54px;
-    width: 54px;
-}
-.two {
-    border-color: rgb(219, 147, 146);
-    height: 47px;
-    width: 47px;
-    margin-top: 3.5px;
 
-}
-.three {
-    border-color: rgb(224, 182, 181);
-    height: 40px;
-    width: 40px;
-    margin-top: 7px;
-}
-.four {
-    border-color: rgb(187, 187, 187);
-    height: 35px;
-    width: 35px;
-    margin-top: 9.5px;
-}
-.five {
-    border-color: rgb(177, 196, 177);
-    height: 40px;
-    width: 40px;
-    margin-top: 7px;
-}
-.six {
-    border-color: rgb(131, 175, 131);
-    height: 47px;
-    width: 47px;
-    margin-top: 3.5px;
-}
-.seven {
-    border-color: rgb(94, 143, 88);
-    height: 54px;
-    width: 54px;
-}
-.labelOne {
-   /* float: left; */
-   border-style: solid;
-}
-.labelTwo {
-    padding-right: 25px;
-    margin-left: 50px;
-    /* float: left; */
-}
-.labelThree {
-    padding-right: 25px;
-    margin-left: 20px;
-
-    /* float: left; */
-}
-.labelFour {
-    padding-right: 25px;
-    /* float: left; */
-    margin-right: 10px;
-}
-.labelFive {
-    padding-right: 22px;
-    /* float: left; */
-}
-.labelSix {
-    padding-right: 25px;
-    /* float: left; */
-}
-.labelSeven {
-    padding-right: 25px;
-    /* float: left; */
-    margin-left: 20px;
-}
-.buttonContainer input:checked ~ .one {
-    background-color: rgb(233, 113, 109);
-  }
-.buttonContainer input:checked ~ .two {
-    background-color: rgb(219, 147, 146);
-  }
-.buttonContainer input:checked ~ .three {
-    background-color: rgb(224, 182, 181);
-  }
-.buttonContainer input:checked ~ .four {
-    background-color: rgb(187, 187, 187);
-  }
-.buttonContainer input:checked ~ .five {
-    background-color: rgb(177, 196, 177);
-  }
-.buttonContainer input:checked ~ .six {
-    background-color: rgb(131, 175, 131);
-  }
-.buttonContainer input:checked ~ .seven {
-    background-color: rgb(94, 143, 88);
-  }
-.tete {
+.radioContainer {
     width: 500px;
     height: 100px;
     display: inline-block;
@@ -251,3 +157,100 @@ p {
     bottom: 5px;
     right: 10px;
 }
+
+.label1 {
+    /* float: left; */
+    border-style: solid;
+ }
+ .label2 {
+     padding-right: 25px;
+     margin-left: 50px;
+     /* float: left; */
+ }
+ .label3 {
+     padding-right: 25px;
+     margin-left: 20px;
+     /* float: left; */
+ }
+ .label4 {
+     padding-right: 25px;
+     /* float: left; */
+     margin-right: 10px;
+ }
+ .label5 {
+     padding-right: 22px;
+     /* float: left; */
+ }
+ .label6 {
+     padding-right: 25px;
+     /* float: left; */
+ }
+ .label7 {
+     padding-right: 25px;
+     /* float: left; */
+     margin-left: 20px;
+ }
+
+ .radio1 {
+    border-color: rgb(233, 113, 109);
+    height: 54px;
+    width: 54px;
+}
+.radio2 {
+    border-color: rgb(219, 147, 146);
+    height: 47px;
+    width: 47px;
+    margin-top: 3.5px;
+
+}
+.radio3 {
+    border-color: rgb(224, 182, 181);
+    height: 40px;
+    width: 40px;
+    margin-top: 7px;
+}
+.radio4 {
+    border-color: rgb(187, 187, 187);
+    height: 35px;
+    width: 35px;
+    margin-top: 9.5px;
+}
+.radio5 {
+    border-color: rgb(177, 196, 177);
+    height: 40px;
+    width: 40px;
+    margin-top: 7px;
+}
+.radio6 {
+    border-color: rgb(131, 175, 131);
+    height: 47px;
+    width: 47px;
+    margin-top: 3.5px;
+}
+.radio7 {
+    border-color: rgb(94, 143, 88);
+    height: 54px;
+    width: 54px;
+}
+
+.buttonContainer input:checked ~ .radio1 {
+    background-color: rgb(233, 113, 109);
+  }
+.buttonContainer input:checked ~ .radio2 {
+    background-color: rgb(219, 147, 146);
+  }
+.buttonContainer input:checked ~ .radio3 {
+    background-color: rgb(224, 182, 181);
+  }
+.buttonContainer input:checked ~ .radio4 {
+    background-color: rgb(187, 187, 187);
+  }
+.buttonContainer input:checked ~ .radio5 {
+    background-color: rgb(177, 196, 177);
+  }
+.buttonContainer input:checked ~ .radio6 {
+    background-color: rgb(131, 175, 131);
+  }
+.buttonContainer input:checked ~ .radio7 {
+    background-color: rgb(94, 143, 88);
+  }
