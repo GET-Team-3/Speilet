@@ -34,7 +34,8 @@ const model = {
     ],
     page: 'surveyView',
     counter: 0,
+    tempCounter: 0,
     date: '',
     selfAssessmentSessionName: '',
-    progressBar: 16.666666666666668,
+    progressBar: 0,
 };
