@@ -1,7 +1,7 @@
 function surveyView() {
     document.getElementById('content').innerHTML = `
     <div class="page">
-        <p class="bV">◀</p>
+        <p onclick="tempBackwardButton()" class="bV">◀</p>
         <div class="progressBar">
             <div class="progressBarInside">1/6</div>
         </div>
@@ -12,7 +12,7 @@ function surveyView() {
         </div>
         <input type="text" class="notepad" placeholder="Notes"/>
         <div class="page2">
-            <p onclick="tempButton()" class="bH">▶</p>
+            <p onclick="tempForwardButton()" class="bH">▶</p>
         </div>
     </div>
     `;
@@ -22,7 +22,8 @@ function makeQuestionRow() {
     let html = '';
     let teller = model.counter + 4;
     for (let i = model.counter; i < teller; i++) {
-        console.log(i);
+        // console.log(i);
+        console.log(model.counter);
         html += `
             <h4 class="questions">${model.survey[i].question}</h4>
             <h6 class="lowScoreAnswer">${model.survey[i].negativeStatement}</h6>
