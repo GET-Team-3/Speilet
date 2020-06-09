@@ -12,7 +12,7 @@ function surveyView() {
         </div>
         <input type="text" class="notepad" placeholder="Notes"/>
         <div class="page2">
-            <p class="bH">▶</p>
+            <p onclick="tempButton()" class="bH">▶</p>
         </div>
     </div>
     `;
@@ -21,27 +21,27 @@ function surveyView() {
 function makeQuestionRow() {
     let html = '';
     let teller = model.counter + 4;
-    for (model.counter; model.counter < teller; model.counter++) {
-        console.log(model.counter);
+    for (let i = model.counter; i < teller; i++) {
+        console.log(i);
         html += `
-            <h4 class="questions">${model.survey[model.counter].question}</h4>
-            <h6 class="lowScoreAnswer">${model.survey[model.counter].negativeStatement}</h6>
+            <h4 class="questions">${model.survey[i].question}</h4>
+            <h6 class="lowScoreAnswer">${model.survey[i].negativeStatement}</h6>
             <div class="radioContainer">
-                ${makeRadioButton()}
+                ${makeRadioButton(i)}
             </div>
-            <h6 class="highScoreAnswer">${model.survey[model.counter].positiveStatement}</h6>
+            <h6 class="highScoreAnswer">${model.survey[i].positiveStatement}</h6>
             <hr>
         `;
     }
     return html;
 }
 
-function makeRadioButton() {
+function makeRadioButton(questionIndex) {
     let html = '';
     for (let i = 1; i < 8; i++) {
         html += `
             <label class="buttonContainer label${i}">
-                <input name="question${model.counter}" type="radio" id="radio${model.counter}${i}" value="${i}">
+                <input name="question${questionIndex}" type="radio" id="radio${questionIndex}${i}" value="${i}">
                 <span class="createCustomButton radio${i}"></span>
             </label>
         `;
