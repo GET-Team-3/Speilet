@@ -32,11 +32,10 @@ const model = {
         {question: 'Forum for deling av kunnskap', positiveStatement: 'Vi har forum for å dele kunnskap på tvers', negativeStatement: 'Når flinke folk slutter, forsvinner ofte verdifull kunnskap'},
         {question: 'Kontinuerlig opplæring og trening', positiveStatement: 'Hos oss driver vi systematisk videreopplæring', negativeStatement: undefined},
     ],
-    page: 'surveyView',
+    page: 'registrationView',
     counter: 0,
     tempCounter: 0,
     date: '',
     selfAssessmentSessionName: '',
     progressBar: 0,
 };
-console.log(model.user)
