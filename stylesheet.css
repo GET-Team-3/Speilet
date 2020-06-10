@@ -256,3 +256,36 @@ p {
 .buttonContainer input:checked ~ .radio7 {
     background-color: rgb(94, 143, 88);
   }
+
+/* registration */
+
+.mainDiv {
+    background-color: red;
+    border: solid 5px;
+    height: 180px;
+    width: 200px;
+    position: absolute;
+    top:0;
+    bottom: 150px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.regInput {
+   margin: auto;
+   display: block;
+   margin-top: px;
+   
+}
+.regButton {
+    background-color: rgb(69, 69, 248);
+    /* text-align: right; */
+    float: right;
+    margin-top: 24px;
+    margin-right: 35px;
+    font-size: 15px;
+    color: white;
+}
+.regH3 {
+    margin-left: 24px;
+}

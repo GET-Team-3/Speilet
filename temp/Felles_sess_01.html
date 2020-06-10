@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Registration</title>
 
     <style>
     .mainDiv {
@@ -18,13 +18,13 @@
         right: 0;
         margin: auto;
     }
-    input {
+    .regInput {
        margin: auto;
        display: block;
        margin-top: px;
        
     }
-    button {
+    .regButton {
         background-color: rgb(69, 69, 248);
         /* text-align: right; */
         float: right;
@@ -33,7 +33,7 @@
         font-size: 15px;
         color: white;
     }
-    h3 {
+    .regH3 {
         margin-left: 24px;
     }
     </style>
@@ -41,10 +41,10 @@
 </head>
 <body>
     <div id="parent" class="mainDiv">
-        <h3>Register</h3>
-        <input id="nameInput" type="text" placeholder="First name"/>
-        <input id="nameInput" type="text" placeholder="Last name"/>
-        <button>➡</button>
+        <h3 class="regH3">Register</h3>
+        <input id="nameInput" type="text" class="regInput" placeholder="First name"/>
+        <input id="nameInput" type="text" class="regInput" placeholder="Last name"/>
+        <button class="regButton">➡</button>
     </div>
 </body>
 </html>
