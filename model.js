@@ -18,7 +18,7 @@ const model = {
         {question: 'Vi evaluerer etterlevelse av god praksis', positiveStatement: 'Vi evaluerer etterlevelse av god arbeidspraksis', negativeStatement: undefined},
 
         {question: 'Vi styrer for god flyt mellom funksjoner', positiveStatement: 'Våre tavlemøter gir god oversikt i en hektisk hverdag', negativeStatement: 'Vi havner ofte på etterskudd fordi mange faktorer påvirker arbeidet'},
-        {question: 'Årsaaker til problemer kommer opp i dagen', positiveStatement: 'Risiko for problemer visualiseres slik at vi raskt kan ta aksjoner', negativeStatement: 'Vi havner ofte på etterskudd i en hektisk hverdag'},
+        {question: 'Årsaker til problemer kommer opp i dagen', positiveStatement: 'Risiko for problemer visualiseres slik at vi raskt kan ta aksjoner', negativeStatement: 'Vi havner ofte på etterskudd i en hektisk hverdag'},
         {question: 'Helse-miljø-og sikkerhet har alltid fokus først', positiveStatement: 'Vi starter alltid møtene våre med HMS evaluering', negativeStatement: 'HMS hos oss er mye prosedyrer men praksis er ikke like bra'},
         {question: 'Daglig registrerer vi ideer til forbedring', positiveStatement: 'Vi logger systematisk ideer for små og store forbedringer', negativeStatement: 'Forbedringsideer blir ofte liggende fordi de ikke tas tak i'},
 
