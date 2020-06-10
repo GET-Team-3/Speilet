@@ -6,9 +6,9 @@ function registerNextPage() {
     let letters = /^[A-Za-z ]+$/;
 
     if (firstNameValue.match(letters) && lastNameValue.match(letters)) {
-    model.page = "surveyView";
-    updateView();
+        model.page = "surveyView";
+        updateView();
     } else {
         alert("Please enter letters from the alphabetic alphabet");
     }
-    };
+};
