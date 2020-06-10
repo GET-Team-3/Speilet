@@ -10,4 +10,4 @@ function registerNextPage() {
     } else {
         alert("Please enter letters from the alphabetic alphabet");
     }
-    };
+};
