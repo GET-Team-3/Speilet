@@ -1,5 +1,5 @@
 const model = {
-    user: {name: '', contact: '',  answer: [], note: []},
+    user: {firstName: '', lastName: '', contact: '',  answer: [], note: []},
     theme: ['Trygt og støttende læringsmiljø', 'Tydelige felles mål', 'Beste praksis er standard', 'Selvledelse og god daglig drift', 'Kontinuerlig forbedring. Litt bedre hver dag.', 'Deling av kunnskap'],
     survey: [
         {question: 'Vi har ydmyke og trygge ledere', positiveStatement: 'Min nærmeste leder er åpen om egne feil', negativeStatement: 'Min leder er litt for mye verdensmester'},
