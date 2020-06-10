@@ -1,0 +1,289 @@
+* {
+    font-family: Arial;
+}
+.page {
+    background-color: rgb(246, 250, 252);
+    user-select: none;
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 8fr 1fr;
+    grid-auto-rows: 16px 20fr 2fr;
+    grid-template-areas:'page progressbar page2'
+                        'page survey page2'
+                        'page notepad page2';
+}
+body {
+    margin: 0;
+}
+.theme {
+    color: gray;
+    font-size: 35px;
+    padding-top: 20px;
+}
+.questions {
+    color: darkgray;
+    font-size: 20px;
+}
+.lowScoreAnswer {
+    /* display: inline-block; */
+    float: left;
+    width: 300px;
+    color: darkgray;
+    font-size: 17px;
+    position: relative;
+    left: 50px;
+}
+.highScoreAnswer {
+    /* display: inline-block; */
+    width: 300px;
+    color: darkgray;
+    font-size: 17px;
+    float: right;    
+    position: relative;
+    bottom: 15px;
+    right: 60px;
+}
+.progressBar {
+    background-color: rgb(246, 250, 252);
+    grid-area: progressbar;
+    box-shadow: 0 4px 8px 0 #f6fdff, 0 6px 20px 0 #eef2f3;
+    position: relative;
+}
+.progressBarInside {
+    color: gray;
+    background-color: #c9ebf2;
+    height: 100%;
+    /* text-align: end; */
+    box-shadow: 0 4px 8px 0 #f6fdff, 0 6px 20px 0 #eef2f3;
+    padding-top: 7px;
+    padding-right: 5px;
+    position: absolute; 
+    bottom: 0px; 
+}
+.survey {
+    background-color: white;
+    border: solid white 5px;
+    grid-area: survey;
+    text-align: center;
+    overflow: auto;
+    box-shadow: 0 4px 8px 0 #f6fdff, 0 6px 20px 0 #eef2f3;
+}
+hr {
+    clear: both;
+    margin-top: 50px;
+    border: solid #c9ebf2 1px;
+}
+.buttonContainer {
+    color: transparent;
+    position: relative;
+    /* padding-left: 15px;
+    padding-right: 15px; */
+    /* user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none; */
+    cursor: pointer;
+    border-style: solid;
+    right: 6px;
+    top: 25px;
+    margin: 3%;
+}
+/* lag button */
+.createCustomButton {
+    position: absolute;
+    /* top: 0;
+    left: 0;
+    /* background-color: rgb(246, 250, 252); */
+    border-radius: 50%;
+    border: 2.5px;
+    border-color: #c9ebf2;
+    border-style: solid;
+    /* margin: 50px; */
+}
+/* skjul tidligere radio */
+.buttonContainer input {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+  }
+  /* farge på hover på custom radio */
+.buttonContainer:hover input ~ .createCustomButton { 
+    background-color: #ecf6f8;
+  }
+.page2 {
+    grid-area: page2;
+    background-color: transparent;
+}
+.notepad {
+    background-color: #f8f8f8;
+    border-radius: 4px;
+    grid-area: notepad;
+    border: solid white 5px; 
+    box-shadow: 0 4px 8px 0 #f6fdff, 0 6px 20px 0 #eef2f3;
+}
+.notepad:focus {
+    outline: none;
+}
+::-webkit-scrollbar {
+    background-color: lightgray;
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #AEAEAE;
+}
+p {
+    font-size: 50px;
+    background-color: transparent;
+    color: #b7d9e0;
+    border: solid rgb(246, 250, 252) 2px;
+    border-radius: 50%;
+    margin: 30px;
+    cursor: pointer;
+}
+.bH {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+.bV {
+    position: absolute;
+    bottom: 0px;
+}
+
+.radioContainer {
+    width: 500px;
+    height: 100px;
+    display: inline-block;
+    position: relative;
+    bottom: 5px;
+    right: 10px;
+}
+
+.label1 {
+    /* float: left; */
+    border-style: solid;
+ }
+ .label2 {
+     padding-right: 25px;
+     margin-left: 50px;
+     /* float: left; */
+ }
+ .label3 {
+     padding-right: 25px;
+     margin-left: 20px;
+     /* float: left; */
+ }
+ .label4 {
+     padding-right: 25px;
+     /* float: left; */
+     margin-right: 10px;
+ }
+ .label5 {
+     padding-right: 22px;
+     /* float: left; */
+ }
+ .label6 {
+     padding-right: 25px;
+     /* float: left; */
+ }
+ .label7 {
+     padding-right: 25px;
+     /* float: left; */
+     margin-left: 20px;
+ }
+
+ .radio1 {
+    border-color: rgb(233, 113, 109);
+    height: 54px;
+    width: 54px;
+}
+.radio2 {
+    border-color: rgb(219, 147, 146);
+    height: 47px;
+    width: 47px;
+    margin-top: 3.5px;
+
+}
+.radio3 {
+    border-color: rgb(224, 182, 181);
+    height: 40px;
+    width: 40px;
+    margin-top: 7px;
+}
+.radio4 {
+    border-color: rgb(187, 187, 187);
+    height: 35px;
+    width: 35px;
+    margin-top: 9.5px;
+}
+.radio5 {
+    border-color: rgb(177, 196, 177);
+    height: 40px;
+    width: 40px;
+    margin-top: 7px;
+}
+.radio6 {
+    border-color: rgb(131, 175, 131);
+    height: 47px;
+    width: 47px;
+    margin-top: 3.5px;
+}
+.radio7 {
+    border-color: rgb(94, 143, 88);
+    height: 54px;
+    width: 54px;
+}
+
+.buttonContainer input:checked ~ .radio1 {
+    background-color: rgb(233, 113, 109);
+  }
+.buttonContainer input:checked ~ .radio2 {
+    background-color: rgb(219, 147, 146);
+  }
+.buttonContainer input:checked ~ .radio3 {
+    background-color: rgb(224, 182, 181);
+  }
+.buttonContainer input:checked ~ .radio4 {
+    background-color: rgb(187, 187, 187);
+  }
+.buttonContainer input:checked ~ .radio5 {
+    background-color: rgb(177, 196, 177);
+  }
+.buttonContainer input:checked ~ .radio6 {
+    background-color: rgb(131, 175, 131);
+  }
+.buttonContainer input:checked ~ .radio7 {
+    background-color: rgb(94, 143, 88);
+  }
+
+/* registration */
+
+.regMainDiv {
+    background-color: red;
+    border: solid 5px;
+    height: 180px;
+    width: 200px;
+    position: absolute;
+    top: 0;
+    bottom: 150px;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  .regInputs {
+    margin: auto;
+    display: block;
+  }
+  .regButton {
+    background-color: rgb(69, 69, 248);
+    /* text-align: right; */
+    float: right;
+    margin-top: 24px;
+    margin-right: 35px;
+    font-size: 15px;
+    color: white;
+  }
+  .regH3 {
+    margin-left: 24px;
+  }
