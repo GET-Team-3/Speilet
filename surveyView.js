@@ -42,7 +42,7 @@ function makeRadioButton(questionIndex) {
     for (let i = 1; i < 8; i++) {
         html += `
             <label class="buttonContainer label${i}">
-                <input name="question${questionIndex}" type="radio" id="${questionIndex}" value="${i}" onchange="dataCol(this)" ${model.user.answer[questionIndex] != undefined && model.user.answer[questionIndex] == i ? 'checked' : ''}>
+                <input name="question${questionIndex}" type="radio" id="${questionIndex}" value="${i}" onchange="dataCol(this)" ${model.user.answer[questionIndex] == i ? 'checked' : ''}>
                 <span class="createCustomButton radio${i}"></span>
             </label>
         `;
