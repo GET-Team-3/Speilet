@@ -15,7 +15,7 @@ function tempForwardButton() {
 }
 
 function dataCol(x) {
-    let id = x.id
-    let val = x.value
-    model.user.answer[id] = val
+    let id = parseInt(x.id);
+    let val = parseInt(x.value);
+    model.user.answer[id] = val;
 }
