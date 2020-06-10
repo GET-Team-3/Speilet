@@ -42,10 +42,11 @@ function makeRadioButton(questionIndex) {
     for (let i = 1; i < 8; i++) {
         html += `
             <label class="buttonContainer label${i}">
-                <input name="question${questionIndex}" type="radio" id="radio${questionIndex}${i}" value="${i}">
+                <input name="question${questionIndex}" type="radio" id="${questionIndex}" value="${i}" onchange="dataCol(this)">
                 <span class="createCustomButton radio${i}"></span>
             </label>
         `;
     }
     return html;
 }
+

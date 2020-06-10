@@ -13,3 +13,9 @@ function tempForwardButton() {
     model.tempCounter++;
     updateView();
 }
+
+function dataCol(x) {
+    let id = x.id
+    let val = x.value
+    model.user.answer[id] = val
+}
