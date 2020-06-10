@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Registration</title>
+    <script>src="speilet/registrationController.js";</script>
+    <script>src="speilet/model.js";</script>
 
     <style>
-    .mainDiv {
+      .mainDiv {
         background-color: red;
         border: solid 5px;
         height: 180px;
         width: 200px;
         position: absolute;
-        top:0;
+        top: 0;
         bottom: 150px;
         left: 0;
         right: 0;
@@ -35,16 +37,15 @@
     }
     .regH3 {
         margin-left: 24px;
-    }
+      }
     </style>
-    
-</head>
-<body>
+  </head>
+  <body>
     <div id="parent" class="mainDiv">
         <h3 class="regH3">Register</h3>
         <input id="nameInput" type="text" class="regInput" placeholder="First name"/>
         <input id="nameInput" type="text" class="regInput" placeholder="Last name"/>
         <button class="regButton">➡</button>
     </div>
-</body>
+  </body>
 </html>
