@@ -22,8 +22,6 @@ function makeQuestionRow() {
     let html = '';
     let teller = model.counter + 4;
     for (let i = model.counter; i < teller; i++) {
-        // console.log(i);
-        console.log(model.counter);
         html += `
             <h4 class="questions">${model.survey[i].question}</h4>
             <h6 class="lowScoreAnswer">${model.survey[i].negativeStatement}</h6>
