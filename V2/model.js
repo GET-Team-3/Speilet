@@ -66,5 +66,5 @@ const model = {
                 {question: 'Kontinuerlig opplæring og trening', positiveStatement: 'Hos oss driver vi systematisk videreopplæring', negativeStatement: undefined},
             ]
         },
-        ],
+    ],
 };
