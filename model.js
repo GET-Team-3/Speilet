@@ -1,5 +1,5 @@
 const model = {
-    user: {firstName: '', lastName: '', fullName: function() { return this.firstName + " " + this.lastName}, contact: '',  answer: [], note: []},
+    user: {firstName: '', lastName: '', contact: '', date: '', answer: [], note: []}, //fullName: function() { return this.firstName + " " + this.lastName}
     theme: ['Trygt og støttende læringsmiljø', 'Tydelige felles mål', 'Beste praksis er standard', 'Selvledelse og god daglig drift', 'Kontinuerlig forbedring. Litt bedre hver dag.', 'Deling av kunnskap'],
     survey: [
         {question: 'Vi har ydmyke og trygge ledere', positiveStatement: 'Min nærmeste leder er åpen om egne feil', negativeStatement: 'Min leder er litt for mye verdensmester'},
@@ -35,7 +35,6 @@ const model = {
     page: 'registrationView',
     counter: 0,
     tempCounter: 0,
-    date: '',
     selfAssessmentSessionName: '',
     progressBar: 0,
 };

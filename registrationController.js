@@ -5,6 +5,7 @@ function registerNextPage() {
         model.user.firstName = firstNameValue;
         model.user.lastName = lastNameValue;
         model.page = "surveyView";
+        model.user.date = new Date().toISOString().substr(0, 10);
         updateView();
     } else {
         alert("Please enter letters from the alphabetic alphabet");
