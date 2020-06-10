@@ -8,7 +8,10 @@ function tempBackwardButton() {
 
 function tempForwardButton() {
     if (radioCheck()) {
-        if (model.counter == 20) return console.log('end of survey');
+        if (model.counter == 20) {
+            model.page = 'resultView';
+            return updateView();
+        }
         model.counter += 4;
         model.progressBar += 20;
         model.tempCounter++;
