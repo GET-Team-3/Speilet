@@ -39,4 +39,4 @@ const model = {
     selfAssessmentSessionName: '',
     progressBar: 0,
 };
-console.log(model)
+console.log(model.user)
