@@ -3,7 +3,7 @@ function surveyView() {
     <div class="page">
         <p onclick="tempBackwardButton()" class="bV">◀</p>
         <div class="progressBar">
-            <div class="progressBarInside" id="bar" style="width: ${model.progressBar}%"></div>
+            <div class="progressBarInside" id="bar" style="width: ${model.progressBar}%;opacity: ${model.tempCounter == 0 ? 0 : 1}"></div>
         </div>
         <div class="survey">
         <h2 class="theme">${model.theme[model.tempCounter]}</h2>
