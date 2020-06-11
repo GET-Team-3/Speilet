@@ -34,7 +34,4 @@ function pushNotes() {
 let notepadValue = document.getElementById("notepad").value;
 let i = model.counter;
 model.user.note[i] = notepadValue;
-console.log(i);
-console.log(notepadValue);
-console.log(model.user.note);
 }
