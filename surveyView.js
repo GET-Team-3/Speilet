@@ -10,7 +10,7 @@ function surveyView() {
         <hr>
         ${makeQuestionRow()}
         </div>
-        <input type="text" class="notepad" placeholder="Notes"/>
+        <input type="text" class="notepad" placeholder="Notes" value="${model.user.note[model.counter] || ''}"/>
         <div class="page2">
             <p onclick="tempForwardButton()" class="bH">▶</p>
         </div>
