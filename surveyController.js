@@ -29,3 +29,10 @@ function radioCheck() {
     }
     return true;
 }
+
+function pushNotes() {
+let notepadValue = document.getElementById("notepad").value;
+if (model.counter == 0){console.log('DER')};
+
+console.log(notepadValue);
+}

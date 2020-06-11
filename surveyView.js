@@ -10,7 +10,7 @@ function surveyView() {
         <hr>
         ${makeQuestionRow()}
         </div>
-        <input type="text" class="notepad" placeholder="Notes"/>
+        <input type="text" class="notepad" id="notepad" placeholder="Notes" onchange="pushNotes()"/>
         <div class="page2">
             <p onclick="tempForwardButton()" class="bH">▶</p>
         </div>
@@ -47,3 +47,4 @@ function makeRadioButton(questionIndex) {
     }
     return html;
 }
+
