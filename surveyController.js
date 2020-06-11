@@ -14,7 +14,7 @@ function tempForwardButton() {
         model.counter++;
         model.progressBar += 20;
         updateView();
-    } else console.log('Answer all the question');
+    } else alert('Answer all the question');
 }
 
 function dataCol(x) {
