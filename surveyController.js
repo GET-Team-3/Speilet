@@ -33,6 +33,8 @@ function radioCheck() {
 function pushNotes() {
 let notepadValue = document.getElementById("notepad").value;
 if (model.counter == 0){console.log('DER')};
-
+let i = model.counter;
+model.user.note[i].push(notepadValue);
 console.log(notepadValue);
+console.log(model.user.note[i]);
 }
