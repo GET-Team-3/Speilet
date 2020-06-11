@@ -7,7 +7,7 @@ const model = {
         answer: [], 
         note: [] //fullName: function() { return this.firstName + " " + this.lastName}
     },
-    page: 'surveyView',
+    page: 'registrationView',
     counter: 0,
     selfAssessmentSessionName: '',
     progressBar: 0,
