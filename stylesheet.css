@@ -10,11 +10,17 @@
     grid-auto-rows: 16px 20fr 2fr;
     grid-template-areas:'page progressbar page2'
                         'page survey page2'
-                        'page notepad page2';
+                        'page survey page2';
 }
 body {
     margin: 0;
 }
+.content {
+    min-width: 1500px;
+  }
+
+
+  
 .theme {
     color: gray;
     font-size: 35px;
@@ -286,4 +292,25 @@ p {
   }
   .regH3 {
     margin-left: 24px;
+  }
+
+
+  .popup {
+    width: 100%;
+    padding: 50px 0;
+    text-align: center;
+    background-color: lightblue;
+    margin-top: 20px;
+    position:absolute;
+    width: 300px;
+    /* height: 350px; */
+    left: 1000px;
+    top: 240px;
+    
+  }
+
+  .popbutton {
+    bottom: 0;
+    position: absolute;
+    left: 1200px;
   }
