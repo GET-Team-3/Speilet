@@ -112,10 +112,7 @@ hr {
     opacity: 0;
     height: 0;
   }
-  /* farge på hover på custom radio */
-.buttonContainer:hover input ~ .radio1 { 
-    background-color: #ecf6f8;
-  }
+ 
 .page2 {
     grid-area: page2;
     background-color: transparent;
@@ -240,6 +237,29 @@ p {
     height: 54px;
     width: 54px;
 }
+
+ /* farge på hover på custom radio */
+ .buttonContainer:hover input ~ .radio1 { 
+    background-color: rgb(236, 129, 126);
+  }
+  .buttonContainer:hover input ~ .radio2 { 
+    background-color: rgb(228, 165, 163);
+  }
+  .buttonContainer:hover input ~ .radio3 { 
+    background-color: rgb(233, 194, 194);
+  }
+  .buttonContainer:hover input ~ .radio4 { 
+    background-color: rgb(196, 194, 194);
+  }
+  .buttonContainer:hover input ~ .radio5 { 
+    background-color: rgb(187, 207, 187);
+  }
+  .buttonContainer:hover input ~ .radio6 { 
+    background-color: rgb(145, 189, 145);
+  }
+  .buttonContainer:hover input ~ .radio7 { 
+    background-color: rgb(112, 160, 105);
+  }
 
 .buttonContainer input:checked ~ .radio1 {
     background-color: rgb(233, 113, 109);
