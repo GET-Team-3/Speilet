@@ -1,12 +1,12 @@
 const model = {
     user: {
-        firstName: '', 
+        firstName: '',
         lastName: '',
         fullName: function() { return this.firstName + " " + this.lastName},
         contact: '',
-        date: '', 
-        answer: [], 
-        note: [] 
+        date: '',
+        answer: [],
+        note: [],
     },
     page: 'registrationView',
     counter: 0,
