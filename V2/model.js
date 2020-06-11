@@ -5,7 +5,7 @@ const model = {
         contact: '',
         date: '', 
         answer: [], 
-        note: []
+        note: [] //fullName: function() { return this.firstName + " " + this.lastName}
     },
     page: 'surveyView',
     counter: 0,
