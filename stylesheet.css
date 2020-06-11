@@ -15,6 +15,12 @@
 body {
     margin: 0;
 }
+.content {
+    min-width: 1500px;
+  }
+
+  /* survey */
+
 .theme {
     color: gray;
     font-size: 35px;
@@ -287,3 +293,5 @@ p {
   .regH3 {
     margin-left: 24px;
   }
+
+
