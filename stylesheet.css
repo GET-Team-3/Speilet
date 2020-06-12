@@ -265,112 +265,110 @@ p {
 }
 
  /* farge på hover på custom radio */
- .buttonContainer:hover input ~ .radio1 { 
-    background-color: rgb(236, 129, 126);
-  }
-  .buttonContainer:hover input ~ .radio2 { 
-    background-color: rgb(228, 165, 163);
-  }
-  .buttonContainer:hover input ~ .radio3 { 
-    background-color: rgb(233, 194, 194);
-  }
-  .buttonContainer:hover input ~ .radio4 { 
-    background-color: rgb(196, 194, 194);
-  }
-  .buttonContainer:hover input ~ .radio5 { 
-    background-color: rgb(187, 207, 187);
-  }
-  .buttonContainer:hover input ~ .radio6 { 
-    background-color: rgb(145, 189, 145);
-  }
-  .buttonContainer:hover input ~ .radio7 { 
-    background-color: rgb(112, 160, 105);
-  }
+.buttonContainer:hover input ~ .radio1 { 
+  background-color: rgb(236, 129, 126);
+}
+.buttonContainer:hover input ~ .radio2 { 
+  background-color: rgb(228, 165, 163);
+}
+.buttonContainer:hover input ~ .radio3 { 
+  background-color: rgb(233, 194, 194);
+}
+.buttonContainer:hover input ~ .radio4 { 
+  background-color: rgb(196, 194, 194);
+}
+.buttonContainer:hover input ~ .radio5 { 
+  background-color: rgb(187, 207, 187);
+}
+.buttonContainer:hover input ~ .radio6 { 
+  background-color: rgb(145, 189, 145);
+}
+.buttonContainer:hover input ~ .radio7 { 
+  background-color: rgb(112, 160, 105);
+}
 
 .buttonContainer input:checked ~ .radio1 {
-    background-color: rgb(233, 113, 109);
-  }
+  background-color: rgb(233, 113, 109);
+}
 .buttonContainer input:checked ~ .radio2 {
-    background-color: rgb(219, 147, 146);
-  }
+  background-color: rgb(219, 147, 146);
+}
 .buttonContainer input:checked ~ .radio3 {
-    background-color: rgb(224, 182, 181);
-  }
+  background-color: rgb(224, 182, 181);
+}
 .buttonContainer input:checked ~ .radio4 {
-    background-color: rgb(187, 187, 187);
-  }
+  background-color: rgb(187, 187, 187);
+}
 .buttonContainer input:checked ~ .radio5 {
-    background-color: rgb(177, 196, 177);
-  }
+  background-color: rgb(177, 196, 177);
+}
 .buttonContainer input:checked ~ .radio6 {
-    background-color: rgb(131, 175, 131);
-  }
+  background-color: rgb(131, 175, 131);
+}
 .buttonContainer input:checked ~ .radio7 {
     background-color: rgb(94, 143, 88);
-  }
+}
+.popup {
+  width: 100%;
+  padding: 50px 0;
+  text-align: center;
+  background-color: lightblue;
+  margin-top: 20px;
+  position:absolute;
+  width: 300px;
+  /* height: 350px; */
+  left: 1000px;
+  top: 240px;
+  
+}
+.popbutton {
+  bottom: 0;
+  position: absolute;
+  left: 1200px;
+}
 
 /* registration */
 
 .regMainDiv {
-    background-color: white;
-    border: solid white 5px;
-    border-radius: 3px;
-    height: 180px;
-    width: 200px;
-    position: absolute;
-    top: 0;
-    bottom: 150px;
-    left: 0;
-    right: 0;
-    margin: auto;
-    box-shadow: 0 4px 8px 0 #e9f4f7, 0 6px 20px 0 #eef2f3;
-  }
-  .regInputs {
-    margin: auto;
-    display: block;
-    border-top: transparent;
-    border-left: transparent;
-    border-right: transparent;
-    border-bottom: solid #00d4b1;
-  }
-  .regInputs:focus {
-    outline: none;
-    }
-    .regInputs:hover {
-    background-color: #e3faf6;
-    }
-  .regButton {
-    background-color: #00d4b1;
-    /* text-align: right; */
-    float: right;
-    margin-top: 25px;
-    margin-right: 36px;
-    font-size: 17px;
-    color: white;
-    border: solid white;
-    border-radius: 3px;
-    cursor: pointer;
-  }
-  .regH3 {
-    margin-left: 24px;
-  }
-
-  .popup {
-    width: 100%;
-    padding: 50px 0;
-    text-align: center;
-    background-color: lightblue;
-    margin-top: 20px;
-    position:absolute;
-    width: 300px;
-    /* height: 350px; */
-    left: 1000px;
-    top: 240px;
-    
-  }
-
-  .popbutton {
-    bottom: 0;
-    position: absolute;
-    left: 1200px;
-  }
+  background-color: white;
+  border: solid white 5px;
+  border-radius: 3px;
+  height: 180px;
+  width: 200px;
+  position: absolute;
+  top: 0;
+  bottom: 150px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  box-shadow: 0 4px 8px 0 #e9f4f7, 0 6px 20px 0 #eef2f3;
+}
+.regInputs {
+  margin: auto;
+  display: block;
+  border-top: transparent;
+  border-left: transparent;
+  border-right: transparent;
+  border-bottom: solid #00d4b1;
+}
+.regInputs:focus {
+  outline: none;
+}
+  .regInputs:hover {
+  background-color: #e3faf6;
+}
+.regButton {
+  background-color: #00d4b1;
+  /* text-align: right; */
+  float: right;
+  margin-top: 25px;
+  margin-right: 36px;
+  font-size: 17px;
+  color: white;
+  border: solid white;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.regH3 {
+  margin-left: 24px;
+}

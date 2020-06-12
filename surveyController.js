@@ -1,5 +1,5 @@
 function tempBackwardButton() {
-    if (model.counter == 0) return console.log('start of survey');
+    if (model.counter == 0) return;
     model.counter--;
     model.progressBar -= 20;
     updateView();
@@ -17,12 +17,6 @@ function tempForwardButton() {
     } else alert('Answer all the question');
 }
 
-function dataCol(x) {
-    let id = parseInt(x.id);
-    let val = parseInt(x.value);
-    model.user.answer[id] = val;
-}
-
 function radioCheck() {
     for (let i = 0; i < 4; i++) {
         if (model.user.answer[model.counter * 4 + i] == undefined) return false;
@@ -30,11 +24,17 @@ function radioCheck() {
     return true;
 }
 
-  function showHideDiv() {
+function dataCol(x) {
+    let id = parseInt(x.id);
+    let val = parseInt(x.value);
+    model.user.answer[id] = val;
+}
+
+function showHideDiv() {
     let x =  document.getElementsByClassName('popup')[0];
     if (x.style.display == "none") x.style.display = "block";
     else x.style.display = "none";
-  }
+}
 
 function pushNotes() {
     let notepadValue = document.getElementById("notepad").value;
