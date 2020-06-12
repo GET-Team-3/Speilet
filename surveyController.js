@@ -37,10 +37,6 @@ function radioCheck() {
     else x.style.display = "none";
   }
 
-  function pushText(x) {
-      console.log(x.value)
-  }
-
 function pushNotes() {
     let notepadValue = document.getElementById("notepad").value;
     let i = model.counter;
