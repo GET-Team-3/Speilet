@@ -6,7 +6,7 @@ const model = {
         contact: '',
         date: '',
         answer: [],
-        note: [],
+        note: ['','','','','',''],
     },
     page: 'registrationView',
     counter: 0,

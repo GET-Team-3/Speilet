@@ -29,3 +29,9 @@ function radioCheck() {
     }
     return true;
 }
+
+function pushNotes() {
+let notepadValue = document.getElementById("notepad").value;
+let i = model.counter;
+model.user.note[i] = notepadValue;
+}
