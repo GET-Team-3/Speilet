@@ -107,8 +107,26 @@ hr {
     height: 0;
   }
   /* farge på hover på custom radio */
-.buttonContainer:hover input ~ .createCustomButton { 
-    background-color: #ecf6f8;
+.buttonContainer:hover input ~ .radio1 { 
+    background-color: rgb(241, 240, 240);
+  }
+.buttonContainer:hover input ~ .radio2 { 
+    background-color: rgb(241, 240, 240);
+  }
+.buttonContainer:hover input ~ .radio3 { 
+    background-color: rgb(241, 240, 240);
+  }
+.buttonContainer:hover input ~ .radio4 { 
+    background-color: rgb(241, 240, 240);
+  }
+.buttonContainer:hover input ~ .radio5 { 
+    background-color: rgb(241, 240, 240);
+  }
+.buttonContainer:hover input ~ .radio6 { 
+    background-color: rgb(241, 240, 240);
+  }
+.buttonContainer:hover input ~ .radio7 { 
+    background-color: rgb(241, 240, 240);
   }
 .page2 {
     grid-area: page2;
