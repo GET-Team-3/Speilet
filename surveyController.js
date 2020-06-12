@@ -30,7 +30,6 @@ function radioCheck() {
     return true;
 }
 
-
   function showHideDiv() {
     let x =  document.getElementsByClassName('popup')[0];
     if (x.style.display == "none") x.style.display = "block";
