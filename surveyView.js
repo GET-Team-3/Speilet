@@ -50,4 +50,3 @@ function makeRadioButton(questionIndex) {
     }
     return html;
 }
-
