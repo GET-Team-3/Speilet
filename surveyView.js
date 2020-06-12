@@ -11,7 +11,7 @@ function surveyView() {
         ${makeQuestionRow()}
         </div>
         <div class="popup"  style="display: none;">
-        <textarea rows="20" cols="25" placeholder="kek" oninput="pushText(this)"></textarea>
+        <textarea rows="20" cols="25" placeholder="kek" oninput="pushText(this)" onchange="pushNotes()" value="${model.user.note[model.counter]}></textarea>
         </div>
         <button class="popbutton" onclick="showHideDiv(this)">Show/hide div</button>
         <div class="page2">
@@ -50,3 +50,4 @@ function makeRadioButton(questionIndex) {
     }
     return html;
 }
+

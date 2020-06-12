@@ -30,6 +30,7 @@ function radioCheck() {
     return true;
 }
 
+
   function showHideDiv() {
     let x =  document.getElementsByClassName('popup')[0];
     if (x.style.display == "none") x.style.display = "block";
@@ -39,3 +40,10 @@ function radioCheck() {
   function pushText(x) {
       console.log(x.value)
   }
+
+function pushNotes() {
+let notepadValue = document.getElementById("notepad").value;
+let i = model.counter;
+model.user.note[i] = notepadValue;
+}
+

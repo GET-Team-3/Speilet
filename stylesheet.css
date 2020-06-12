@@ -1,3 +1,5 @@
+/* global */
+
 * {
     font-family: Arial;
 }
@@ -19,8 +21,8 @@ body {
     min-width: 1500px;
   }
 
+  /* survey */
 
-  
 .theme {
     color: gray;
     font-size: 35px;
@@ -114,7 +116,25 @@ hr {
   }
   /* farge på hover på custom radio */
 .buttonContainer:hover input ~ .radio1 { 
-    background-color: #ecf6f8;
+    background-color: rgb(241, 240, 240);
+  }
+.buttonContainer:hover input ~ .radio2 { 
+    background-color: rgb(241, 240, 240);
+  }
+.buttonContainer:hover input ~ .radio3 { 
+    background-color: rgb(241, 240, 240);
+  }
+.buttonContainer:hover input ~ .radio4 { 
+    background-color: rgb(241, 240, 240);
+  }
+.buttonContainer:hover input ~ .radio5 { 
+    background-color: rgb(241, 240, 240);
+  }
+.buttonContainer:hover input ~ .radio6 { 
+    background-color: rgb(241, 240, 240);
+  }
+.buttonContainer:hover input ~ .radio7 { 
+    background-color: rgb(241, 240, 240);
   }
 .page2 {
     grid-area: page2;
@@ -138,21 +158,24 @@ hr {
 ::-webkit-scrollbar-thumb {
     background-color: #AEAEAE;
 }
+/* Both buttons */
 p {
     font-size: 50px;
     background-color: transparent;
-    color: #b7d9e0;
+    color: #00d4b1;
     border: solid rgb(246, 250, 252) 2px;
     border-radius: 50%;
     margin: 30px;
     cursor: pointer;
 }
-.bH {
+/* Button right */
+.bH { 
     position: absolute;
     bottom: 0px;
     right: 0px;
 }
-.bV {
+/* Both left */
+.bV { 
     position: absolute;
     bottom: 0px;
 }
@@ -241,6 +264,29 @@ p {
     width: 54px;
 }
 
+ /* farge på hover på custom radio */
+ .buttonContainer:hover input ~ .radio1 { 
+    background-color: rgb(236, 129, 126);
+  }
+  .buttonContainer:hover input ~ .radio2 { 
+    background-color: rgb(228, 165, 163);
+  }
+  .buttonContainer:hover input ~ .radio3 { 
+    background-color: rgb(233, 194, 194);
+  }
+  .buttonContainer:hover input ~ .radio4 { 
+    background-color: rgb(196, 194, 194);
+  }
+  .buttonContainer:hover input ~ .radio5 { 
+    background-color: rgb(187, 207, 187);
+  }
+  .buttonContainer:hover input ~ .radio6 { 
+    background-color: rgb(145, 189, 145);
+  }
+  .buttonContainer:hover input ~ .radio7 { 
+    background-color: rgb(112, 160, 105);
+  }
+
 .buttonContainer input:checked ~ .radio1 {
     background-color: rgb(233, 113, 109);
   }
@@ -266,8 +312,9 @@ p {
 /* registration */
 
 .regMainDiv {
-    background-color: red;
-    border: solid 5px;
+    background-color: white;
+    border: solid white 5px;
+    border-radius: 3px;
     height: 180px;
     width: 200px;
     position: absolute;
@@ -276,24 +323,37 @@ p {
     left: 0;
     right: 0;
     margin: auto;
+    box-shadow: 0 4px 8px 0 #e9f4f7, 0 6px 20px 0 #eef2f3;
   }
   .regInputs {
     margin: auto;
     display: block;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    border-bottom: solid #00d4b1;
   }
+  .regInputs:focus {
+    outline: none;
+    }
+    .regInputs:hover {
+    background-color: #e3faf6;
+    }
   .regButton {
-    background-color: rgb(69, 69, 248);
+    background-color: #00d4b1;
     /* text-align: right; */
     float: right;
-    margin-top: 24px;
-    margin-right: 35px;
-    font-size: 15px;
+    margin-top: 25px;
+    margin-right: 36px;
+    font-size: 17px;
     color: white;
+    border: solid white;
+    border-radius: 3px;
+    cursor: pointer;
   }
   .regH3 {
     margin-left: 24px;
   }
-
 
   .popup {
     width: 100%;
