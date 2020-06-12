@@ -9,11 +9,16 @@ function surveyView() {
         <h2 class="theme">${model.survey[model.counter].theme}</h2>
         <hr>
         ${makeQuestionRow()}
+
+        <div class="popup" style="display: none;">
+
+        <textarea rows="20" cols="25" placeholder="kek" onchange="pushNotes()" value="${model.user.note[model.counter]}"></textarea>
+
         </div>
-        <div class="popup"  style="display: none;">
-        <textarea rows="20" cols="25" placeholder="kek" oninput="pushText(this)" onchange="pushNotes()" value="${model.user.note[model.counter]}></textarea>
-        </div>
+
         <button class="popbutton" onclick="showHideDiv(this)">Show/hide div</button>
+        
+        </div>
         <div class="page2">
             <p onclick="tempForwardButton()" class="bH">▶</p>
         </div>
