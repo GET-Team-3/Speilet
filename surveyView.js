@@ -12,7 +12,7 @@ function surveyView() {
 
         <div class="popup" style="display: none;">
 
-        <textarea rows="20" cols="25" placeholder="kek" onchange="pushNotes()" value="${model.user.note[model.counter]}"></textarea>
+        <textarea rows="20" cols="25" placeholder="kek" id="notepad" onchange="pushNotes()" value="${model.user.note[model.counter]}"></textarea>
 
         </div>
 
