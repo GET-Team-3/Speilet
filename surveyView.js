@@ -10,7 +10,10 @@ function surveyView() {
         <hr>
         ${makeQuestionRow()}
         </div>
-        <input type="text" class="notepad" id="notepad" placeholder="Notes" onchange="pushNotes()" value="${model.user.note[model.counter]}"/>
+        <div class="popup"  style="display: none;">
+        <textarea rows="20" cols="25" placeholder="kek" oninput="pushText(this)" onchange="pushNotes()" value="${model.user.note[model.counter]}></textarea>
+        </div>
+        <button class="popbutton" onclick="showHideDiv(this)">Show/hide div</button>
         <div class="page2">
             <p onclick="tempForwardButton()" class="bH">▶</p>
         </div>
