@@ -1,3 +1,5 @@
+/* global */
+
 * {
     font-family: Arial;
 }
@@ -15,6 +17,12 @@
 body {
     margin: 0;
 }
+.content {
+    min-width: 1500px;
+  }
+
+  /* survey */
+
 .theme {
     color: gray;
     font-size: 35px;
@@ -106,6 +114,7 @@ hr {
     opacity: 0;
     height: 0;
   }
+<<<<<<< HEAD
   /* farge på hover på custom radio */
 .buttonContainer:hover input ~ .radio1 { 
     background-color: rgb(241, 240, 240);
@@ -128,6 +137,9 @@ hr {
 .buttonContainer:hover input ~ .radio7 { 
     background-color: rgb(241, 240, 240);
   }
+=======
+ 
+>>>>>>> d8e8764c5eeef7f233402af618dac90acb1867a5
 .page2 {
     grid-area: page2;
     background-color: transparent;
@@ -253,6 +265,29 @@ p {
     width: 54px;
 }
 
+ /* farge på hover på custom radio */
+ .buttonContainer:hover input ~ .radio1 { 
+    background-color: rgb(236, 129, 126);
+  }
+  .buttonContainer:hover input ~ .radio2 { 
+    background-color: rgb(228, 165, 163);
+  }
+  .buttonContainer:hover input ~ .radio3 { 
+    background-color: rgb(233, 194, 194);
+  }
+  .buttonContainer:hover input ~ .radio4 { 
+    background-color: rgb(196, 194, 194);
+  }
+  .buttonContainer:hover input ~ .radio5 { 
+    background-color: rgb(187, 207, 187);
+  }
+  .buttonContainer:hover input ~ .radio6 { 
+    background-color: rgb(145, 189, 145);
+  }
+  .buttonContainer:hover input ~ .radio7 { 
+    background-color: rgb(112, 160, 105);
+  }
+
 .buttonContainer input:checked ~ .radio1 {
     background-color: rgb(233, 113, 109);
   }
@@ -305,3 +340,5 @@ p {
   .regH3 {
     margin-left: 24px;
   }
+
+
