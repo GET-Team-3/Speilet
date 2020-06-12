@@ -114,7 +114,6 @@ hr {
     opacity: 0;
     height: 0;
   }
-<<<<<<< HEAD
   /* farge på hover på custom radio */
 .buttonContainer:hover input ~ .radio1 { 
     background-color: rgb(241, 240, 240);
@@ -137,9 +136,6 @@ hr {
 .buttonContainer:hover input ~ .radio7 { 
     background-color: rgb(241, 240, 240);
   }
-=======
- 
->>>>>>> d8e8764c5eeef7f233402af618dac90acb1867a5
 .page2 {
     grid-area: page2;
     background-color: transparent;
