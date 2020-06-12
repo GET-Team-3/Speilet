@@ -1,7 +1,7 @@
 function surveyView() {
     document.getElementById('content').innerHTML = `
     <div class="page">
-        <p onclick="tempBackwardButton()" class="bV" style="${model.counter == 0 ? 'color:lightgray' : ''}">◀</p>
+        <p onclick="tempBackwardButton()" class="bV" style="${model.counter == 0 ? 'color:lightgray;cursor: not-allowed;' : ''}">◀</p>
         <div class="progressBar">
             <div class="progressBarInside" id="bar" style="width: ${model.progressBar}%;opacity: ${model.counter == 0 ? 0 : 1}"></div>
         </div>

@@ -41,4 +41,3 @@ function pushNotes() {
     let i = model.counter;
     model.user.note[i] = notepadValue;
 }
-
