@@ -6,15 +6,13 @@ function surveyView() {
             <div class="progressBarInside" id="bar" style="width: ${model.progressBar}%;opacity: ${model.counter == 0 ? 0 : 1}"></div>
         </div>
         <div class="survey">
-        <h2 class="theme">${model.survey[model.counter].theme}</h2>
-        <hr>
-        ${makeQuestionRow()}
-
+            <h2 class="theme">${model.survey[model.counter].theme}</h2>
+            <hr>
+            ${makeQuestionRow()}
             <div class="popup" style="display: none;">
                 <textarea rows="20" cols="25" placeholder="kek" id="notepad" onchange="pushNotes()">${model.user.note[model.counter] || ''}</textarea>
             </div>
             <button class="popbutton" onclick="showHideDiv()">Show/hide div</button>
-        
         </div>
         <div class="page2">
             <p onclick="tempForwardButton()" class="bH">▶</p>
