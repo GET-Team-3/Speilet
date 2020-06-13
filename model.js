@@ -8,7 +8,7 @@ const model = {
         answer: [],
         note: [],
     },
-    page: 'surveyView',
+    page: 'registrationView',
     counter: 0,
     selfAssessmentSessionName: '',
     progressBar: 0,
