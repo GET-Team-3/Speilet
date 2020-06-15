@@ -2,7 +2,6 @@ function speilView() {
     document.getElementById('content').innerHTML = `
     <canvas id="myChart"></canvas>
     `;
-
     let myChart = document.getElementById('myChart').getContext('2d');
 
     // Global Options
