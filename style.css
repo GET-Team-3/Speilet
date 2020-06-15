@@ -375,3 +375,7 @@ p {
 .regH3 {
   margin-left: 24px;
 }
+
+.mockDiagram {
+  width: 1000px;
+}

@@ -8,7 +8,7 @@ function tempBackwardButton() {
 function tempForwardButton() {
     if (radioCheck()) {
         if (model.counter == 5) {
-            model.page = 'resultView';
+            model.page = 'speilView';
             return updateView();
         }
         model.counter++;
@@ -19,7 +19,7 @@ function tempForwardButton() {
 
 function radioCheck() {
     for (let i = 0; i < 4; i++) {
-        if (model.user.answer[model.counter * 4 + i] == undefined) return false;
+        if (model.user.answer[model.counter * 4 + i] != undefined) return false;
     }
     return true;
 }
