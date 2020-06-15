@@ -8,7 +8,7 @@ const model = {
         answer: [],
         note: [],
     },
-    page: 'registrationView',
+    page: 'speilView',
     counter: 0,
     selfAssessmentSessionName: '',
     progressBar: 0,
