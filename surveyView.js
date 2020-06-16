@@ -3,7 +3,7 @@ function surveyView() {
     <div class="page">
             <p onclick="tempBackwardButton()" class="bV" style="${model.questionCounter == 0 ? 'color:lightgray;cursor: not-allowed;' : ''}">◀</p>
         <div class="progressBar">
-            <div class="progressBarInside" id="bar" style="width: ${model.progressBar < 95 ? model.progressBar : 100}%;opacity: ${model.questionCounter == 0 ? 0 : 1}"></div>
+            <div class="progressBarInside" id="bar" style="width: ${model.progressBar < 96 ? model.progressBar : 100}%;opacity: ${model.questionCounter == 0 ? 0 : 1}"></div>
         </div>
         <div class="survey">
             <h2 class="theme">${model.theme[model.themeCounter]}</h2>
@@ -24,7 +24,6 @@ function surveyView() {
 
 function makeQuestionRow() {
     let html = '';
-    // let row = model.survey[model.counter].row;
     let row = model.survey[model.questionCounter];
     for (let i = 0; i < 1; i++) {
         html += `
