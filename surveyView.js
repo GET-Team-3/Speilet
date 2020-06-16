@@ -6,7 +6,7 @@ function surveyView() {
             <div class="progressBarInside" id="bar" style="width: ${model.progressBar < 96 ? model.progressBar : 100}%;opacity: ${model.questionCounter == 0 ? 0 : 1}"></div>
         </div>
         <div class="survey">
-            <h2 class="theme">${model.theme[model.themeCounter]}${model.questionCounter}</h2>
+            <h2 class="theme">${model.theme[model.themeCounter]}</h2>
             <hr>
             ${makeQuestionRow()}
             <div class="popup" style="display: none;">
