@@ -42,7 +42,7 @@ function makeRadioButton() {
         html += `
             <label class="buttonContainer label${i}">
                 <input name="question${model.questionCounter}" type="radio" id="${model.questionCounter}" value="${i}" 
-                onchange="dataCol(this)" ${model.user.answer[model.questionCounter] == i ? 'checked' : ''}>
+                onchange="answer(this)" ${model.user.answer[model.questionCounter] == i ? 'checked' : ''}>
                 <span class="createCustomButton radio${i}"></span><span class="numbersUnderCheckmark">${i}</span>
             </label>
         `;
