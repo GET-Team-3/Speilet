@@ -158,6 +158,13 @@ p {
     margin: 30px;
     cursor: pointer;
 }
+/* Buttons hover cursor */
+p:hover {
+  -webkit-text-fill-color: #84d1c4;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #00d4b1;
+}
+
 /* Button right */
 .bH { 
     position: absolute;
