@@ -277,25 +277,25 @@ p {
 }
 
 .buttonContainer input:checked ~ .radio1 {
-  background-color: rgb(233, 113, 109);
+  background-color: rgb(255, 138, 136);
 }
 .buttonContainer input:checked ~ .radio2 {
-  background-color: rgb(235, 137, 98);
+  background-color: rgb(255, 174, 108);
 }
 .buttonContainer input:checked ~ .radio3 {
-  background-color: rgb(255, 197, 72);
+  background-color: rgb(255, 207, 102);
 }
 .buttonContainer input:checked ~ .radio4 {
-  background-color: rgb(255, 245, 100);
+  background-color: rgb(255, 247, 130);
 }
 .buttonContainer input:checked ~ .radio5 {
-  background-color: rgb(224, 250, 77);
+  background-color: rgb(234, 255, 116);
 }
 .buttonContainer input:checked ~ .radio6 {
-  background-color: rgb(184, 231, 74);
+  background-color: rgb(201, 241, 106);
 }
 .buttonContainer input:checked ~ .radio7 {
-    background-color: rgb(63, 179, 47);
+    background-color: rgb(83, 194, 69);
 }
 .popup {
   width: 100%;
