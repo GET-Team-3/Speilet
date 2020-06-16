@@ -1,18 +1,25 @@
 function tempBackwardButton() {
+    console.log(model.questionCounter)
+    let stg = model.questionCounter.toString()
     if (model.questionCounter == 0) return;
+    if (stg.match(/^4|8|12|16|20$/)) model.themeCounter--;
     model.questionCounter--;
     model.progressBar -= 4.16666666666;
     updateView();
 }
 
 function tempForwardButton() {
-    let stg = model.questionCounter.toLocaleString(0)
+    // console.log(model.questionCounter)
+    let stg = model.questionCounter.toString()
     if (radioCheck()) {
         if (model.questionCounter == 23) {
-            model.page = 'resultView';
+            // model.page = 'resultView';
             return updateView();
         }
-        if (stg.match(/^3|7|11|15|19$/)) model.themeCounter++;
+        if (stg.match(/^3|7|11|15|19$/)) {
+            console.log(model.questionCounter)
+            model.themeCounter++;
+        }
         model.questionCounter++;
         model.progressBar += 4.16666666666;
         updateView();
