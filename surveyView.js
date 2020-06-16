@@ -23,10 +23,8 @@ function surveyView() {
 }
 
 function makeQuestionRow() {
-    let html = '';
     let row = model.survey[model.questionCounter];
-    for (let i = 0; i < 1; i++) {
-        html += `
+    let html = `
             <h4 class="questions">${row.question}</h4>
             <h6 class="lowScoreAnswer">${row.negativeStatement}</h6>
             <div class="radioContainer">
@@ -35,7 +33,6 @@ function makeQuestionRow() {
             <h6 class="highScoreAnswer">${row.positiveStatement}</h6>
             <hr>
         `;
-    }
     return html;
 }
 
