@@ -6,12 +6,13 @@ function tempBackwardButton() {
 }
 
 function tempForwardButton() {
+    let stg = model.questionCounter.toLocaleString(0)
     if (radioCheck()) {
         if (model.questionCounter == 23) {
             model.page = 'resultView';
             return updateView();
         }
-        if (model.questionCounter == 3 || model.questionCounter == 7 || model.questionCounter == 11 || model.questionCounter == 15 || model.questionCounter == 19) model.themeCounter++;
+        if (stg.match(/^3|7|11|15|19$/)) model.themeCounter++;
         model.questionCounter++;
         model.progressBar += 4.16666666666;
         updateView();
