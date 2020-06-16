@@ -3,7 +3,7 @@ function tempBackwardButton() {
     if (model.questionCounter == 0) return;
     if ([4,8,12,16,20].includes(model.questionCounter)) model.themeCounter--;
     model.questionCounter--;
-    model.progressBar -= 4.16666666666;
+    model.progressBar -= 4.34782608695;
     updateView();
 }
 
@@ -15,7 +15,8 @@ function tempForwardButton() {
         }
         if ([3,7,11,15,19].includes(model.questionCounter)) model.themeCounter++;
         model.questionCounter++;
-        model.progressBar += 4.16666666666;
+        model.progressBar += 4.34782608695;
+        console.log(model.progressBar)
         updateView();
     } else alert('Answer all the question');
 }
