@@ -24,14 +24,9 @@ function tempForwardButton() {
 function radioCheck() {
     if (model.user.answer[model.questionCounter] != undefined) return false;
     return true;
-
-    // for (let i = 0; i < 4; i++) {
-    //     if (model.user.answer[model.counter * 4 + i] == undefined) return false;
-    // }
-    // return true;
 }
 
-function dataCol(x) {
+function answer(x) {
     let id = parseInt(x.id);
     let val = parseInt(x.value);
     model.user.answer[id] = val;
@@ -45,6 +40,6 @@ function showHideDiv() {
 
 function pushNotes() {
     let notepadValue = document.getElementById("notepad").value;
-    let i = model.counter;
+    let i = model.questionCounter;
     model.user.note[i] = notepadValue;
 }
