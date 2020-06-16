@@ -2,11 +2,11 @@ const model = {
     user: {
         firstName: '',
         lastName: '',
-        fullName: function() { return this.firstName + " " + this.lastName},
         contact: '',
         date: '',
         answer: [],
         note: [],
+        fullName: function() { return this.firstName + " " + this.lastName},
     },
     page: 'surveyView', //'registrationView'
     themeCounter: 0,
