@@ -11,6 +11,7 @@ function tempForwardButton() {
             model.page = 'resultView';
             return updateView();
         }
+        if (model.questionCounter == 3 || model.questionCounter == 7 || model.questionCounter == 11 || model.questionCounter == 15 || model.questionCounter == 19) model.themeCounter++;
         model.questionCounter++;
         model.progressBar += 4.16666666666;
         updateView();
@@ -18,7 +19,7 @@ function tempForwardButton() {
 }
 
 function radioCheck() {
-    if (model.user.answer[model.questionCounter] == undefined) return false;
+    if (model.user.answer[model.questionCounter] != undefined) return false;
     return true;
 
     // for (let i = 0; i < 4; i++) {
