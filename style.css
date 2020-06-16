@@ -217,32 +217,32 @@ p {
     width: 54px;
 }
 .radio2 {
-    border-color: rgb(255, 111, 108);
+    border-color: rgb(255, 172, 171);
     height: 47px;
     width: 47px;
     margin-top: 3.5px;
 
 }
 .radio3 {
-    border-color: rgb(255, 245, 100);
+    border-color: rgb(253, 249, 160);
     height: 40px;
     width: 40px;
     margin-top: 7px;
 }
 .radio4 {
-    border-color: rgb(255, 245, 100);
+    border-color: rgb(255, 251, 184);
     height: 35px;
     width: 35px;
     margin-top: 9.5px;
 }
 .radio5 {
-    border-color: rgb(255, 245, 100);
+    border-color: rgb(253, 249, 160);
     height: 40px;
     width: 40px;
     margin-top: 7px;
 }
 .radio6 {
-    border-color: rgb(63, 179, 47);
+    border-color: rgb(170, 219, 163);
     height: 47px;
     width: 47px;
     margin-top: 3.5px;
@@ -255,44 +255,44 @@ p {
 
  /* farge på hover på custom radio */
 .buttonContainer:hover input ~ .radio1 { 
-  background-color: rgb(255, 140, 138);
+  background-color: rgb(253, 135, 133);
 }
 .buttonContainer:hover input ~ .radio2 { 
-  background-color: rgb(255, 140, 138);
+  background-color: rgb(255, 186, 184);
 }
 .buttonContainer:hover input ~ .radio3 { 
-  background-color: rgb(255, 249, 158);
+  background-color: rgb(255, 252, 191);
 }
 .buttonContainer:hover input ~ .radio4 { 
-  background-color: rgb(255, 249, 158);
+  background-color: rgb(255, 253, 219);
 }
 .buttonContainer:hover input ~ .radio5 { 
-  background-color: rgb(255, 249, 158);
+  background-color: rgb(255, 252, 191);
 }
 .buttonContainer:hover input ~ .radio6 { 
-  background-color: rgb(92, 202, 77);
+  background-color: rgb(194, 230, 189);
 }
 .buttonContainer:hover input ~ .radio7 { 
-  background-color: rgb(92, 202, 77);
+  background-color: rgb(105, 199, 92);
 }
 
 .buttonContainer input:checked ~ .radio1 {
   background-color: rgb(255, 111, 108);
 }
 .buttonContainer input:checked ~ .radio2 {
-  background-color: rgb(255, 111, 108);
+  background-color: rgb(255, 172, 171);
 }
 .buttonContainer input:checked ~ .radio3 {
-  background-color: rgb(255, 245, 100);
+  background-color: rgb(253, 249, 160);
 }
 .buttonContainer input:checked ~ .radio4 {
-  background-color: rgb(255, 245, 100);
+  background-color: rgb(255, 251, 184);
 }
 .buttonContainer input:checked ~ .radio5 {
-  background-color: rgb(255, 245, 100);
+  background-color: rgb(253, 249, 160);
 }
 .buttonContainer input:checked ~ .radio6 {
-  background-color: rgb(63, 179, 47);
+  background-color: rgb(170, 219, 163);
 }
 .buttonContainer input:checked ~ .radio7 {
     background-color: rgb(63, 179, 47);
