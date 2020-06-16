@@ -1,7 +1,7 @@
 function tempBackwardButton() {
     console.log(model.questionCounter)
     if (model.questionCounter == 0) return;
-    if ([4,8,12,16,20].includes(model.questionCounter)) model.themeCounter++;
+    if ([4,8,12,16,20].includes(model.questionCounter)) model.themeCounter--;
     model.questionCounter--;
     model.progressBar -= 4.16666666666;
     updateView();
