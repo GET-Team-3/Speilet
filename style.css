@@ -375,3 +375,12 @@ p {
 .regH3 {
   margin-left: 24px;
 }
+.numbersUnderCheckmark {
+    position: absolute;
+    border: 2.5px;
+    color: orange;
+    top: 75px;
+    left: 21px;
+    padding: 1px;
+    font-size: 16px;
+  }

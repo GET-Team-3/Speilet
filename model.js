@@ -8,10 +8,11 @@ const model = {
         answer: [],
         note: [],
     },
-    page: 'registrationView',
+    page: 'surveyView', //'registrationView'
     counter: 0,
     selfAssessmentSessionName: '',
     progressBar: 0,
+    numbersUnderCheckmark: [1,2,3,4,5,6,7],
     survey: [
         {
             theme: 'Trygt og støttende læringsmiljø',
