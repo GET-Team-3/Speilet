@@ -67,6 +67,7 @@ body {
     padding-right: 5px;
     position: absolute; 
     bottom: 0px; 
+    text-align: left;
 }
 .survey {
     background-color: white;
