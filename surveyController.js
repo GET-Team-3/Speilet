@@ -8,7 +8,6 @@ function tempBackwardButton() {
 }
 
 function tempForwardButton() {
-    let stg = model.questionCounter.toString()
     if (radioCheck()) {
         if (model.questionCounter == 23) {
             // model.page = 'resultView';
