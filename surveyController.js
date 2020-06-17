@@ -10,7 +10,7 @@ function tempBackwardButton() {
 function tempForwardButton() {
     if (radioCheck()) {
         if (model.questionCounter == 23) {
-            // model.page = 'resultView';
+             model.page = 'resultView';
             return updateView();
         }
         if ([3,7,11,15,19].includes(model.questionCounter)) model.themeCounter++;

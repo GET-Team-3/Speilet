@@ -7,6 +7,7 @@ const model = {
         answer: [],
         note: [],
         fullName: function() { return this.firstName + " " + this.lastName},
+        data: [1, 3, 2, 8, 9, 7],
     },
     page: 'surveyView', //'registrationView'
     themeCounter: 0,
