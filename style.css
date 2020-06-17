@@ -151,7 +151,7 @@ hr {
     background-color: #AEAEAE;
 }
 /* Both buttons */
-p {
+.bothB {
     font-size: 50px;
     background-color: transparent;
     color: #00d4b1;
@@ -159,10 +159,13 @@ p {
     cursor: pointer;
 }
 /* Buttons hover cursor */
-p:hover {
+.bothB:hover {
   -webkit-text-fill-color: #84d1c4;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: #00d4b1;
+}
+.noHover{
+  pointer-events: none;
 }
 
 /* Button right */
