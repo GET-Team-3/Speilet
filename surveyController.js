@@ -9,7 +9,7 @@ function tempBackwardButton() {
 function tempForwardButton() {
     if (model.user.answer[model.questionCounter] == undefined) {
         if (model.questionCounter == 23) {
-            // model.page = 'resultView';
+             model.page = 'resultView';
             return updateView();
         }
         if ([3,7,11,15,19].includes(model.questionCounter)) model.themeCounter++;

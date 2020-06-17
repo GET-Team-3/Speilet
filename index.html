@@ -10,6 +10,8 @@
     <script src="registrationController.js"></script>
     <script src="surveyView.js"></script>
     <script src="surveyController.js"></script>
+    <script src="resultView.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
 </head>
 <body>
     <div class="content" id="content"></div>
@@ -18,7 +20,7 @@
         function updateView() {
             if (model.page == 'registrationView') registrationView();
             if (model.page == 'surveyView') surveyView();
-            if (model.page == 'resultView') console.log('result!!');
+            if (model.page == 'resultView') resultView();
         }
     </script>
 </body>
