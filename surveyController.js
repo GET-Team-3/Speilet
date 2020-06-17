@@ -7,7 +7,7 @@ function tempBackwardButton() {
 }
 
 function tempForwardButton() {
-    if (model.user.answer[model.questionCounter] != undefined) {
+    if (model.user.answer[model.questionCounter] == undefined) {
         if (model.questionCounter == 23) {
             // model.page = 'resultView';
             return updateView();
@@ -37,8 +37,8 @@ function pushNotes() {
     model.user.note[i] = notepadValue;
 }
 
-window.addEventListener('click', function(e){
+window.addEventListener('click', (event) => {
     let popup = document.getElementsByClassName('popup')[0];
     let popbutton = document.getElementsByClassName('popbutton')[0];
-    if (!popup.contains(e.target) && !popbutton.contains(e.target) && popup.style.display == 'block') popup.style.display = "none";
+    if (!popup.contains(event.target) && !popbutton.contains(event.target) && popup.style.display == 'block') popup.style.display = "none";
 })
