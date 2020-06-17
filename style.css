@@ -354,6 +354,8 @@ hr {
   right: 0;
   margin: auto;
   box-shadow: 0 4px 8px 0 #e9f4f7, 0 6px 20px 0 #eef2f3;
+  user-select: none;
+
 }
 .regInputs {
   margin: auto;

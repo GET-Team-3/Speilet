@@ -36,3 +36,9 @@ function pushNotes() {
     let i = model.questionCounter;
     model.user.note[i] = notepadValue;
 }
+
+window.addEventListener('click', function(e){
+    let popup = document.getElementsByClassName('popup')[0];
+    let popbutton = document.getElementsByClassName('popbutton')[0];
+    if (!popup.contains(e.target) && !popbutton.contains(e.target) && popup.style.display == 'block') popup.style.display = "none";
+})

@@ -19,7 +19,6 @@ function surveyView() {
         </div>
     </div>
     `;
-    console.log(model.themeCounter)
 }
 
 function makeQuestionRow() {
