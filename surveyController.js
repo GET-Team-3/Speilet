@@ -1,5 +1,4 @@
 function tempBackwardButton() {
-    console.log(model.questionCounter)
     if (model.questionCounter == 0) return;
     if ([4,8,12,16,20].includes(model.questionCounter)) model.themeCounter--;
     model.questionCounter--;
@@ -8,7 +7,7 @@ function tempBackwardButton() {
 }
 
 function tempForwardButton() {
-    if (radioCheck()) {
+    if (model.user.answer[model.questionCounter] != undefined) {
         if (model.questionCounter == 23) {
             // model.page = 'resultView';
             return updateView();
@@ -16,14 +15,8 @@ function tempForwardButton() {
         if ([3,7,11,15,19].includes(model.questionCounter)) model.themeCounter++;
         model.questionCounter++;
         model.progressBar += 4.34782608695;
-        console.log(model.progressBar)
         updateView();
     } else alert('Answer all the question');
-}
-
-function radioCheck() {
-    if (model.user.answer[model.questionCounter] != undefined) return false;
-    return true;
 }
 
 function answer(x) {
