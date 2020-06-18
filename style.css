@@ -396,3 +396,51 @@ hr {
     font-size: 16px;
   }
 
+/* result chart */
+
+.bar {
+  fill: red;
+  transition: fill .3s ease;
+  cursor: pointer;
+  font-family: Helvetica, sans-serif;
+  stroke: solid green 5px;
+}
+
+.bar1 {
+    fill: blue;
+}
+
+.bar1 text {
+fill: transparent;
+}
+.bar1:hover {
+  fill: black;
+  
+}
+.bar1:hover text {
+  fill: red;
+  font-size: 30%;
+}
+
+.bar text {
+fill: transparent;
+  font-size: x-small;
+}
+.bar:hover {
+  fill: black;
+  
+}
+.bar:hover text {
+  fill: red;
+  font-size: 30%;
+}
+
+.chart {
+    display: block;
+}
+
+.kategori {
+    font-size: 30px;
+    color: red;
+}
+    
