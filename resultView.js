@@ -5,8 +5,6 @@ function resultView() {
     <canvas id="myChart"></canvas>
     </div>
     `;
-    console.log(document.getElementById('myChart'));
-
     var ctx = document.getElementById('myChart').getContext('2d');
     let massPopChart = new Chart(myChart, {
         type:'bar', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
@@ -146,6 +144,4 @@ function resultView() {
           }
         }
       });
-
-                // return;
-            }
+}
