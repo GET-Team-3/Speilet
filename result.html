@@ -1,164 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <title>My Chart.js Chart</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test barChart</title>
+<style>
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+  .bar {
+  fill: rgb(255, 111, 108);
+  transition: fill .3s ease;
+  stroke: whitesmoke;
+  stroke-width: 0.01;
+  stroke-linecap: round;
+  }
+
+.bar1 {
+    fill: rgb(253, 249, 160);
+    stroke: whitesmoke;
+    stroke-width: 0.02;
+}
+
+.bar1 text {
+fill: transparent;
+stroke: transparent;
+font-size: 3%;
+}
+.hovercolor:hover {
+  fill: whitesmoke;
+}
+.bar1:hover text {
+  fill: darkgray;
+  font-size: 3%;
+}
+
+.bar text {
+fill: transparent;
+stroke: transparent;
+font-size: 3%;
+background-color: #c9ebf2;
+}
+.hovercolor:hover {
+  fill: whitesmoke;
+  
+}
+.bar:hover text {
+  fill: darkgray;
+  font-size: 3%;
+}
+
+.chart {
+    background-color: #c9ebf2;
+    grid-area: chart;
+}
+
+.kategori {
+  background-color: white;
+  font-size: 25px;
+  grid-area: kategori;
+  padding-left: 38px;
+  align-self: flex-end;
+  color: darkgray;
+}
+
+.points {
+  background-color: white;
+  font-size: 25px;
+  grid-area: points;
+  align-self: flex-end;
+  bottom: 0px;
+  padding: 20px;
+  padding-top: 15px;
+  padding-right: 5px;
+  color: darkgray;
+}
+
+.divContainer {
+  display: grid;
+  width: 330px;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 55px 4fr;
+  grid-template-areas:'kategori kategori'
+                      'points chart'
+                        
+}
+
+.pointa {
+  padding-top: 9px;
+}
+    </style>
 </head>
 <body>
-  <div class="container">
-    <canvas id="myChart"></canvas>
-  </div>
+<div class="divContainer">
+<text class="kategori">Kategori</text> 
+<div class="points">
+  <div class="pointa">7</div>
+  <div class="pointa">6</div>
+  <div class="pointa">5</div>
+  <div class="pointa">4</div>
+  <div class="pointa">3</div>
+  <div class="pointa">2</div>
+  <div class="pointa">1</div>
+</div>
+<svg class="chart" viewBox="0 0 8 8" height="300" width="300">
+  <g class="bar1">
+      <text x="0.1" y="0.5">Alle</text>
+      <rect class="hovercolor" x="0" y="1" width="8" height="7"></rect>
+  </g> 
 
-  <script>
-    let myChart = document.getElementById('myChart').getContext('2d');
+  <g class="bar">
+    <rect class="hovercolor" x="0" y="7" width="2" height="1"></rect>
+    <text x="0" y="7">Samhold</text>
+  </g>
 
-    // Global Options
-    Chart.defaults.global.defaultFontFamily = 'Lato';
-    Chart.defaults.global.defaultFontSize = 18;
-    Chart.defaults.global.defaultFontColor = '#777';
+  <g class="bar">
+    <text x="0.1" y="0.5">Produksjon</text>
+    <rect class="hovercolor" x="2" y="5" width="2" height="3"></rect>
+  </g>
 
-    let massPopChart = new Chart(myChart, {
-      type:'bar', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
-      data:{
-        labels:['Læringsmiljø', 'Felles mål', 'standard', 'rift','forbedring','kunnskap'],
-        datasets:[{
-        label: 'Nummer1',
-          data:[
-            2,
-            2,
-            5,
-            6,
-            3,
-            1,
-          ],
-        //   backgroundColor:'green',
-          backgroundColor:[
-            'rgba(255, 99, 132, 0.6)',
-            'rgba(54, 162, 235, 0.6)',
-            'rgba(255, 206, 86, 0.6)',
-            'rgba(75, 192, 192, 0.6)',
-            'rgba(63, 191, 127, 0.6)',
-            'rgba(191, 63, 127, 0.6)',
-          ],
-          borderWidth:1,
-          borderColor:'#777',
-          hoverBorderWidth:3,
-          hoverBorderColor:'#000'
-        },
-        {
-          label:'Nummer2',
-          data:[
-            4,
-            4,
-            4,
-            2,
-            2,
-            1,
-          ],
-          //backgroundColor:'green',
-          backgroundColor:[
-            'rgba(255, 99, 132, 0.6)',
-            'rgba(54, 162, 235, 0.6)',
-            'rgba(255, 206, 86, 0.6)',
-            'rgba(75, 192, 192, 0.6)',
-            'rgba(63, 191, 127, 0.6)',
-            'rgba(191, 63, 127, 0.6)',
-          ],
-          borderWidth:1,
-          borderColor:'#777',
-          hoverBorderWidth:3,
-          hoverBorderColor:'#000'
-        },
-        {
-        label: 'Nummer3',
-          data:[
-            2,
-            2,
-            5,
-            6,
-            3,
-            1,
-          ],
-        //   backgroundColor:'green',
-          backgroundColor:[
-            'rgba(255, 99, 132, 0.6)',
-            'rgba(54, 162, 235, 0.6)',
-            'rgba(255, 206, 86, 0.6)',
-            'rgba(75, 192, 192, 0.6)',
-            'rgba(63, 191, 127, 0.6)',
-            'rgba(191, 63, 127, 0.6)',
-          ],
-          borderWidth:1,
-          borderColor:'#777',
-          hoverBorderWidth:3,
-          hoverBorderColor:'#000'
-        },
-        {
-        label: 'Nummer4',
-          data:[
-            2,
-            2,
-            5,
-            6,
-            3,
-            1,
-          ],
-        //   backgroundColor:'green',
-          backgroundColor:[
-            'rgba(255, 99, 132, 0.6)',
-            'rgba(54, 162, 235, 0.6)',
-            'rgba(255, 206, 86, 0.6)',
-            'rgba(75, 192, 192, 0.6)',
-            'rgba(63, 191, 127, 0.6)',
-            'rgba(191, 63, 127, 0.6)',
-          ],
-          borderWidth:1,
-          borderColor:'#777',
-          hoverBorderWidth:3,
-          hoverBorderColor:'#000'
-        },
-    ]
-      },
-      options:{
-        title:{
-          display:true,
-          text:'Resultat speilet',
-          fontSize:25
-        },
-        legend:{
-          display:true,
-          position:'right',
-          labels:{
-            fontColor:'#000'
-          },
-        },
-        scales: {
-            yAxes : [{
-                    ticks : {
-                        max : 7,    
-                        min : 0,
-                    }
-                }]
-        },  
-        layout:{
-          padding:{
-            left:50,
-            right:0,
-            bottom:0,
-            top:0
-          }
-        },
-        tooltips:{
-          enabled:true,
-          fontColor:'#000',
-          fontColor:'#000',
-        }
-      }
-    });
-  </script>
+  <g class="bar">
+    <text x="0.1" y="0.5">Drift</text>
+    <rect class="hovercolor" x="4" y="3" width="2" height="5"></rect>
+  </g>
+
+  <g class="bar">
+    <text x="0.1" y="0.5">Lederskap</text>  
+    <rect class="hovercolor" x="6" y="1" width="2" height="7"></rect>
+</g>
+</svg>
+</div>
+
 </body>
 </html>
