@@ -75,7 +75,6 @@ function resultView() {
     };
 
     var options = {
-
       legend: {
         display: false
     },
@@ -87,25 +86,18 @@ function resultView() {
         }
       },
       scales: {
-        yAxes : [{
-                ticks : {
-                    max : 7,    
-                    min : 0,
-                }
-            }]
-    },  
+        yAxes: [{
+            ticks: {
+                suggestedMin: 0,
+                suggestedMax: 7
+            }
+        }]
+    },
       title: {
         // display: true,
         // text: 'Ice Cream Truck',
         // position: 'bottom'
       },
-      scales: {
-        yAxes: [{
-          ticks: {
-            beginAtZero: true
-          }
-        }]
-      }
     };
 
     // Chart declaration:

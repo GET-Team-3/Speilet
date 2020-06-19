@@ -124,7 +124,6 @@
     ]
       },
       options:{
-        scaleOverride : true,
         title:{
           display:true,
           text:'Resultat speilet',
@@ -149,6 +148,14 @@
           enabled:true,
           fontColor:'#000',
           fontColor:'#000',
+        },
+        scales: {
+            yAxes: [{
+                ticks: {
+                    suggestedMin: 0,
+                    suggestedMax: 7
+                }
+            }]
         }
       }
     });
