@@ -4,12 +4,11 @@ const model = {
         lastName: '',
         contact: '',
         date: '',
-        answer: [], // [1,2,3,4,5,6,1,2,3,4,5,6,1,2,3,4,5,6,1,2,3,4,5,6]
+        answer: [1,2,3,4,5,6,1,2,3,4,5,6,1,2,3,4,5,6,1,2,3,4,5,6], // [1,2,3,4,5,6,1,2,3,4,5,6,1,2,3,4,5,6,1,2,3,4,5,6]
         note: [],
         fullName: function() { return this.firstName + " " + this.lastName},
-        data: [1, 3, 2, 8, 9, 7],
     },
-    page: 'registrationView', //'registrationView'
+    page: 'resultView', //'registrationView'
     themeCounter: 0,
     questionCounter: 0,
     selfAssessmentSessionName: '',
