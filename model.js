@@ -8,7 +8,7 @@ const model = {
         note: [],
         fullName: function() { return this.firstName + " " + this.lastName},
     },
-    page: 'surveyView', //'registrationView'
+    page: 'resultView', //'registrationView'
     themeCounter: 0,
     questionCounter: 0,
     selfAssessmentSessionName: '',

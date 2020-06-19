@@ -19,6 +19,8 @@ body {
 }
 .content {
     min-width: 1500px;
+    /* resize: both; */
+    /* overflow: auto; */
   }
 
   /* survey */

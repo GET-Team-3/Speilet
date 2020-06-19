@@ -13,7 +13,7 @@ function plotQuestion() {
 function plotData(index) {
     let array = [];
     for (let i = 0; i < model.theme.length; i++) {
-        array.push(model.user.answer[i + (model.theme.length * index)])
+        array.push(model.user.answer[i + (model.theme.length * index)]);
     }
     return array;
 }
