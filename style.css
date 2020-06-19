@@ -399,48 +399,83 @@ hr {
 /* result chart */
 
 .bar {
-  fill: red;
+  fill: rgb(255, 111, 108);
   transition: fill .3s ease;
-  cursor: pointer;
-  font-family: Helvetica, sans-serif;
-  stroke: solid green 5px;
-}
+  stroke: whitesmoke;
+  stroke-width: 0.01;
+  stroke-linecap: round;
+  }
 
 .bar1 {
-    fill: blue;
+    fill: rgb(253, 249, 160);
+    stroke: whitesmoke;
+    stroke-width: 0.02;
 }
 
 .bar1 text {
 fill: transparent;
+stroke: transparent;
+font-size: 3%;
 }
-.bar1:hover {
-  fill: black;
-  
+.hovercolor:hover {
+  fill: whitesmoke;
 }
 .bar1:hover text {
-  fill: red;
-  font-size: 30%;
+  fill: darkgray;
+  font-size: 3%;
 }
 
 .bar text {
 fill: transparent;
-  font-size: x-small;
+stroke: transparent;
+font-size: 3%;
+background-color: #c9ebf2;
 }
-.bar:hover {
-  fill: black;
+.hovercolor:hover {
+  fill: whitesmoke;
   
 }
 .bar:hover text {
-  fill: red;
-  font-size: 30%;
+  fill: darkgray;
+  font-size: 3%;
 }
 
 .chart {
-    display: block;
+    background-color: #c9ebf2;
+    grid-area: chart;
 }
 
 .kategori {
-    font-size: 30px;
-    color: red;
+  background-color: white;
+  font-size: 25px;
+  grid-area: kategori;
+  padding-left: 38px;
+  align-self: flex-end;
+  color: darkgray;
 }
-    
+
+.points {
+  background-color: white;
+  font-size: 25px;
+  grid-area: points;
+  align-self: flex-end;
+  bottom: 0px;
+  padding: 20px;
+  padding-top: 15px;
+  padding-right: 5px;
+  color: darkgray;
+}
+
+.divContainer {
+  display: grid;
+  width: 330px;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 55px 4fr;
+  grid-template-areas:'kategori kategori'
+                      'points chart'
+                        
+}
+
+.pointa {
+  padding-top: 9px;
+}
