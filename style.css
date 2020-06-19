@@ -397,3 +397,7 @@ hr {
     padding: 1px;
     font-size: 16px;
   }
+.resultStyle {
+  font-family: Arial, Helvetica, sans-serif;
+  padding-left: 20px;
+}

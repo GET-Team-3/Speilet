@@ -4,7 +4,7 @@ const model = {
         lastName: '',
         contact: '',
         date: '',
-        answer: [1,2,3,4,5,6,1,2,3,4,5,6,1,2,3,4,5,6,1,2,3,4,5,6], // [1,2,3,4,5,6,1,2,3,4,5,6,1,2,3,4,5,6,1,2,3,4,5,6]
+        answer: [],//[1,2,3,4,5,6,1,2,3,4,5,6,1,2,3,4,5,6,1,2,3,4,5,6],
         note: [],
         fullName: function() { return this.firstName + " " + this.lastName},
     },
@@ -13,7 +13,7 @@ const model = {
     questionCounter: 0,
     selfAssessmentSessionName: '',
     progressBar: 0,
-    theme: ['Trygt og støttende læringsmiljø', 'Tydelige felles mål', 'Beste praksis er standard', 'Selvledelse og god daglig drift', 'Kontinuerlig forbedring. Litt bedre hver dag', 'Deling av kunnskap'],
+    theme: ['Trygt og støttende læringsmiljø', 'Tydelige felles mål', 'Beste praksis er standard', 'Selvledelse og god daglig drift', 'Litt bedre hver dag', 'Deling av kunnskap'],
     survey: [
         {question: 'Vi har ydmyke og trygge ledere', positiveStatement: 'Min nærmeste leder er åpen om egne feil', negativeStatement: 'Min leder er litt for mye verdensmester'},
         {question: 'Vi anerkjenner og utnytter forskjellighet', positiveStatement: 'Hos oss er det lett komme med egne ideer', negativeStatement: 'Hos oss er det tryggest å holde kortene tett til brystet'},

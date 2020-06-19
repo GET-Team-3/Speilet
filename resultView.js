@@ -1,7 +1,8 @@
 function resultView() {
     document.getElementById('content').innerHTML = `
-    <h2>Chart</h2>
-    <div style="height:786px;width:maxcontent;border-style:solid">
+    <h2 class='resultStyle'>Resultat</h2>
+    <p class='resultStyle'>Hold musepekeren over en graf for å se tilhørende spørsmål</p>
+    <div style="height:800px;width:1600px;border-style:solid">
     <canvas id="myChart"></canvas>
     </div>
     `;
@@ -13,13 +14,13 @@ function resultView() {
     // Global Options:
     Chart.defaults.global.defaultFontColor = 'dodgerblue';
     Chart.defaults.global.defaultFontSize = 16;
+    Chart.defaults.global.defaultFontFamily = 'Arial'
 
     // Data with datasets options
     var data = {
       labels: model.theme,
       datasets: [
         {
-          label: "Theme1",
           fill: true,
           backgroundColor:[
             'rgba(255, 99, 132, 0.6)',
@@ -32,7 +33,6 @@ function resultView() {
           data: plotData(0)
         },
         {
-          label: "kakepris",
           fill: true,
          backgroundColor:[
             'rgba(255, 99, 132, 0.6)',
@@ -45,7 +45,6 @@ function resultView() {
           data: plotData(1)
         },
         {
-          label: "Ice Cream Prices ",
           fill: true,
          backgroundColor:[
             'rgba(255, 99, 132, 0.6)',
@@ -58,7 +57,7 @@ function resultView() {
           data: plotData(2)
         },
         {
-          label: "Ice Cream Prices ",
+          
           fill: true,
          backgroundColor:[
             'rgba(255, 99, 132, 0.6)',
@@ -70,14 +69,15 @@ function resultView() {
           ],
           data: plotData(3)
         },
-        
       ]
     };
 
     var options = {
       legend: {
-        display: false
+        display: false,
     },
+      
+  
       tooltips: {
         callbacks: {
           label: function (item) {
@@ -86,6 +86,11 @@ function resultView() {
         }
       },
       scales: {
+        xAxes: [{
+          ticks: {
+               fontSize: 16
+          }
+      }],
         yAxes: [{
             ticks: {
                 suggestedMin: 0,
