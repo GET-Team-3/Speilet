@@ -7,7 +7,7 @@ function tempBackwardButton() {
 }
 
 function tempForwardButton() {
-    if (model.user.answer[model.questionCounter] == undefined) {
+    if (model.user.answer[model.questionCounter] != undefined) {
         if (model.questionCounter == 23) {
              model.page = 'resultView';
             return updateView();
