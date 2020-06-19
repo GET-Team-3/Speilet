@@ -1,7 +1,7 @@
 function resultView() {
     document.getElementById('content').innerHTML = `
     <h2>Chart</h2>
-    <div style="height:600px;width:maxcontent;border-style:solid">
+    <div style="height:786px;width:maxcontent;border-style:solid">
     <canvas id="myChart"></canvas>
     </div>
     `;
