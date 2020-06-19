@@ -2,7 +2,7 @@ function resultView() {
     document.getElementById('content').innerHTML = `
     <h2 class='resultStyle'>Resultat</h2>
     <p class='resultStyle'>Hold musepekeren over en graf for å se tilhørende spørsmål</p>
-    <div style="height:800px;width:1600px;border-style:solid">
+    <div class="chart-container" style="position: relative; height:40vh; width:80vw">
     <canvas id="myChart"></canvas>
     </div>
     `;
@@ -30,6 +30,8 @@ function resultView() {
             'rgba(63, 191, 127, 0.6)',
             'rgba(191, 63, 127, 0.6)',
           ],
+          borderWidth:1,
+          borderColor:'#777',
           data: plotData(0)
         },
         {
@@ -42,6 +44,8 @@ function resultView() {
             'rgba(63, 191, 127, 0.6)',
             'rgba(191, 63, 127, 0.6)',
           ],
+          borderWidth:1,
+          borderColor:'#777',
           data: plotData(1)
         },
         {
@@ -54,6 +58,8 @@ function resultView() {
             'rgba(63, 191, 127, 0.6)',
             'rgba(191, 63, 127, 0.6)',
           ],
+          borderWidth:1,
+          borderColor:'#777',
           data: plotData(2)
         },
         {
@@ -67,12 +73,15 @@ function resultView() {
             'rgba(63, 191, 127, 0.6)',
             'rgba(191, 63, 127, 0.6)',
           ],
+          borderWidth:1,
+          borderColor:'#777',
           data: plotData(3)
         },
       ]
     };
 
     var options = {
+      responsive: true,
       legend: {
         display: false,
     },
@@ -88,7 +97,7 @@ function resultView() {
       scales: {
         xAxes: [{
           ticks: {
-               fontSize: 16
+               fontSize: 14
           }
       }],
         yAxes: [{
