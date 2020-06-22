@@ -19,23 +19,23 @@ document.getElementById('content').innerHTML = `
   </g> 
 
   <g class="bar">
-    <rect class="hovercolor" x="-4" y="${8-theScore(0)}" width="4" height="${theScore(0)}"></rect>
-    <text x="-4" y="${8-theScore(0)}">${theScore(0)}</text>
+    <rect class="hovercolor" x="-4" y="${8-theScore()}" width="4" height="${theScore()}"></rect>
+    <text x="-4" y="${8-theScore()}">${theScore()}</text>
   </g>
 
   <g class="bar">
-    <rect class="hovercolor" x="0" y="${8-theScore(1)}" width="4" height="${theScore(1)}"></rect>
-    <text x="0" y="${8-theScore(1)}">${theScore(1)}</text>
+    <rect class="hovercolor" x="0" y="${8-theScore()}" width="4" height="${theScore()}"></rect>
+    <text x="0" y="${8-theScore()}">${theScore()}</text>
   </g>
 
   <g class="bar">
-    <rect class="hovercolor" x="4" y="${8-theScore(2)}" width="4" height="${theScore(2)}"></rect>
-    <text x="4" y="${8-theScore(2)}">${theScore(2)}</text>
+    <rect class="hovercolor" x="4" y="${8-theScore()}" width="4" height="${theScore()}"></rect>
+    <text x="4" y="${8-theScore()}">${theScore()}</text>
   </g>
 
   <g class="bar">
-    <rect class="hovercolor" x="8" y="${8-theScore(3)}" width="4" height="${theScore(3)}"></rect>
-    <text x="8" y="${8-theScore(3)}">${theScore(3)}</text>
+    <rect class="hovercolor" x="8" y="${8-theScore()}" width="4" height="${theScore()}"></rect>
+    <text x="8" y="${8-theScore()}">${theScore()}</text>
 </g>
 </svg>
 <div class="explain">${questionHeader()}</div>
