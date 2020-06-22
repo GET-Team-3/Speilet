@@ -4,7 +4,7 @@ function resultView() {
 console.log(model.user.data);
         document.getElementById('content').innerHTML = `
         <div class="divContainer">
-<text class="kategori">Kategori</text> 
+<text class="kategori">${plotQuestion()}</text> 
 <div class="points">
   <div class="pointa">7</div>
   <div class="pointa">6</div>
