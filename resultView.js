@@ -2,9 +2,7 @@
 resultView();
 function resultView() {
 console.log(model);
-console.log(theTheme());
-console.log(theScore());
-console.log(questionHeader());
+console.log(plotData(2));
         document.getElementById('content').innerHTML = `
         <div class="divContainer">
 <text class="kategori">${theTheme()}</text> 
@@ -24,23 +22,23 @@ console.log(questionHeader());
   </g> 
 
   <g class="bar">
-    <rect class="hovercolor" x="-4" y="7" width="4" height="${theScore()}"></rect>
-    <text x="-4" y="7">${questionHeader()}</text>
+    <rect class="hovercolor" x="-4" y="7" width="4" height="1"></rect>
+    <text x="-4" y="7">Drift</text>
   </g>
 
   <g class="bar">
-    <rect class="hovercolor" x="0" y="5" width="4" height="${theScore()}"></rect>
-    <text x="0" y="5">${questionHeader()}</text>
+    <rect class="hovercolor" x="0" y="5" width="4" height="3"></rect>
+    <text x="0" y="5">Ledelse</text>
   </g>
 
   <g class="bar">
-    <rect class="hovercolor" x="4" y="3" width="4" height="${theScore()}"></rect>
-    <text x="4" y="3">${questionHeader()}</text>
+    <rect class="hovercolor" x="4" y="3" width="4" height="5"></rect>
+    <text x="4" y="3">Samhold</text>
   </g>
 
   <g class="bar">
-    <rect class="hovercolor" x="8" y="1" width="4" height="${theScore()}"></rect>
-    <text x="8" y="1">${questionHeader()}</text>
+    <rect class="hovercolor" x="8" y="1" width="4" height="7"></rect>
+    <text x="8" y="1">Puls</text>
 </g>
 </svg>
 <div class="explain"></div>
