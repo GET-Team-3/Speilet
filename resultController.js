@@ -10,7 +10,6 @@ function theScore() {
 }
 
 function questionHeader() {
-    let score = theScore();
     for(i=0; i<model.survey.length; i++)
     return model.survey[i].question;
 }
