@@ -1,12 +1,14 @@
 
+var labels = plotQuestion();
+
 resultView();
 function resultView() {
 console.log(model.user.data);
         document.getElementById('content').innerHTML = `
         <div class="divContainer">
-<text class="kategori">${plotQuestion(0)}</text> 
+<text class="kategori">${model.theme[0]}</text> 
 <div class="points">
-  <div class="pointa">7</div>
+  <div class="pointa">${plotQuestion()}</div>
   <div class="pointa">6</div>
   <div class="pointa">5</div>
   <div class="pointa">4</div>
