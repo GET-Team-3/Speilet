@@ -1,10 +1,8 @@
 
-resultView();
+theTheme();
 function resultView() {
-console.log(model);
-console.log(plotData(2));
-        document.getElementById('content').innerHTML = `
-        <div class="divContainer">
+document.getElementById('content').innerHTML = `
+<div class="divContainer">
 <text class="kategori">${theTheme()}</text> 
 <div class="points">
   <div class="pointa">7</div>
@@ -22,25 +20,26 @@ console.log(plotData(2));
   </g> 
 
   <g class="bar">
-    <rect class="hovercolor" x="-4" y="7" width="4" height="1"></rect>
-    <text x="-4" y="7">Drift</text>
+    <rect class="hovercolor" x="-4" y="${8-theScore()}" width="4" height="${theScore()}"></rect>
+    <text x="-4" y="${8-theScore()}">Drift</text>
   </g>
 
   <g class="bar">
-    <rect class="hovercolor" x="0" y="5" width="4" height="3"></rect>
-    <text x="0" y="5">Ledelse</text>
+    <rect class="hovercolor" x="0" y="${8-theScore()}" width="4" height="${theScore()}"></rect>
+    <text x="0" y="${8-theScore()}">Ledelse</text>
   </g>
 
   <g class="bar">
-    <rect class="hovercolor" x="4" y="3" width="4" height="5"></rect>
-    <text x="4" y="3">Samhold</text>
+    <rect class="hovercolor" x="4" y="${8-theScore()}" width="4" height="${theScore()}"></rect>
+    <text x="4" y="${8-theScore()}">Samhold</text>
   </g>
 
   <g class="bar">
-    <rect class="hovercolor" x="8" y="1" width="4" height="7"></rect>
-    <text x="8" y="1">Puls</text>
+    <rect class="hovercolor" x="8" y="${8-theScore()}" width="4" height="${theScore()}"></rect>
+    <text x="8" y="${8-theScore()}">Puls</text>
 </g>
 </svg>
 <div class="explain"></div>
 </div>
+<text class="kategori">${theTheme()}</text> 
         `;}

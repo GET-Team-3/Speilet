@@ -1,8 +1,7 @@
 
-
 function theTheme() {
-    for(i=0;i<model.theme.length;i++)
-    return model.theme[i];
+    for(i=0;i<model.theme.length;i++) {
+    model.theme[i]};
 }
 
 function theScore(){
