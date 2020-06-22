@@ -9,7 +9,7 @@ const model = {
         fullName: function() { return this.firstName + " " + this.lastName},
         data: [1, 3, 2, 8, 9, 7],
     },
-    page: 'resultView',
+    page: 'resultView', //registrationView surveyView resultView
     themeCounter: 0,
     questionCounter: 0,
     selfAssessmentSessionName: '',

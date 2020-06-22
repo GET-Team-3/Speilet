@@ -8,7 +8,7 @@ console.log(model.user.data);
         <div class="divContainer">
 <text class="kategori">${model.theme[0]}</text> 
 <div class="points">
-  <div class="pointa">${plotQuestion()}</div>
+  <div class="pointa">1</div>
   <div class="pointa">6</div>
   <div class="pointa">5</div>
   <div class="pointa">4</div>
