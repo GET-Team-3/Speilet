@@ -1,11 +1,10 @@
 
-
 resultView();
 function resultView() {
 console.log(model);
-console.log(theTheme());
-console.log(theScore());
-console.log(questionHeader());
+console.log(theTheme(2));
+console.log(theScore(1));
+console.log(questionHeader(3));
         document.getElementById('content').innerHTML = `
         <div class="divContainer">
 <text class="kategori">${theTheme()}</text> 
