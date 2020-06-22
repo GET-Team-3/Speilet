@@ -12,6 +12,7 @@ const model = {
     page: 'resultView', //registrationView surveyView resultView
     themeCounter: 0,
     questionCounter: 0,
+    teller: 0,
     selfAssessmentSessionName: '',
     progressBar: 0,
     theme: ['Trygt og støttende læringsmiljø', 'Tydelige felles mål', 'Beste praksis er standard', 'Selvledelse og god daglig drift', 'Kontinuerlig forbedring. Litt bedre hver dag', 'Deling av kunnskap'],

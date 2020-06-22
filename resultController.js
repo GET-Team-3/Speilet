@@ -1,8 +1,10 @@
-theTheme()
+
+
 function theTheme() {
-    for(i=0; i<model.theme.length; i++)
+    i=0; i<model.theme.length; i++;
     return model.theme[i];
-}
+ }   
+
 
 function theScore() {
     for(i=0; i<model.user.answer.length; i++)
