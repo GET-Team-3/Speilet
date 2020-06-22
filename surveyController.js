@@ -7,7 +7,7 @@ function tempBackwardButton() {
 }
 
 function tempForwardButton() {
-    if (model.user.answer[model.questionCounter] == undefined) {
+    if (model.user.answer[model.questionCounter] != undefined) {
         if (model.questionCounter == 23) {
              model.page = 'resultView';
             return updateView();
@@ -40,5 +40,5 @@ function pushNotes() {
 window.addEventListener('click', (event) => {
     let popup = document.getElementsByClassName('popup')[0];
     let popbutton = document.getElementsByClassName('popbutton')[0];
-    if (!popup.contains(event.target) && !popbutton.contains(event.target) && popup.style.display == 'block') popup.style.display = "none";
+    if (model.page == 'surveyView' && !popup.contains(event.target) && !popbutton.contains(event.target) && popup.style.display == 'block') popup.style.display = "none";
 })

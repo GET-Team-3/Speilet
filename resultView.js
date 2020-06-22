@@ -1,14 +1,16 @@
 
-var labels = plotQuestion();
 
 resultView();
 function resultView() {
-console.log(model.user.data);
+console.log(model);
+console.log(theTheme());
+console.log(theScore());
+console.log(questionHeader());
         document.getElementById('content').innerHTML = `
         <div class="divContainer">
-<text class="kategori">${model.theme[0]}</text> 
+<text class="kategori">${theTheme()}</text> 
 <div class="points">
-  <div class="pointa">1</div>
+  <div class="pointa">7</div>
   <div class="pointa">6</div>
   <div class="pointa">5</div>
   <div class="pointa">4</div>
@@ -23,23 +25,23 @@ console.log(model.user.data);
   </g> 
 
   <g class="bar">
-    <rect class="hovercolor" x="-4" y="7" width="4" height="1"></rect>
-    <text x="-4" y="7">Samhold</text>
+    <rect class="hovercolor" x="-4" y="7" width="4" height="${theScore()}"></rect>
+    <text x="-4" y="7">${questionHeader()}</text>
   </g>
 
   <g class="bar">
-    <rect class="hovercolor" x="0" y="5" width="4" height="3"></rect>
-    <text x="0" y="5">Produksjon</text>
+    <rect class="hovercolor" x="0" y="5" width="4" height="${theScore()}"></rect>
+    <text x="0" y="5">${questionHeader()}</text>
   </g>
 
   <g class="bar">
-    <rect class="hovercolor" x="4" y="3" width="4" height="5"></rect>
-    <text x="4" y="3">Drift</text>
+    <rect class="hovercolor" x="4" y="3" width="4" height="${theScore()}"></rect>
+    <text x="4" y="3">${questionHeader()}</text>
   </g>
 
   <g class="bar">
-    <rect class="hovercolor" x="8" y="1" width="4" height="7"></rect>
-    <text x="8" y="1">Lederskap</text>
+    <rect class="hovercolor" x="8" y="1" width="4" height="${theScore()}"></rect>
+    <text x="8" y="1">${questionHeader()}</text>
 </g>
 </svg>
 <div class="explain"></div>

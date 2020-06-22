@@ -1,19 +1,14 @@
-function plotQuestion() {
-    let array = [];
-    for (let index = 0; index < 4; index++) {
-        let childArray = [];
-        for (let i = 0; i < model.theme.length; i++) {
-            childArray.push(model.survey[i + (model.theme.length * index)].question);
-        }
-        array.push(childArray);
-    }
-    return array;
+function theTheme() {
+    for(i=0;i<model.theme.length;i++)
+    return model.theme[i];
 }
 
-function plotData(index) {
-    let array = [];
-    for (let i = 0; i < model.theme.length; i++) {
-        array.push(model.user.answer[i + (model.theme.length * index)]);
-    }
-    return array;
+function theScore(){
+    for(i=0;i<model.user.answer.length;i++)
+    return model.user.answer[i];
+}
+
+function questionHeader() {
+    for(i=0;i<model.survey.length;i++)
+    return model.survey[i].question;
 }
