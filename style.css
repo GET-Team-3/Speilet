@@ -473,7 +473,6 @@ background-color: #c9ebf2;
   grid-template-rows: 55px 4fr;
   grid-template-areas:'kategori kategori'
                       'points chart'
-                        
 }
 
 .pointa {
