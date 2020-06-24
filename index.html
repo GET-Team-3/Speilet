@@ -14,6 +14,8 @@
     <script src="resultController.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+    <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-firestore.js"></script>
 </head>
 <body>
     <div class="content" id="content"></div>
@@ -24,6 +26,21 @@
             if (model.page == 'surveyView') surveyView();
             if (model.page == 'resultView') resultView();
         }
+
+         // Your web app's Firebase configuration
+        let firebaseConfig = {
+            apiKey: "AIzaSyCwsm_Lauj0Rhh7lLoBfcPTmDm-zS6yqJ0",
+            authDomain: "los-speilet.firebaseapp.com",
+            databaseURL: "https://los-speilet.firebaseio.com",
+            projectId: "los-speilet",
+            storageBucket: "los-speilet.appspot.com",
+            messagingSenderId: "822730136033",
+            appId: "1:822730136033:web:4fa6413f32785dd4e45aa0",
+            measurementId: "G-2V38QGNYTC"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
     </script>
 </body>
 </html>
