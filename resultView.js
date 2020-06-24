@@ -1,3 +1,4 @@
+resultView();
 function resultView() {
   console.log()
 let html = '';
@@ -15,34 +16,27 @@ html += `
   <div class="pointa">1</div>
 </div>
 <svg class="chart" viewBox="0 0 8 8" height="300" width="600">
+`;
+}
+for (oi = 0; oi < model.user.answer.length; oi++) {
+  html += `
   <g class="bar1">
-      <rect class="hovercolor" x="-4" y="4" width="16" height="4"></rect>
-      <text x="-4" y="4">Alle</text>
+      <rect class="hovercolor" x="-4" y="${(8-median())}" width="16" height="${median()}"></rect>
+      <text x="-4" y="${(8-median())}">${median()}</text>
   </g> 
 
   <g class="bar">
-    <rect class="hovercolor" x="-4" y="${(8-model.user.answer[i])}" width="4" height="${model.user.answer[i]}"></rect>
-    <text x="-4" y="4">4</text>
+    <rect class="hovercolor" x="-4" y="${(8-model.user.answer[oi])}" width="4" height="${model.user.answer[oi]}"></rect>
+    <text x="-4" y="${(8-model.user.answer[oi])}">${model.user.answer[oi]}</text>
   </g>
-
-  <g class="bar">
-    <rect class="hovercolor" x="0" y="${(8-model.user.answer[i])}" width="4" height="${model.user.answer[i]}"></rect>
-    <text x="0" y="4">4</text>
-  </g>
-
-  <g class="bar">
-    <rect class="hovercolor" x="4" y="${(8-model.user.answer[i])}" width="4" height="${model.user.answer[i]}"></rect>
-    <text x="4" y="4">4</text>
-  </g>
-
-  <g class="bar">
-    <rect class="hovercolor" x="8" y="${(8-model.user.answer[i])}" width="4" height="${model.user.answer[i]}"></rect>
-    <text x="8" y="4">4</text>
-</g>
-</svg>
-<div class="explain">questionheader</div>
-</div>
   `;
+}
+  for (i = 0; i < 6; i++) {
+    html += `
+  </svg>
+  <div class="explain">questionheader</div>
+  </div>
+    `;
 }
 document.getElementById('content').innerHTML = html;
 }

@@ -1,17 +1,8 @@
-
-
-function theScore() {
-    for (i = 0; i < model.user.answer.length; i++) {
-        model.user.answer[i];
- }   
-
-
-function the() {
-    for(i=0; i<model.user.answer.length; i++)
-    return model.user.answer[i];
+function median() {
+    var length = model.user.answer.length;
+    var sum = model.user.answer.reduce(function(a, b){return a + b;});
+    
+    return (sum/length); 
 }
+    
 
-function questionHeader() {
-    for(i=0; i<model.survey.length; i++)
-    return model.survey[i].question;
-}

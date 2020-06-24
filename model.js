@@ -4,7 +4,7 @@ const model = {
         lastName: '',
         contact: '',
         date: '',
-        answer: [1,2,3,4,1,2,3,4,1,2,3,4,1,2,3,4,1,2,3,4,1,2,3,4],
+        answer: [1,3,2,5,7,6,3,2,1,4,5,2,3,7,1,6,5,2,3,4,1,2,3,4],
         note: [],
         fullName: function() { return this.firstName + " " + this.lastName},
         data: [1, 3, 2, 8, 9, 7],
