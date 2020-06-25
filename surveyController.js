@@ -8,8 +8,27 @@ function tempBackwardButton() {
 
 function tempForwardButton() {
     if (model.user.answer[model.questionCounter] != undefined) {
+        pushNotes();
         if (model.questionCounter == 23) {
-             model.page = 'resultView';
+            db.collection(model.session).add({
+                firstName: model.user.firstName,
+                lastName: model.user.lastName,
+                date: new Date().toISOString().substr(0, 10),
+                answer: model.user.answer,
+                note: model.user.note,
+            })
+            .then((outline) => {
+                db.collection(model.session).doc(outline.id).get().then(doc => {
+                    if (doc.exists) {
+                        console.log(doc.data());
+                        model.userId = doc.id
+                    } else {
+                        console.log("No such document!");
+                    }
+                })
+            .catch((err) => console.log(err))
+            })
+            model.page = 'resultView';
             return updateView();
         }
         if ([3,7,11,15,19].includes(model.questionCounter)) model.themeCounter++;
@@ -34,7 +53,8 @@ function showHideDiv() {
 function pushNotes() {
     let notepadValue = document.getElementById("notepad").value;
     let i = model.questionCounter;
-    model.user.note[i] = notepadValue;
+    if (notepadValue) model.user.note[i] = notepadValue;
+    else model.user.note[i] = null;
 }
 
 window.addEventListener('click', (event) => {

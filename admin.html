@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- datatables-css -->
+    <script src="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.2/css/buttons.dataTables.min.css"></script>
+    <!-- datatables-js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.2/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.html5.min.js"></script>
+    <!-- firebase -->
+    <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-firestore.js"></script>
+
+</head>
+<body>
+    <table id="table" class="display" style="width:100%"></table>
+    <script>
+         let firebaseConfig = {
+            apiKey: "AIzaSyCwsm_Lauj0Rhh7lLoBfcPTmDm-zS6yqJ0",
+            authDomain: "los-speilet.firebaseapp.com",
+            databaseURL: "https://los-speilet.firebaseio.com",
+            projectId: "los-speilet",
+            storageBucket: "los-speilet.appspot.com",
+            messagingSenderId: "822730136033",
+            appId: "1:822730136033:web:4fa6413f32785dd4e45aa0",
+            measurementId: "G-2V38QGNYTC"
+        };
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+
+        let data = [];
+        db.collection('session01').get().then(snap => {
+            snap.docs.forEach(doc => {
+                // console.log(doc.data())
+                data.push(doc.data())
+                console.log(data)
+            })
+            makeTable();
+        })
+
+        function makeTable() {
+            document.getElementById('table').innerHTML = `
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Date</th>
+                        <th>Answer</th>
+                        <th>Note</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    ${plotInfo()}
+                </tbody>
+            `;
+            buttonss();
+        }
+
+        function plotInfo() {
+            console.log(data);
+            let html = '';
+            for (i = 0; i < data.length; i++) {
+                html += `
+                    <tr>
+                        <td>${data[i].firstName + ' ' + data[i].lastName}</td>
+                        <td>${data[i].date}</td>
+                        <td>${data[i].answer.toString().replace(/,/g, ".")}</td>
+                        <td>${convertNote(i)}</td
+                    </tr>
+                `;
+            }
+            return html;
+        }
+
+        function buttonss() {
+            $(document).ready(function() {
+                $('#table').DataTable( {
+                    dom: 'Bfrtip',
+                    buttons: [
+                        'copyHtml5',
+                        'excelHtml5',
+                        'csvHtml5',
+                        'pdfHtml5'
+                    ]
+                });
+            });
+        }
+
+        function convertNote(i) {
+            data[i].note.forEach((doc, index) => {
+                if (doc) console.log('true', index)
+                else data[i].note[index] = 'empty'
+            })
+            return data[i].note;
+        }
+
+
+
+    </script>
+</body>
+</html>

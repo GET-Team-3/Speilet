@@ -10,7 +10,7 @@ function surveyView() {
             <hr>
             ${makeQuestionRow()}
             <div class="popup" style="display: none;">
-                <textarea rows="20" cols="25" placeholder="Notes" id="notepad" class="notepad" onchange="pushNotes()">${model.user.note[model.counter] || ''}</textarea>
+                <textarea rows="20" cols="25" placeholder="Notes" id="notepad" class="notepad">${model.user.note[model.questionCounter] || ''}</textarea>
             </div>
             <button class="popbutton" onclick="showHideDiv()">Show/hide div</button>
         </div>

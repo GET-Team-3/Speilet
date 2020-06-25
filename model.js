@@ -2,16 +2,16 @@ const model = {
     user: {
         firstName: '',
         lastName: '',
-        contact: '',
         date: '',
         answer: [],//[1,2,3,4,5,6,1,2,3,4,5,6,1,2,3,4,5,6,1,2,3,4,5,6],
         note: [],
         fullName: function() { return this.firstName + " " + this.lastName},
     },
+    userId: '',
+    session: '',
     page: 'registrationView', //registrationView surveyView resultView
     themeCounter: 0,
     questionCounter: 0,
-    selfAssessmentSessionName: '',
     progressBar: 0,
     theme: ['Trygt og støttende læringsmiljø', 'Tydelige felles mål', 'Beste praksis er standard', 'Selvledelse og god daglig drift', 'Litt bedre hver dag', 'Deling av kunnskap'],
     survey: [
