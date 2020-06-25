@@ -9,7 +9,7 @@ function tempBackwardButton() {
 function tempForwardButton() {
     if (model.user.answer[model.questionCounter] != undefined) {
         pushNotes();
-        if (model.questionCounter == 23) {
+        if (model.questionCounter == 2) {
             db.collection(model.session).add({
                 firstName: model.user.firstName,
                 lastName: model.user.lastName,
@@ -35,7 +35,7 @@ function tempForwardButton() {
         model.questionCounter++;
         model.progressBar += 4.34782608695;
         updateView();
-    } else alert('Answer all the question');
+    } else alert('Du må svare på spørsmålet for å gå videre');
 }
 
 function answer(x) {
@@ -62,3 +62,7 @@ window.addEventListener('click', (event) => {
     let popbutton = document.getElementsByClassName('popbutton')[0];
     if (model.page == 'surveyView' && !popup.contains(event.target) && !popbutton.contains(event.target) && popup.style.display == 'block') popup.style.display = "none";
 })
+
+window.onbeforeunload = function(){
+    if (model.page == 'surveyView') return 'Are you sure you want to leave?';
+  };

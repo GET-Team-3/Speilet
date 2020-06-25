@@ -9,6 +9,6 @@ function registerNextPage() {
         model.user.date = new Date().toISOString().substr(0, 10);
         updateView();
     } else {
-        alert("Please enter letters from the alphabetic alphabet");
+        alert("Bruk bare bokstaver fra alfabetet");
     }
-};
+    };
