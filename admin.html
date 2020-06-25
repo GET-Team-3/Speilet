@@ -79,6 +79,14 @@
             return html;
         }
 
+        function convertNote(i) {
+            data[i].note.forEach((doc, index) => {
+                if (doc) console.log('true', index)
+                else data[i].note[index] = 'empty'
+            })
+            return data[i].note;
+        }
+
         function buttonss() {
             $(document).ready(function() {
                 $('#table').DataTable( {
@@ -92,17 +100,6 @@
                 });
             });
         }
-
-        function convertNote(i) {
-            data[i].note.forEach((doc, index) => {
-                if (doc) console.log('true', index)
-                else data[i].note[index] = 'empty'
-            })
-            return data[i].note;
-        }
-
-
-
     </script>
 </body>
 </html>
