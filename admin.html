@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!-- datatables-css -->
-    <script src="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css"></script>
-    <script src="https://cdn.datatables.net/buttons/1.6.2/css/buttons.dataTables.min.css"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.6.2/css/buttons.dataTables.min.css">
     <!-- datatables-js -->
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
@@ -18,10 +18,17 @@
     <!-- firebase -->
     <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-firestore.js"></script>
-
 </head>
 <body>
-    <table id="table" class="display" style="width:100%"></table>
+    <table id="table" class="display" style="width:100%">
+        <label for="session">Choose session:</label>
+        <select onchange="fetchData(this.value)"  id="session" name="session">
+            <option value="session01">Session-01</option>
+            <option value="session02">Session-02</option>
+            <option value="session03">Session-03</option>
+        </select>
+        <button onclick="removeData(document.querySelector('select').value)">Delete</button>
+    </table>
     <script>
          let firebaseConfig = {
             apiKey: "AIzaSyCwsm_Lauj0Rhh7lLoBfcPTmDm-zS6yqJ0",
@@ -36,17 +43,7 @@
         firebase.initializeApp(firebaseConfig);
         const db = firebase.firestore();
 
-        let data = [];
-        db.collection('session01').get().then(snap => {
-            snap.docs.forEach(doc => {
-                // console.log(doc.data())
-                data.push(doc.data())
-                console.log(data)
-            })
-            makeTable();
-        })
-
-        function makeTable() {
+        function makeTable(data) {
             document.getElementById('table').innerHTML = `
                 <thead>
                     <tr>
@@ -57,14 +54,13 @@
                     </tr>
                 </thead>
                 <tbody>
-                    ${plotInfo()}
+                    ${plotInfo(data)}
                 </tbody>
             `;
-            buttonss();
+            buttons();
         }
 
-        function plotInfo() {
-            console.log(data);
+        function plotInfo(data) {
             let html = '';
             for (i = 0; i < data.length; i++) {
                 html += `
@@ -72,33 +68,97 @@
                         <td>${data[i].firstName + ' ' + data[i].lastName}</td>
                         <td>${data[i].date}</td>
                         <td>${data[i].answer.toString().replace(/,/g, ".")}</td>
-                        <td>${convertNote(i)}</td
+                        <td>${convertNote(i, data)}</td
                     </tr>
                 `;
             }
             return html;
         }
 
-        function convertNote(i) {
+        function convertNote(i, data) {
             data[i].note.forEach((doc, index) => {
-                if (doc) console.log('true', index)
+                if (doc) return;
                 else data[i].note[index] = 'empty'
             })
             return data[i].note;
         }
 
-        function buttonss() {
+        function buttons() {
             $(document).ready(function() {
                 $('#table').DataTable( {
                     dom: 'Bfrtip',
                     buttons: [
                         'copyHtml5',
                         'excelHtml5',
-                        'csvHtml5',
                         'pdfHtml5'
                     ]
                 });
             });
+        }
+        
+        fetchData(document.querySelector('select').value);
+        function fetchData(session) {
+            let data = [];
+
+            db.collection(session).get().then(snap => {
+                snap.docs.forEach(doc => {
+                    // console.log(doc.data())
+                    data.push(doc.data())
+                })
+                if (document.querySelector('thead')) $('#table').DataTable().destroy();
+                makeTable(data);
+            })
+        }
+
+        function removeData(collectId) {
+            console.log(collectId)
+            db.collection(collectId).get().then(snap => {
+                let id = []
+                snap.docs.forEach(doc => {
+                    id.push(doc.id);
+                })
+                return id;
+           })
+           .then(id => {
+                id.forEach(id => {
+                    db.collection(collectId).doc(id).delete().then(function() {
+                        console.log("Document successfully deleted!");
+                    }).catch(function(error) {
+                        console.error("Error removing document: ", error);
+                    });
+                })
+           })
+        }
+
+        // for testing purpose
+
+        let tempData = [
+            {firstName: 'Ola', lastName: 'Kamfjord', date: '20.20.20', answer: [1,2,3,4,5,6], note: ['a','b','c','d','e','f']},
+            {firstName: 'Petter', lastName: 'Kamfjord', date: '20.20.20', answer: [1,2,3,4,5,6], note: ['a','b','c','d','e','f']},
+            {firstName: 'Eivind', lastName: 'Kamfjord', date: '20.20.20', answer: [1,2,3,4,5,6], note: ['a','b','c','d','e','f']},
+            {firstName: 'Sissel', lastName: 'Kamfjord', date: '20.20.20', answer: [1,2,3,4,5,6], note: ['a','b','c','d','e','f']},
+        ];
+
+        function addData() {
+            for (let i = 0; i < tempData.length; i++) {
+                db.collection('session03').add({
+                    firstName: tempData[i].firstName,
+                    lastName: tempData[i].lastName,
+                    date: new Date().toISOString().substr(0, 10),
+                    answer: tempData[i].answer,
+                    note: tempData[i].note,
+                })
+                .then((outline) => {
+                    db.collection('session03').doc(outline.id).get().then(doc => {
+                        if (doc.exists) {
+                            console.log(doc.data());
+                        } else {
+                            console.log("No such document!");
+                        }
+                    })
+                })
+                .catch((err) => console.log(err))
+            }
         }
     </script>
 </body>
