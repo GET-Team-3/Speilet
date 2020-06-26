@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- datatables-css -->
+    <!-- datatables -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.6.2/css/buttons.dataTables.min.css">
-    <!-- datatables-js -->
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/1.6.2/js/dataTables.buttons.min.js"></script>
@@ -27,7 +26,7 @@
             <option value="session02">Session-02</option>
             <option value="session03">Session-03</option>
         </select>
-        <button onclick="removeData(document.querySelector('select').value)">Delete</button>
+        <button onclick="if (confirm('permanently delete' + ' ' + document.querySelector('select').value + '?')) removeData(document.querySelector('select').value)">Delete</button>
     </table>
     <script>
          let firebaseConfig = {
@@ -120,10 +119,11 @@
                 return id;
            })
            .then(id => {
-                id.forEach(id => {
-                    db.collection(collectId).doc(id).delete().then(function() {
-                        console.log("Document successfully deleted!");
-                    }).catch(function(error) {
+                id.forEach((idEach, index) => {
+                    db.collection(collectId).doc(idEach).delete().then(function() {
+                        if (index == id.length - 1) fetchData(document.querySelector('select').value);
+                    })
+                    .catch(function(error) {
                         console.error("Error removing document: ", error);
                     });
                 })
