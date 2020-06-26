@@ -41,6 +41,7 @@ function tempo(index) {
 }
 
 function theMid(indexo) {
+  var length = model.user.answer.length/6;
   let html = '';
   for (y = 0; y < 4; y++) {
       html += `
@@ -52,3 +53,12 @@ function theMid(indexo) {
   }
   return html;
 }
+
+function median() {
+  var length = model.user.answer.length;
+  var sum = model.user.answer.reduce(function(a, b){return a + b;});
+  
+  return (sum/length); 
+}
+  
+console.log(length)
