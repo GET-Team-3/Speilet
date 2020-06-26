@@ -15,11 +15,8 @@ function resultView() {
         <div class="pointa">1</div>
     </div>
     <svg class="chart" viewBox="0 0 8 8" height="300" width="600">
-    
-        <g class="bar1">
-            <rect class="hovercolor" x="-4" y="${(8-median())}" width="16" height="${median()}"></rect>
-            <text x="-4" y="${(8-median())}">${median()}</text>
-        </g>
+        ${theMid(i)}
+        
         ${tempo(i)}
     </svg>
     <div class="explain">questionheader</div>
@@ -38,6 +35,19 @@ function tempo(index) {
               <rect class="hovercolor" x="${-4 + (4 * y)}" y="${(8-model.user.answer[y + (index * 4)])}" width="4" height="${model.user.answer[y + (index * 4)]}"></rect>
               <text x="${-4 + (4 * y)}" y="${(8-model.user.answer[y + (index * 4)])}">${model.user.answer[y + (index * 4)]}</text>
           </g>
+      `;
+  }
+  return html;
+}
+
+function theMid(indexo) {
+  let html = '';
+  for (y = 0; y < 4; y++) {
+      html += `
+        <g class="bar1">
+          <rect class="hovercolor" x="-4" y="${(8-median())}" width="16" height="${median()}"></rect>
+          <text x="-4" y="${(8-median())}">${median()}</text>
+        </g>
       `;
   }
   return html;
