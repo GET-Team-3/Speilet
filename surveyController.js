@@ -9,7 +9,7 @@ function tempBackwardButton() {
 function tempForwardButton() {
     if (model.user.answer[model.questionCounter] != undefined) {
         pushNotes();
-        if (model.questionCounter == 2) {
+        if (model.questionCounter == 23) {
             db.collection(model.session).add({
                 firstName: model.user.firstName,
                 lastName: model.user.lastName,
