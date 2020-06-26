@@ -41,24 +41,20 @@ function tempo(index) {
 }
 
 function theMid(indexo) {
-  var length = model.user.answer.length/6;
   let html = '';
-  for (y = 0; y < 4; y++) {
+  for (y = 0; y < 1; y++) {
+    var verdi = (model.user.answer[4 + (indexo * 4)]);
+    var lengde = ((verdi + verdi + verdi + verdi) / 4);
       html += `
         <g class="bar1">
-          <rect class="hovercolor" x="-4" y="${(8-median())}" width="16" height="${median()}"></rect>
-          <text x="-4" y="${(8-median())}">${median()}</text>
+          <rect class="hovercolor" x="-4" y="${8-lengde}" width="16" height="${lengde}"></rect>
+          <text x="-4" y="${(8-lengde)}">${lengde}</text>
         </g>
       `;
   }
+  console.log(model.user.answer[y + (indexo * 4)]);
   return html;
 }
 
-function median() {
-  var length = model.user.answer.length;
-  var sum = model.user.answer.reduce(function(a, b){return a + b;});
+
   
-  return (sum/length); 
-}
-  
-console.log(length)
