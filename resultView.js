@@ -34,14 +34,14 @@ function resultView() {
 
 function tempo(index) {
   let html = '';
-  
   for (y = 0; y < 4; y++) {
       html += `
-          <g class="bar">
+          <g class="bar" id="barsa">
               <rect class="hovercolor" x="${1 + (1 * y)}" y="${(7-model.user.answer[y + (index * 4)])}" width="1" height="${model.user.answer[y + (index * 4)]}"></rect>
               <text x="${1 + (1 * y)}" y="${(7-model.user.answer[y + (index * 4)])}">${model.user.answer[y + (index * 4)]}</text>
           </g>
       `;
+      
   }
   return html;
 }
@@ -49,8 +49,8 @@ function tempo(index) {
 function theMid(indexo) {
   let html = '';
   for (y = 0; y < 1; y++) {
-    var verdi = (model.user.answer[0 + (1 * 4)]);
-    var lengde = ((verdi + verdi + verdi + verdi) / 4);
+    var verdi = (model.user.answer[0]+model.user.answer[1]+model.user.answer[2]+model.user.answer[3]);
+    var lengde = (verdi / 4);
       html += `
         <g class="bar1">
           <rect class="hovercolor" x="1" y="${7-lengde}" width="4" height="${lengde}"></rect>
@@ -58,7 +58,7 @@ function theMid(indexo) {
         </g>
       `;
   }
-  console.log(model.user.answer[y + (indexo * 4)]);
+  console.log(verdi);
   return html;
 }
 
