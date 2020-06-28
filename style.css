@@ -407,9 +407,25 @@ hr {
   }
 
 .bar1 {
-    fill: rgb(253, 249, 160);
+    fill: #daeff3;
     stroke: whitesmoke;
     stroke-width: 0.02;
+}
+
+.scale1 {
+  fill: rgb(255, 111, 108);
+  stroke: rgb(255, 111, 108);
+  stroke-width: 0.02;
+}
+.scale2 {
+  fill: rgb(253, 249, 160);
+  stroke: rgb(253, 249, 160);
+  stroke-width: 0.02;
+}
+.scale3 {
+  fill: rgb(168, 228, 163);
+  stroke: rgb(168, 228, 163);
+  stroke-width: 0.02;
 }
 
 .bar1 text {
@@ -458,23 +474,20 @@ background-color: #c9ebf2;
   background-color: white;
   font-size: 25px;
   grid-area: points;
-  align-self: flex-end;
-  bottom: 0px;
-  padding: 20px;
-  padding-top: 15px;
-  padding-right: 5px;
+  align-self: flex-start;
   color: darkgray;
 }
 
 .divContainer {
   display: grid;
   width: 330px;
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: 50px 4fr;
   grid-template-rows: 55px 4fr;
   grid-template-areas:'kategori kategori'
                       'points chart'
 }
 
 .pointa {
-  padding-top: 9px;
+  padding-bottom: 10px;
+  padding-left: 30px;
 }

@@ -14,7 +14,12 @@ function resultView() {
         <div class="pointa">2</div>
         <div class="pointa">1</div>
     </div>
-    <svg class="chart" viewBox="0 0 8 8" height="300" width="600">
+    <svg class="chart" viewBox="0 0 7 7" height="300" width="300">
+    
+    <rect class="scale1" x="0" y="5" width="0.2" height="2"></rect>
+    <rect class="scale2" x="0" y="2" width="0.2" height="3"></rect>
+    <rect class="scale3" x="0" y="0" width="0.2" height="2"></rect>
+
         ${theMid(i)}
         
         ${tempo(i)}
@@ -29,11 +34,12 @@ function resultView() {
 
 function tempo(index) {
   let html = '';
+  
   for (y = 0; y < 4; y++) {
       html += `
           <g class="bar">
-              <rect class="hovercolor" x="${-4 + (4 * y)}" y="${(8-model.user.answer[y + (index * 4)])}" width="4" height="${model.user.answer[y + (index * 4)]}"></rect>
-              <text x="${-4 + (4 * y)}" y="${(8-model.user.answer[y + (index * 4)])}">${model.user.answer[y + (index * 4)]}</text>
+              <rect class="hovercolor" x="${1 + (1 * y)}" y="${(7-model.user.answer[y + (index * 4)])}" width="1" height="${model.user.answer[y + (index * 4)]}"></rect>
+              <text x="${1 + (1 * y)}" y="${(7-model.user.answer[y + (index * 4)])}">${model.user.answer[y + (index * 4)]}</text>
           </g>
       `;
   }
@@ -43,12 +49,12 @@ function tempo(index) {
 function theMid(indexo) {
   let html = '';
   for (y = 0; y < 1; y++) {
-    var verdi = (model.user.answer[4 + (indexo * 4)]);
+    var verdi = (model.user.answer[0 + (1 * 4)]);
     var lengde = ((verdi + verdi + verdi + verdi) / 4);
       html += `
         <g class="bar1">
-          <rect class="hovercolor" x="-4" y="${8-lengde}" width="16" height="${lengde}"></rect>
-          <text x="-4" y="${(8-lengde)}">${lengde}</text>
+          <rect class="hovercolor" x="1" y="${7-lengde}" width="4" height="${lengde}"></rect>
+          <text x="-4" y="${(7-lengde)}">${lengde}</text>
         </g>
       `;
   }
