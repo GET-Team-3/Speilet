@@ -32,7 +32,6 @@ function resultView() {
 
   function theMid(indexo) {
     let html = '';
-    for (oi = 0; oi < 1; oi++) {
       var verdi = (model.user.answer[0+(i*4)]+model.user.answer[1+(i*4)]+model.user.answer[2+(i*4)]+model.user.answer[3+(i*4)]);
       var lengde = (verdi / 4);
         html += `
@@ -41,10 +40,7 @@ function resultView() {
             <text x="-4" y="${(7-lengde)}">${lengde}</text>
           </g>
         `;
-    }
-    
     return html;
-    
   }
   }
   
