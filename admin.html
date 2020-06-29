@@ -20,7 +20,7 @@
 </head>
 <body>
     <label for="session">Choose session:</label>
-    <select onchange="session = this.value, replaceData()"  id="session" name="session" style="margin-bottom:2px;">
+    <select onchange="session = this.value, getDataFromSession()"  id="session" name="session" style="margin-bottom:2px;">
         <option value="session01">Session-01</option>
         <option value="session02">Session-02</option>
         <option value="session03">Session-03</option>
@@ -44,12 +44,9 @@
         let data = [];
         let session = document.getElementById('session').value;
 
-        replaceData();
-        async function replaceData() {
-            if (document.querySelector('thead')) {
-                data = [];
-                $('#table').DataTable().destroy();
-            }
+        getDataFromSession();
+        async function getDataFromSession() {
+            data = [];
             try {
                 const dbData = await db.collection(session).get();
                 dbData.forEach(obj => {
@@ -58,7 +55,8 @@
             } catch (err) {
                 console.log(err);
             }
-            makeTabel()
+            makeTabel();
+            tableSetting();
         }
 
         function makeTabel() {
@@ -75,19 +73,6 @@
                     ${plotData()}
                 </tbody>
             `;
-            $(document).ready(function() {
-                $('#table').DataTable( {
-                    dom: 'Bfrtip',
-                    buttons: [
-                        {
-                            extend: 'excelHtml5',
-                            title: session
-                        },
-                        'copyHtml5',
-                        'pdfHtml5'
-                    ]
-                });
-            });
         }
 
         function plotData() {
@@ -113,6 +98,23 @@
             return data[i].note;
         }
 
+        function tableSetting() {
+            $('#table').DataTable().destroy();
+            $(document).ready(function() {
+                $('#table').DataTable( {
+                    dom: 'Bfrtip',
+                    buttons: [
+                        {
+                            extend: 'excelHtml5',
+                            title: session
+                        },
+                        'copyHtml5',
+                        'pdfHtml5'
+                    ]
+                });
+            });
+        }
+
         async function removeData() {
             try {
                 const dbData = await db.collection(session).get();
@@ -124,7 +126,7 @@
                     dbDataId.forEach(dbId => {
                     db.collection(session).doc(dbId).delete();
                     })
-                    replaceData();
+                    getDataFromSession();
                 } else alert('Nothing to delete');
             } catch (err) {
                 console.log(err);
