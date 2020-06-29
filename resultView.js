@@ -71,7 +71,9 @@ function resultView() {
 }
 
 function mouseOver() {
-  document.getElementById('explain').innerHTML = model.survey[0].question;
+var d = document.getElementById('explain');
+var v = model.survey[0].question;
+console.log(d,v);
 }
 
 
