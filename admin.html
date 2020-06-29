@@ -118,21 +118,12 @@
         }
 
         async function removeData() {
-            try {
-                const dbData = await db.collection(session).get();
-                let dbDataId = [];
-                dbData.forEach(obj => {
-                    dbDataId.push(obj.id);
-                })
-                if (dbDataId.length > 0) {
-                    dbDataId.forEach(dbId => {
+            if (dataId.length > 0) {
+                dataId.forEach(dbId => {
                     db.collection(session).doc(dbId).delete();
-                    })
-                    getDataFromSession();
-                } else alert('Nothing to delete');
-            } catch (err) {
-                console.log(err);
-            }
+                })
+                getDataFromSession();
+            } else alert('Nothing to delete');
         }
     </script>
 </body>
