@@ -71,9 +71,7 @@ function resultView() {
 }
 
 function mouseOver() {
-  theQuestion = document.getElementById('explain');
-  x = model.survey[0].question;
-  return (theQuestion.innerHTML=x);
+  document.getElementById('explain').innerHTML = model.survey[0].question;
 }
 
 
