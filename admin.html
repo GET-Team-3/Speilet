@@ -55,11 +55,10 @@
                 dbData.forEach(obj => {
                     data.push(obj.data());
                 })
-                console.log(data)
-                makeTabel()
             } catch (err) {
                 console.log(err);
             }
+            makeTabel()
         }
 
         function makeTabel() {
