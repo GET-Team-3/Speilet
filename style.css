@@ -413,17 +413,17 @@ hr {
 }
 
 .scale1 {
-  fill: rgb(255, 111, 108);
+  fill: rgb(255, 180, 179);
   stroke: rgb(255, 111, 108);
   stroke-width: 0.02;
 }
 .scale2 {
-  fill: rgb(253, 249, 160);
+  fill: rgb(255, 253, 207);
   stroke: rgb(253, 249, 160);
   stroke-width: 0.02;
 }
 .scale3 {
-  fill: rgb(168, 228, 163);
+  fill: rgb(223, 255, 220);
   stroke: rgb(168, 228, 163);
   stroke-width: 0.02;
 }
