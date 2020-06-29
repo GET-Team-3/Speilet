@@ -45,19 +45,21 @@
         let session = document.getElementById('session').value;
 
         replaceData();
-        function replaceData() {
-            db.collection(session).get()
-                .then(dbData => {
-                    if (document.querySelector('thead')) {
-                        data = [];
-                        $('#table').DataTable().destroy();
-                    }
-                    dbData.forEach(dbData => {
-                        data.push(dbData.data());
-                    })
-                    makeTabel()
+        async function replaceData() {
+            if (document.querySelector('thead')) {
+                data = [];
+                $('#table').DataTable().destroy();
+            }
+            try {
+                const dbData = await db.collection(session).get();
+                dbData.forEach(obj => {
+                    data.push(obj.data());
                 })
-                .catch(err => console.log(err))
+                console.log(data)
+                makeTabel()
+            } catch (err) {
+                console.log(err);
+            }
         }
 
         function makeTabel() {
@@ -112,20 +114,22 @@
             return data[i].note;
         }
 
-        function removeData() {
-            db.collection(session).get()
-                .then(dbData => {
-                    let dbDataId = [];
-                    dbData.forEach(dbData => {
-                        dbDataId.push(dbData.id);
-                    })
-                    if (dbDataId.length > 0) {
-                        dbDataId.forEach(dbId => {
-                            db.collection(session).doc(dbId).delete();
-                        })
-                    } else return alert('Nothing to delete');
-                    replaceData();
+        async function removeData() {
+            try {
+                const dbData = await db.collection(session).get();
+                let dbDataId = [];
+                dbData.forEach(obj => {
+                    dbDataId.push(obj.id);
                 })
+                if (dbDataId.length > 0) {
+                    dbDataId.forEach(dbId => {
+                    db.collection(session).doc(dbId).delete();
+                    })
+                    replaceData();
+                } else alert('Nothing to delete');
+            } catch (err) {
+                console.log(err);
+            }
         }
     </script>
 </body>
