@@ -42,6 +42,7 @@
         const db = firebase.firestore();
 
         let data = [];
+        let dataId = [];
         let session = document.getElementById('session').value;
 
         getDataFromSession();
@@ -50,6 +51,7 @@
             try {
                 const dbData = await db.collection(session).get();
                 dbData.forEach(obj => {
+                    dataId.push(obj.id);
                     data.push(obj.data());
                 })
             } catch (err) {
