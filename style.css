@@ -494,6 +494,12 @@ background-color: #c9ebf2;
   padding-left: 30px;
 }
 
+
+@font-face {
+  font-family: Gravity-Light;
+  src:url("Gravity-Light.otf");
+}
+
 * {
-  font-family: Arial;
+  font-family: Gravity-Light;
 }
