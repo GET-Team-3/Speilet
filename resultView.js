@@ -1,5 +1,3 @@
-
-
 function resultView() {
   let html = '';
   for (i = 0; i < 6; i++) {
@@ -43,8 +41,11 @@ function resultView() {
     return html;
   }
   }
-  
-  function tempo(index) {
+
+  document.getElementById('content').innerHTML = html;
+}
+
+function tempo(index) {
   let color = 'fill:rgb(168, 228, 163)';
   let stroke = 'stroke:rgb(168, 228, 163)'
   let html = '';
@@ -58,12 +59,8 @@ function resultView() {
               <text x="${0.3 + (2 * y)}" y="${(8-answer)}">${answer}</text>
           </g>
       `;
-      
   }
   return html;
-  
-}
-  document.getElementById('content').innerHTML = html;
 }
 
 function mouseOver() {
