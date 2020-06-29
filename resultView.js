@@ -16,17 +16,17 @@ function resultView() {
         <div class="pointa">2</div>
         <div class="pointa">1</div>
     </div>
-    <svg class="chart" viewBox="0 0 7 7" height="300" width="360">
+    <svg class="chart" viewBox="0 0 7 7" height="300" width="350">
     
-    <rect class="scale1" x="-0.6" y="5" width="0.2" height="2"></rect>
-    <rect class="scale2" x="-0.6" y="2" width="0.2" height="3"></rect>
-    <rect class="scale3" x="-0.6" y="0" width="0.2" height="2"></rect>
+    <rect class="scale1" x="-0.6" y="5" width="0.1" height="2"></rect>
+    <rect class="scale2" x="-0.6" y="2" width="0.1" height="3"></rect>
+    <rect class="scale3" x="-0.6" y="0" width="0.1" height="2"></rect>
 
         ${theMid(i)}
         
         ${tempo(i)}
     </svg>
-    <div class="explain">Text</div>
+    <div id="explain" class="explain">Text</div>
     </div>
     `;
 
@@ -50,6 +50,7 @@ function resultView() {
   
   function tempo(index) {
   let color = 'fill:rgb(168, 228, 163)';
+  let stroke = 'stroke:rgb(168, 228, 163)'
   let html = '';
   for (y = 0; y < 4; y++) {
     let answer = model.user.answer[y + (index * 4)];
@@ -70,9 +71,9 @@ function resultView() {
 }
 
 function mouseOver() {
-  theQuestion = document.getElementsByClassName('explain');
-  x= theQuestion.innerHTML;
-  x += model.survey[0].question;
+  theQuestion = document.getElementById('explain');
+  x = model.survey[0].question;
+  return (theQuestion.innerHTML=x);
 }
 
 

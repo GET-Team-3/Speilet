@@ -407,7 +407,7 @@ hr {
   }
 
 .bar1 {
-    fill: #c9ebf2;
+    fill: #e4f5f8;
     stroke: #c9ebf2;
     stroke-width: 0.02;
 }
@@ -454,7 +454,7 @@ background-color: #c9ebf2;
 }
 
 .chart {
-    background-color: rgb(255, 214, 214);
+    background-color: white;
     grid-area: chart;
 }
 
