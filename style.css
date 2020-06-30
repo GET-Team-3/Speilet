@@ -59,6 +59,11 @@ body {
     box-shadow: 0 4px 8px 0 #f6fdff, 0 6px 20px 0 #eef2f3;
     position: relative;
 }
+.letters{
+  z-index: 5;
+  position: absolute;
+}
+
 .progressBarInside {
     color: gray;
     background-color: #c9ebf2;
@@ -70,6 +75,7 @@ body {
     position: absolute; 
     bottom: 0px; 
     text-align: left;
+    z-index: 3;
 }
 .survey {
     background-color: white;
