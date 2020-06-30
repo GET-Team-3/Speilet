@@ -22,57 +22,28 @@ function resultView() {
       datasets: [
         {
           fill: true,
-          backgroundColor:[
-            'rgba(255, 99, 132, 0.6)',
-            'rgba(54, 162, 235, 0.6)',
-            'rgba(255, 206, 86, 0.6)',
-            'rgba(75, 192, 192, 0.6)',
-            'rgba(63, 191, 127, 0.6)',
-            'rgba(191, 63, 127, 0.6)',
-          ],
+          backgroundColor:changeColors(0),
           borderWidth:1,
           borderColor:'#777',
           data: plotData(0)
         },
         {
           fill: true,
-         backgroundColor:[
-            'rgba(255, 99, 132, 0.6)',
-            'rgba(54, 162, 235, 0.6)',
-            'rgba(255, 206, 86, 0.6)',
-            'rgba(75, 192, 192, 0.6)',
-            'rgba(63, 191, 127, 0.6)',
-            'rgba(191, 63, 127, 0.6)',
-          ],
+         backgroundColor: changeColors(1),
           borderWidth:1,
           borderColor:'#777',
           data: plotData(1)
         },
         {
           fill: true,
-         backgroundColor:[
-            'rgba(255, 99, 132, 0.6)',
-            'rgba(54, 162, 235, 0.6)',
-            'rgba(255, 206, 86, 0.6)',
-            'rgba(75, 192, 192, 0.6)',
-            'rgba(63, 191, 127, 0.6)',
-            'rgba(191, 63, 127, 0.6)',
-          ],
+         backgroundColor: changeColors(2),
           borderWidth:1,
           borderColor:'#777',
           data: plotData(2)
         },
         {
-          
           fill: true,
-         backgroundColor:[
-            'rgba(255, 99, 132, 0.6)',
-            'rgba(54, 162, 235, 0.6)',
-            'rgba(255, 206, 86, 0.6)',
-            'rgba(75, 192, 192, 0.6)',
-            'rgba(63, 191, 127, 0.6)',
-            'rgba(191, 63, 127, 0.6)',
-          ],
+         backgroundColor: changeColors(3),
           borderWidth:1,
           borderColor:'#777',
           data: plotData(3)

@@ -17,7 +17,18 @@ function plotData(index) {
     }
     return array;
 }
-
+function changeColors(index) {
+    let array = [];
+    for (let i = 0; i < 6; i++) {
+        let bar = model.user.answer[i + (6 * index)];
+        if (bar < 3) array.push('rgb(255, 78, 78)');
+        else if(bar < 6) array.push('rgb(255, 255, 92)');
+        else if(bar < 8) array.push('rgb(53, 170, 53)');
+    }
+    console.log(array)
+    return array;
+    
+}
 // function plotQuestion() {
 //     let array = [];
 //     for (let i = 0; i < 4; i++) {
