@@ -48,6 +48,7 @@
         getDataFromSession();
         async function getDataFromSession() {
             data = [];
+            dataId = [];
             try {
                 const dbData = await db.collection(session).get();
                 dbData.forEach(obj => {
@@ -110,8 +111,11 @@
                             extend: 'excelHtml5',
                             title: session
                         },
+                        {
+                            extend: 'pdfHtml5',
+                            title: session
+                        },
                         'copyHtml5',
-                        'pdfHtml5'
                     ]
                 });
             });
