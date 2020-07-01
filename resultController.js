@@ -8,6 +8,7 @@ function plotQuestion() {
         array.push(childArray);
     }
     return array;
+    
 }
 
 function plotData(index) {
@@ -33,7 +34,7 @@ function alternativtResultat() {
         model.page = "resultView2";
         resultView2();
     }
-    if (model.page == "resultView2") {
+    else if (model.page == "resultView2") {
         model.page = "resultView1";
         resultView1();
     }
