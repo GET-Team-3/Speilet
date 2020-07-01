@@ -16,7 +16,7 @@ function resultView() {
         <div class="pointa">2</div>
         <div class="pointa">1</div>
     </div>
-    <svg class="chart" viewBox="0 0 7 7" height="405" width="440">
+    <svg class="chart" viewBox="0 0 7 7" height="400" width="470">
     
     <rect class="scale" x="-0.7" y="6" width="9" height="0.01"></rect>
     <rect class="scale" x="-0.7" y="5" width="9" height="0.01"></rect>
