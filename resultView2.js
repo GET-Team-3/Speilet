@@ -1,8 +1,7 @@
 function resultView2() {
-    let html = '';
+    let html = '<button onclick="alternativtResultat()" class="alternativtResultatOppsett">alternativt resultatoppsett</button>';
     for (i = 0; i < 6; i++) {
       html += `
-      
       <div class="divContainer">
           <text class="kategori">${model.theme[i]}</text> 
           <div class="points">
@@ -78,9 +77,10 @@ function resultView2() {
         `;
     }
     return html;
-  
-    
   }
+function buttonView() {
+  `<button id="alternativtResultat" class="alternativtResultatOppsett">alternativt resultatoppsett</button>`
+}
   
   
   

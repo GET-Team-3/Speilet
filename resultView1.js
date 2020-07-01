@@ -1,5 +1,6 @@
 function resultView1() {
     document.getElementById('content').innerHTML = `
+    <button onclick="alternativtResultat()" class="alternativtResultatOppsett">alternativt resultatoppsett</button>
     <h2 class='resultStyle'>Resultat</h2>
     <p class='resultStyle'>Hold musepekeren over en graf for å se tilhørende spørsmål</p>
     <div class="chart-container" style="position: relative; height:40vh; width:80vw">
