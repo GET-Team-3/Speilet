@@ -400,8 +400,8 @@ hr {
     position: absolute;
     border: 2.5px;
     color: white;
-    padding: 16px 0px 0px 0px;
-    font-size: 16px;
+    padding: 10px 0px 0px 0px;
+    font-size: 24px;
   }
 .resultStyle {
   
@@ -499,26 +499,26 @@ background-color: #c9ebf2;
 
 /* the numbersinside buttons */
 .nuc1  {
-  padding-left: 22px;
+  padding-left: 21px;
 }
 
 .nuc2  {
-padding-left: 19px;
+padding-left: 16px;
 }
 
 .nuc3  {
-padding-left: 15px;
+padding-left: 13px;
 }
 .nuc4  {
-padding-left: 12px;
+padding-left: 10px;
 }
 
 .nuc5  {
-padding-left: 15px;
+padding-left: 13px;
 }
 .nuc6  {
-padding-left: 19px;
+padding-left: 16px;
 }
 .nuc7  {
-padding-left: 22px;
+padding-left: 21px;
 }
