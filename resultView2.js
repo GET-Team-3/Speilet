@@ -37,7 +37,7 @@ function resultView2() {
         var lengde = (verdi / 4);
           html += `
             <g class="bar1">
-              <rect class="hovercolor" x="-0.4" y="${7-lengde}" width="8" height="${lengde}"></rect>
+              <rect class="hovercolor" x="-0.4" y="${7-lengde}" width="7.9" height="${lengde}"></rect>
               <text x="-4" y="${(7-lengde)}">${lengde}</text>
             </g>
           `;
@@ -71,7 +71,7 @@ function resultView2() {
       if (answer < 2) {color = 'fill:rgb(255, 111, 108)'}
         html += `
             <g class="bar" id="${y + (index * 4)}" style="${color}" onmouseover="colorOnBar(this.id)">
-                <rect class="hovercolor" x="${-0.4 + (2 * y)}" y="${(7-answer)}" width="2" height="${answer}" ></rect>
+                <rect class="hovercolor" x="${-0.4 + (2 * y)}" y="${(7-answer)}" width="1.98" height="${answer}" ></rect>
                 <text x="${0.35 + (2 * y)}" y="${(7.7-answer)}">${answer}</text>
             </g>
         `;

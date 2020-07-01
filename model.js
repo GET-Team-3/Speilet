@@ -3,7 +3,7 @@ const model = {
         firstName: '',
         lastName: '',
         date: '',
-        answer: [],
+        answer: [1,2,3,4,1,2,3,4,1,2,3,4,1,2,3,4,1,2,3,4,1,2,3,4,],
         note: [],
         fullName: function() { return this.firstName + " " + this.lastName},
     },
