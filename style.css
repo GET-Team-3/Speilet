@@ -408,3 +408,93 @@ hr {
   font-family: Arial, Helvetica, sans-serif;
   padding-left: 20px;
 }
+
+.bar {
+  fill: rgba(255, 111, 108, 0.5);
+  transition: fill .3s ease;
+  stroke: white;
+  stroke-width: 0.010;
+  stroke-linecap: round;
+  }
+
+.bar1 {
+    fill: #e4f5f8b9;
+    stroke: #e4f5f8b9;
+    stroke-width: 0.02;
+}
+
+.scale {
+  fill: transparent;
+  stroke: rgb(243, 243, 243);
+  stroke-width: 0.02;
+}
+
+
+.bar1 text {
+fill: transparent;
+stroke: transparent;
+font-size: 3%;
+}
+.bar1:hover text {
+  fill: black;
+  font-size: 3%;
+}
+
+.bar text {
+fill: transparent;
+stroke: transparent;
+font-size: 3%;
+background-color: #c9ebf2;
+}
+.hovercolor:hover {
+  fill: #00d4b1;
+}
+.bar:hover text {
+  fill: rgb(255, 255, 255);
+  font-size: 4.5%;
+}
+.chart {
+    grid-area: chart;
+}
+.kategori {
+  font-size: 25px;
+  grid-area: kategori;
+  text-align: center;
+  align-self: flex-end;
+  color: black;
+}
+.explain {
+  padding: 10px 10px 10px 50px;
+  grid-area: explain;
+}
+.points {
+  font-size: 19px;
+  grid-area: points;
+  color: black;
+}
+.divContainer {
+  padding-left: 40px;
+  display: grid;
+  float: left;
+  width: 700px;
+  height: 600px;
+  grid-template-columns: 50px 500px;
+  grid-template-rows: 70px 15px 400px 50px;
+  grid-template-areas:'kategori kategori'
+                      'points null'
+                      'points chart'
+                      'explain explain'
+}
+
+.pointa {
+  height: 10px;
+  border: solid transparent 2px;
+  padding: 5px 0px 38px 23px;
+}
+@font-face {
+  font-family: Gravity-Light;
+  src:url("Gravity-Light.otf");
+}
+* {
+  font-family: Gravity-Light;
+}
