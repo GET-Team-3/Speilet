@@ -407,26 +407,17 @@ hr {
   }
 
 .bar1 {
-    fill: #e4f5f8;
-    stroke: #c9ebf2;
+    fill: #e4f5f8b9;
+    stroke: #e4f5f8b9;
     stroke-width: 0.02;
 }
 
-.scale1 {
-  fill: rgb(255, 180, 179);
-  stroke: rgb(255, 111, 108);
+.scale {
+  fill: transparent;
+  stroke: #f2f7f688;
   stroke-width: 0.02;
 }
-.scale2 {
-  fill: rgb(255, 253, 207);
-  stroke: rgb(253, 249, 160);
-  stroke-width: 0.02;
-}
-.scale3 {
-  fill: rgb(223, 255, 220);
-  stroke: rgb(168, 228, 163);
-  stroke-width: 0.02;
-}
+
 
 .bar1 text {
 fill: transparent;
@@ -454,7 +445,6 @@ background-color: #c9ebf2;
 }
 
 .chart {
-    background-color: white;
     grid-area: chart;
 }
 
@@ -470,30 +460,34 @@ background-color: #c9ebf2;
 
 .explain {
   padding: 10px 0px 20px 50px;
+  grid-area: explain;
 }
 
 .points {
-  background-color: white;
-  font-size: 25px;
+  font-size: 19px;
   grid-area: points;
-  align-self: flex-start;
   color: darkgray;
+  
 }
 
 .divContainer {
   display: grid;
   width: 330px;
-  grid-template-columns: 50px 4fr;
-  grid-template-rows: 70px 4fr;
+  grid-template-columns: 50px 400px;
+  grid-template-rows: 70px 15px 400px 20px;
   grid-template-areas:'kategori kategori'
+                      'points null'
                       'points chart'
+                      'explain explain'
 }
 
 .pointa {
-  padding-bottom: 10px;
-  padding-left: 30px;
+  
+  background-color: rgb(255, 255, 255);
+  height: 10px;
+  border: solid transparent 2px;
+  padding: 5px 0px 30px 23px;
 }
-
 
 @font-face {
   font-family: Gravity-Light;

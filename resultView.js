@@ -1,3 +1,5 @@
+let kake = '';
+let ex = document.getElementById('exp');
 function resultView() {
   let html = '';
   for (i = 0; i < 6; i++) {
@@ -14,17 +16,21 @@ function resultView() {
         <div class="pointa">2</div>
         <div class="pointa">1</div>
     </div>
-    <svg class="chart" viewBox="0 0 7 7" height="300" width="350">
+    <svg class="chart" viewBox="0 0 7 7" height="350" width="450">
     
-    <rect class="scale1" x="-0.6" y="5" width="0.1" height="2"></rect>
-    <rect class="scale2" x="-0.6" y="2" width="0.1" height="3"></rect>
-    <rect class="scale3" x="-0.6" y="0" width="0.1" height="2"></rect>
+    <rect class="scale" x="-0.7" y="6" width="9" height="0.01"></rect>
+    <rect class="scale" x="-0.7" y="5" width="9" height="0.01"></rect>
+    <rect class="scale" x="-0.7" y="4" width="9" height="0.01"></rect>
+    <rect class="scale" x="-0.7" y="3" width="9" height="0.01"></rect>
+    <rect class="scale" x="-0.7" y="2" width="9" height="0.01"></rect>
+    <rect class="scale" x="-0.7" y="1" width="9" height="0.01"></rect>
+    <rect class="scale" x="-0.7" y="0.1" width="9" height="0.01"></rect>
 
         ${theMid(i)}
         
         ${tempo(i)}
     </svg>
-    <div id="explain" class="explain">Text</div>
+    <div id="exp" class="explain">${kake}</div>
     </div>
     `;
 
@@ -44,32 +50,33 @@ function resultView() {
 
   document.getElementById('content').innerHTML = html;
 }
+      function smegma() {
+        kake = model.survey[0].question;
+      
+      return kake;
+
+    }
 
 function tempo(index) {
   let color = 'fill:rgb(168, 228, 163)';
-  let stroke = 'stroke:rgb(168, 228, 163)'
   let html = '';
   for (y = 0; y < 4; y++) {
     let answer = model.user.answer[y + (index * 4)];
     if (answer < 5) {color = 'fill:rgb(253, 249, 160)'}
     if (answer < 2) {color = 'fill:rgb(255, 111, 108)'}
       html += `
-          <g class="bar" style="${color}" onmouseover="${mouseOver()}">
+          <g class="bar" style="${color}" onhover="${smegma()}">
               <rect class="hovercolor" x="${-0.4 + (2 * y)}" y="${(7-answer)}" width="2" height="${answer}" ></rect>
               <text x="${0.3 + (2 * y)}" y="${(8-answer)}">${answer}</text>
           </g>
       `;
   }
   return html;
-}
-
-function mouseOver() {
-var d = document.getElementById('explain');
-var v = model.survey[0].question;
-console.log(d,v);
-}
-
-
-
 
   
+}
+
+
+
+
+
