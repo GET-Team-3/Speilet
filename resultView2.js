@@ -37,7 +37,7 @@ function resultView2() {
         var lengde = (verdi / 4);
           html += `
             <g class="bar1">
-              <rect class="hovercolor" x="-0.4" y="${7-lengde}" width="7.9" height="${lengde}"></rect>
+              <rect class="hovercolor" x="-0.4" y="${7-lengde}" width="7.98" height="${lengde}"></rect>
               <text x="-4" y="${(7-lengde)}">${lengde}</text>
             </g>
           `;
@@ -67,6 +67,7 @@ function resultView2() {
     let html = '';
     for (y = 0; y < 4; y++) {
       let answer = model.user.answer[y + (index * 4)];
+      if (answer > 5) {color = 'fill:rgb(70, 185, 55)'}
       if (answer < 5) {color = 'fill:rgb(255, 247, 105)'}
       if (answer < 2) {color = 'fill:rgb(255, 111, 108)'}
         html += `
@@ -78,9 +79,7 @@ function resultView2() {
     }
     return html;
   }
-function buttonView() {
-  `<button id="alternativtResultat" class="alternativtResultatOppsett">alternativt resultatoppsett</button>`
-}
+
   
   
   

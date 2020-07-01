@@ -3,13 +3,13 @@ const model = {
         firstName: '',
         lastName: '',
         date: '',
-        answer: [1,2,3,4,1,2,3,4,1,2,3,4,1,2,3,4,1,2,3,4,1,2,3,4,],
+        answer: [1,6,3,1,1,2,3,4,1,2,3,4,1,2,3,4,1,2,3,4,1,2,3,4,],
         note: [],
         fullName: function() { return this.firstName + " " + this.lastName},
     },
     userId: '',
     session: '',
-    page: 'surveyView', //registrationView surveyView resultView1 resultView2
+    page: 'resultView2', //registrationView surveyView resultView1 resultView2
     themeCounter: 0,
     questionCounter: 0,
     progressBar: 0,
