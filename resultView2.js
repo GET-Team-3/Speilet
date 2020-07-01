@@ -67,9 +67,10 @@ function resultView2() {
     let html = '';
     for (y = 0; y < 4; y++) {
       let answer = model.user.answer[y + (index * 4)];
-      if (answer > 5) {color = 'fill:rgb(70, 185, 55)'}
-      if (answer < 5) {color = 'fill:rgb(255, 247, 105)'}
-      if (answer < 2) {color = 'fill:rgb(255, 111, 108)'}
+      if (answer < 7) {color = 'fill:rgb(70, 185, 55)'}
+      if (answer < 6) {color = 'fill:rgb(255, 247, 105)'}
+      if (answer < 3) {color = 'fill:rgb(255, 111, 108)'}
+      
         html += `
             <g class="bar" id="${y + (index * 4)}" style="${color}" onmouseover="colorOnBar(this.id)">
                 <rect class="hovercolor" x="${-0.4 + (2 * y)}" y="${(7-answer)}" width="1.98" height="${answer}" ></rect>
