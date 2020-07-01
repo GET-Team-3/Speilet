@@ -66,16 +66,16 @@ function resultView() {
     }
 
 function tempo(index) {
-  let color = 'fill:rgb(168, 228, 163)';
+  let color = 'fill:rgb(70, 185, 55)';
   let html = '';
   for (y = 0; y < 4; y++) {
     let answer = model.user.answer[y + (index * 4)];
-    if (answer < 5) {color = 'fill:rgb(253, 249, 160)'}
+    if (answer < 5) {color = 'fill:rgb(255, 247, 105)'}
     if (answer < 2) {color = 'fill:rgb(255, 111, 108)'}
       html += `
           <g class="bar" id="${y + (index * 4)}" style="${color}" onmouseover="smegma(this.id)">
               <rect class="hovercolor" x="${-0.4 + (2 * y)}" y="${(7-answer)}" width="2" height="${answer}" ></rect>
-              <text x="${0.3 + (2 * y)}" y="${(8-answer)}">${answer}</text>
+              <text x="${0.35 + (2 * y)}" y="${(7.7-answer)}">${answer}</text>
           </g>
       `;
   }
