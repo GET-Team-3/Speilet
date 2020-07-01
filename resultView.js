@@ -1,5 +1,5 @@
-let kake = '';
-let ex = document.getElementById('exp');
+// let kake = '';
+// let ex = document.getElementById('exp');
 function resultView() {
   let html = '';
   for (i = 0; i < 6; i++) {
@@ -30,7 +30,7 @@ function resultView() {
         
         ${tempo(i)}
     </svg>
-    <div id="exp" class="explain">${smegma(i)}</div>
+    <div id="exp${i}" class="explain"></div>
     </div>
     `;
 
@@ -50,12 +50,19 @@ function resultView() {
 
   document.getElementById('content').innerHTML = html;
 }
-      function smegma() {
-        k = document.getElementById('exp');
-        kake = model.survey[0].question;
-        k = kake;
-      return k;
-
+      function smegma(elem) {
+      let div1 = document.getElementById('exp0');
+      let div2 = document.getElementById('exp1');
+      let div3 = document.getElementById('exp2');
+      let div4 = document.getElementById('exp3');
+      let div5 = document.getElementById('exp4');
+      let div6 = document.getElementById('exp5');
+      if (elem < 4) div1.innerHTML = model.survey[elem].question;
+      else if (elem < 8) div2.innerHTML = model.survey[elem].question;
+      else if (elem < 12) div3.innerHTML = model.survey[elem].question;
+      else if (elem < 16) div4.innerHTML = model.survey[elem].question;
+      else if (elem < 20) div5.innerHTML = model.survey[elem].question;
+      else if (elem < 25) div6.innerHTML = model.survey[elem].question;
     }
 
 function tempo(index) {
@@ -66,8 +73,8 @@ function tempo(index) {
     if (answer < 5) {color = 'fill:rgb(253, 249, 160)'}
     if (answer < 2) {color = 'fill:rgb(255, 111, 108)'}
       html += `
-          <g id="" class="bar" style="${color}" onmouseover="${smegma(this)}">
-              <rect  class="hovercolor" x="${-0.4 + (2 * y)}" y="${(7-answer)}" width="2" height="${answer}" ></rect>
+          <g class="bar" id="${y + (index * 4)}" style="${color}" onmouseover="smegma(this.id)">
+              <rect class="hovercolor" x="${-0.4 + (2 * y)}" y="${(7-answer)}" width="2" height="${answer}" ></rect>
               <text x="${0.3 + (2 * y)}" y="${(8-answer)}">${answer}</text>
           </g>
       `;
