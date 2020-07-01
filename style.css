@@ -42,6 +42,7 @@ body {
     font-size: 17px;
     position: relative;
     left: 50px;
+    top: 45px;
 }
 .highScoreAnswer {
     /* display: inline-block; */
@@ -50,7 +51,7 @@ body {
     font-size: 17px;
     float: right;    
     position: relative;
-    bottom: 15px;
+    top: 40px;
     right: 60px;
 }
 .progressBar {

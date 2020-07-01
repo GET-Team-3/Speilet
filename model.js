@@ -9,7 +9,7 @@ const model = {
     },
     userId: '',
     session: '',
-    page: 'registrationView', //registrationView surveyView resultView
+    page: 'surveyView', //registrationView surveyView resultView
     themeCounter: 0,
     questionCounter: 0,
     progressBar: 0,

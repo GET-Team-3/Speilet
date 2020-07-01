@@ -31,6 +31,7 @@ function makeQuestionRow() {
                 ${makeRadioButton()}
             </div>
             <h6 class="highScoreAnswer">${row.positiveStatement}</h6>
+            <br><br><br>
             <hr>
         `;
     return html;
