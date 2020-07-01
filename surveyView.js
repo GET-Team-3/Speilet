@@ -41,12 +41,12 @@ function makeRadioButton() {
     let html = '';
     for (let i = 1; i < 8; i++) {
         html += `
-            <label class="buttonContainer label${i}">
-                <input name="question${model.questionCounter}" type="radio" id="${model.questionCounter}" value="${i}" 
-                onchange="answer(this)" ${model.user.answer[model.questionCounter] == i ? 'checked' : ''}>
-                <span class="createCustomButton radio${i}"></span><span class="numbersUnderCheckmark">${i}</span>
-            </label>
-        `;
-    }
-    return html;
+        <label class="buttonContainer label${i}">
+        <input name="question${model.questionCounter}" type="radio" id="${model.questionCounter}" value="${i}" 
+        onchange="answer(this)" ${model.user.answer[model.questionCounter] == i ? 'checked' : ''}>
+        <span class="createCustomButton radio${i}"></span><span class="numbersUnderCheckmark" ><div class="nuc${i}">${i}</div></span>
+    </label>
+`;
+}
+return html;
 }

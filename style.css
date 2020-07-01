@@ -389,24 +389,22 @@ hr {
   font-size: 17px;
   color: white;
   border: solid white;
-  border-radius: 3px;
+  border-radius: 2px;
   cursor: pointer;
 }
 .regH3 {
   margin-left: 24px;
 }
 .numbersUnderCheckmark {
+  display: block;
     position: absolute;
     border: 2.5px;
-    color: orange;
-    top: 75px;
-    left: 21px;
-    padding: 1px;
+    color: white;
+    padding: 16px 0px 0px 0px;
     font-size: 16px;
   }
 .resultStyle {
-  font-family: Arial, Helvetica, sans-serif;
-  padding-left: 20px;
+  
 }
 
 .bar {
@@ -497,4 +495,30 @@ background-color: #c9ebf2;
 }
 * {
   font-family: Gravity-Light;
+}
+
+/* the numbersinside buttons */
+.nuc1  {
+  padding-left: 22px;
+}
+
+.nuc2  {
+padding-left: 19px;
+}
+
+.nuc3  {
+padding-left: 15px;
+}
+.nuc4  {
+padding-left: 12px;
+}
+
+.nuc5  {
+padding-left: 15px;
+}
+.nuc6  {
+padding-left: 19px;
+}
+.nuc7  {
+padding-left: 22px;
 }
