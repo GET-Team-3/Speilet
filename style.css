@@ -414,7 +414,7 @@ hr {
 
 .scale {
   fill: transparent;
-  stroke: #f2f7f688;
+  stroke: rgb(243, 243, 243);
   stroke-width: 0.02;
 }
 
@@ -446,27 +446,29 @@ background-color: #c9ebf2;
 
 .chart {
     grid-area: chart;
+    background-color: white;
 }
 
 .kategori {
   background-color: white;
   font-size: 25px;
   grid-area: kategori;
-  padding-left: 50px;
-  padding-bottom: 10px;
+  padding: 10px 0px 0px 50px;
   align-self: flex-end;
-  color: darkgray;
+  color: black;
 }
 
 .explain {
-  padding: 10px 0px 20px 50px;
+  padding: 0px 0px 0px 50px;
   grid-area: explain;
+  background-color: darkkhaki;
 }
 
 .points {
   font-size: 19px;
   grid-area: points;
-  color: darkgray;
+  color: black;
+  background-color: darkmagenta;
   
 }
 
@@ -474,7 +476,7 @@ background-color: #c9ebf2;
   display: grid;
   width: 330px;
   grid-template-columns: 50px 400px;
-  grid-template-rows: 70px 15px 400px 20px;
+  grid-template-rows: 70px 15px 400px 50px;
   grid-template-areas:'kategori kategori'
                       'points null'
                       'points chart'
@@ -483,7 +485,7 @@ background-color: #c9ebf2;
 
 .pointa {
   
-  background-color: rgb(255, 255, 255);
+  background-color: pink;
   height: 10px;
   border: solid transparent 2px;
   padding: 5px 0px 30px 23px;

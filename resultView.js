@@ -16,7 +16,7 @@ function resultView() {
         <div class="pointa">2</div>
         <div class="pointa">1</div>
     </div>
-    <svg class="chart" viewBox="0 0 7 7" height="350" width="450">
+    <svg class="chart" viewBox="0 0 7 7" height="405" width="440">
     
     <rect class="scale" x="-0.7" y="6" width="9" height="0.01"></rect>
     <rect class="scale" x="-0.7" y="5" width="9" height="0.01"></rect>
@@ -30,7 +30,7 @@ function resultView() {
         
         ${tempo(i)}
     </svg>
-    <div id="exp" class="explain">${kake}</div>
+    <div id="exp" class="explain">${smegma(i)}</div>
     </div>
     `;
 
@@ -51,9 +51,10 @@ function resultView() {
   document.getElementById('content').innerHTML = html;
 }
       function smegma() {
+        k = document.getElementById('exp');
         kake = model.survey[0].question;
-      
-      return kake;
+        k = kake;
+      return k;
 
     }
 
@@ -65,8 +66,8 @@ function tempo(index) {
     if (answer < 5) {color = 'fill:rgb(253, 249, 160)'}
     if (answer < 2) {color = 'fill:rgb(255, 111, 108)'}
       html += `
-          <g class="bar" style="${color}" onhover="${smegma()}">
-              <rect class="hovercolor" x="${-0.4 + (2 * y)}" y="${(7-answer)}" width="2" height="${answer}" ></rect>
+          <g id="" class="bar" style="${color}" onmouseover="${smegma(this)}">
+              <rect  class="hovercolor" x="${-0.4 + (2 * y)}" y="${(7-answer)}" width="2" height="${answer}" ></rect>
               <text x="${0.3 + (2 * y)}" y="${(8-answer)}">${answer}</text>
           </g>
       `;
