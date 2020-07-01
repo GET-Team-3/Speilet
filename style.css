@@ -403,10 +403,6 @@ hr {
     padding: 10px 0px 0px 0px;
     font-size: 24px;
   }
-.resultStyle {
-  
-}
-
 .bar {
   fill: rgba(255, 111, 108, 0.5);
   transition: fill .3s ease;
