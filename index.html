@@ -10,8 +10,9 @@
     <script src="registrationController.js"></script>
     <script src="surveyView.js"></script>
     <script src="surveyController.js"></script>
-    <script src="resultView.js"></script>
+    <script src="resultView1.js"></script>
     <script src="resultController.js"></script>
+    <script src="resultView2.js"></script>
     <!-- chart.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -39,7 +40,8 @@
         function updateView() {
             if (model.page == 'registrationView') registrationView();
             if (model.page == 'surveyView') surveyView();
-            if (model.page == 'resultView') resultView();
+            if (model.page == 'resultView1') resultView1();
+            if (model.page == 'resultView2') resultView2();
         }
     </script>
 </body>

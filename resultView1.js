@@ -1,4 +1,4 @@
-function resultView() {
+function resultView1() {
     document.getElementById('content').innerHTML = `
     <h2 class='resultStyle'>Resultat</h2>
     <p class='resultStyle'>Hold musepekeren over en graf for å se tilhørende spørsmål</p>
@@ -68,7 +68,7 @@ function resultView() {
       scales: {
         xAxes: [{
           ticks: {
-               fontSize: 14
+               fontSize: 12
           }
       }],
         yAxes: [{
