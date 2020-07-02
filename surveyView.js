@@ -13,7 +13,7 @@ function surveyView() {
             <div class="popup" style="display: none;">
                 <textarea rows="20" cols="25" placeholder="Notes" id="notepad" class="notepad">${model.user.note[model.questionCounter] || ''}</textarea>
             </div>
-            <button class="popbutton" onclick="showHideDiv()">Show/hide div</button>
+            <button class="popbutton" onclick="showHideDiv()">Notisblokk</button>
         </div>
         <div class="page2">
             <p onclick="tempForwardButton()" class="bH bothB" style="${model.questionCounter == 23 ? 'color:red' : ''}">▶</p>

@@ -1,8 +1,4 @@
-code/* global */
 
-* {
-  font-family: Arial, Helvetica, sans-serif;
-}
 .page {
     background-color: rgb(246, 250, 252);
     user-select: none;
@@ -22,9 +18,7 @@ body {
     /* resize: both; */
     /* overflow: auto; */
   }
-
   /* survey */
-
 .theme {
     color: gray;
     font-size: 35px;
@@ -35,7 +29,6 @@ body {
     font-size: 20px;
 }
 .lowScoreAnswer {
-    /* display: inline-block; */
     float: left;
     width: 300px;
     color: darkgray;
@@ -45,7 +38,6 @@ body {
     top: 45px;
 }
 .highScoreAnswer {
-    /* display: inline-block; */
     width: 300px;
     color: darkgray;
     font-size: 17px;
@@ -64,7 +56,6 @@ body {
   z-index: 5;
   position: absolute;
 }
-
 .progressBarInside {
     color: gray;
     background-color: #c9ebf2;
@@ -150,12 +141,10 @@ hr {
     grid-area: page2;
     background-color: transparent;
 }
-
 ::-webkit-scrollbar {
     background-color: lightgray;
     width: 8px;
 }
-
 ::-webkit-scrollbar-thumb {
     background-color: #AEAEAE;
 }
@@ -347,8 +336,6 @@ hr {
 .notepad:focus {
     outline: none;
 }
-
-
 .alternativtResultatOppsett {
   display: block;
   position: absolute;
@@ -357,13 +344,23 @@ hr {
   margin: 10px;
 }
 /* registration */
-
+.sessionPosition {
+  display: inline-block;
+  margin-top: 30px;
+  margin-left: 67.5px;
+}
+.sessionDropDown {
+  margin-left: 4px;
+}
+select {
+  border: solid  #00d4b1 1px;
+}
 .regMainDiv {
   background-color: white;
   border: solid white 5px;
   border-radius: 3px;
-  height: 180px;
-  width: 200px;
+  height: 280px;
+  width: 300px;
   position: absolute;
   top: 0;
   bottom: 150px;
@@ -372,7 +369,13 @@ hr {
   margin: auto;
   box-shadow: 0 4px 8px 0 #e9f4f7, 0 6px 20px 0 #eef2f3;
   user-select: none;
-
+}
+.regLogo {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 150px;
+  padding: 20px
 }
 .regInputs {
   margin: auto;
@@ -380,7 +383,10 @@ hr {
   border-top: transparent;
   border-left: transparent;
   border-right: transparent;
-  border-bottom: solid #00d4b1;
+  border-bottom: solid #00d4b1 1px;
+}
+.regNameInputPosition {
+  margin-top: 50px;
 }
 .regInputs:focus {
   outline: none;
@@ -389,15 +395,21 @@ hr {
   background-color: #e3faf6;
 }
 .regButton {
-  background-color: #00d4b1;
+  display: block;
+  background-color: white;
   /* text-align: right; */
   float: right;
-  margin-top: 25px;
-  margin-right: 36px;
-  font-size: 17px;
-  color: white;
+  margin-top: 70px;
+  margin-right: 10px;
+  font-size: 30px;
+  color: #00d4b1;
   border: solid white;
-  border-radius: 2px;
+  border-radius: 0.3px;
+  cursor: pointer;
+}
+
+.regButton:hover {
+  color: #a4ece0;
   cursor: pointer;
 }
 .regH3 {
@@ -418,20 +430,16 @@ hr {
   stroke-width: 0.010;
   stroke-linecap: round;
   }
-
 .bar1 {
     fill: #e4f5f8b9;
     stroke: #e4f5f8b9;
     stroke-width: 0.02;
 }
-
 .scale {
   fill: transparent;
   stroke: rgb(243, 243, 243);
   stroke-width: 0.02;
 }
-
-
 .bar1 text {
 fill: transparent;
 stroke: transparent;
@@ -441,7 +449,6 @@ font-size: 3%;
   fill: black;
   font-size: 3%;
 }
-
 .bar text {
 fill: transparent;
 stroke: transparent;
@@ -488,7 +495,6 @@ background-color: #c9ebf2;
                       'points chart'
                       'explain explain'
 }
-
 .pointa {
   height: 10px;
   border: solid transparent 2px;
@@ -502,22 +508,19 @@ background-color: #c9ebf2;
   font-family: Gravity-Light;
 }
 
-/* the numbersinside buttons */
+/* the numbersinside surveybuttons */
 .nuc1  {
   padding-left: 21px;
 }
-
 .nuc2  {
 padding-left: 16px;
 }
-
 .nuc3  {
 padding-left: 13px;
 }
 .nuc4  {
 padding-left: 10px;
 }
-
 .nuc5  {
 padding-left: 13px;
 }
@@ -527,3 +530,5 @@ padding-left: 16px;
 .nuc7  {
 padding-left: 21px;
 }
+
+
