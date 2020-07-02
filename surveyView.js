@@ -16,7 +16,7 @@ function surveyView() {
             <button class="popbutton" onclick="showHideDiv()">Notisblokk</button>
         </div>
         <div class="page2">
-            <p onclick="tempForwardButton()" class="bH bothB" style="${model.questionCounter == 23 ? 'color:red' : ''}">▶</p>
+            <p onclick="tempForwardButton()" class="bH bothB">▶</p>
         </div>
     </div>
     `;

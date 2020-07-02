@@ -10,6 +10,7 @@ function tempForwardButton() {
     if (model.user.answer[model.questionCounter] != undefined) {
         pushNotes();
         if (model.questionCounter == 23) {
+            if (!confirm('Er du sikker på at du vil levere?')) return;
             db.collection(model.session).add({
                 firstName: model.user.firstName,
                 lastName: model.user.lastName,
@@ -63,6 +64,6 @@ window.addEventListener('click', (event) => {
     if (model.page == 'surveyView' && !popup.contains(event.target) && !popbutton.contains(event.target) && popup.style.display == 'block') popup.style.display = "none";
 })
 
-// window.onbeforeunload = function(){
-//     if (model.page == 'surveyView') return 'Are you sure you want to leave?';
-//   };
+window.onbeforeunload = function(){
+    if (model.page == 'surveyView') return 'Are you sure you want to leave?';
+  };
