@@ -1,8 +1,4 @@
-code/* global */
 
-* {
-  font-family: Arial, Helvetica, sans-serif;
-}
 .page {
     background-color: rgb(246, 250, 252);
     user-select: none;
@@ -22,9 +18,7 @@ body {
     /* resize: both; */
     /* overflow: auto; */
   }
-
   /* survey */
-
 .theme {
     color: gray;
     font-size: 35px;
@@ -35,7 +29,6 @@ body {
     font-size: 20px;
 }
 .lowScoreAnswer {
-    /* display: inline-block; */
     float: left;
     width: 300px;
     color: darkgray;
@@ -45,7 +38,6 @@ body {
     top: 45px;
 }
 .highScoreAnswer {
-    /* display: inline-block; */
     width: 300px;
     color: darkgray;
     font-size: 17px;
@@ -64,7 +56,6 @@ body {
   z-index: 5;
   position: absolute;
 }
-
 .progressBarInside {
     color: gray;
     background-color: #c9ebf2;
@@ -150,12 +141,10 @@ hr {
     grid-area: page2;
     background-color: transparent;
 }
-
 ::-webkit-scrollbar {
     background-color: lightgray;
     width: 8px;
 }
-
 ::-webkit-scrollbar-thumb {
     background-color: #AEAEAE;
 }
@@ -244,19 +233,19 @@ hr {
 
 }
 .radio3 {
-    border-color: rgb(253, 249, 160);
+    border-color: rgb(255, 238, 80);
     height: 40px;
     width: 40px;
     margin-top: 7px;
 }
 .radio4 {
-    border-color: rgb(255, 251, 184);
+    border-color: rgb(255, 238, 80);
     height: 35px;
     width: 35px;
     margin-top: 9.5px;
 }
 .radio5 {
-    border-color: rgb(253, 249, 160);
+    border-color: rgb(255, 238, 80);
     height: 40px;
     width: 40px;
     margin-top: 7px;
@@ -281,13 +270,13 @@ hr {
   background-color: rgb(255, 186, 184);
 }
 .buttonContainer:hover input ~ .radio3 { 
-  background-color: rgb(255, 252, 191);
+  background-color: rgb(255, 243, 136);
 }
 .buttonContainer:hover input ~ .radio4 { 
-  background-color: rgb(255, 253, 219);
+  background-color: rgb(255, 243, 136);
 }
 .buttonContainer:hover input ~ .radio5 { 
-  background-color: rgb(255, 252, 191);
+  background-color: rgb(255, 243, 136);
 }
 .buttonContainer:hover input ~ .radio6 { 
   background-color: rgb(194, 230, 189);
@@ -303,13 +292,13 @@ hr {
   background-color: rgb(255, 172, 171);
 }
 .buttonContainer input:checked ~ .radio3 {
-  background-color: rgb(253, 249, 160);
+  background-color: rgb(255, 238, 80);
 }
 .buttonContainer input:checked ~ .radio4 {
-  background-color: rgb(255, 251, 184);
+  background-color: rgb(255, 238, 80);
 }
 .buttonContainer input:checked ~ .radio5 {
-  background-color: rgb(253, 249, 160);
+  background-color: rgb(255, 238, 80);
 }
 .buttonContainer input:checked ~ .radio6 {
   background-color: rgb(170, 219, 163);
@@ -347,15 +336,31 @@ hr {
 .notepad:focus {
     outline: none;
 }
-
+.alternativtResultatOppsett {
+  display: block;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  margin: 10px;
+}
 /* registration */
-
+.sessionPosition {
+  display: inline-block;
+  margin-top: 30px;
+  margin-left: 67.5px;
+}
+.sessionDropDown {
+  margin-left: 4px;
+}
+select {
+  border: solid  #00d4b1 1px;
+}
 .regMainDiv {
   background-color: white;
   border: solid white 5px;
   border-radius: 3px;
-  height: 180px;
-  width: 200px;
+  height: 280px;
+  width: 300px;
   position: absolute;
   top: 0;
   bottom: 150px;
@@ -364,7 +369,13 @@ hr {
   margin: auto;
   box-shadow: 0 4px 8px 0 #e9f4f7, 0 6px 20px 0 #eef2f3;
   user-select: none;
-
+}
+.regLogo {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 150px;
+  padding: 20px
 }
 .regInputs {
   margin: auto;
@@ -372,7 +383,10 @@ hr {
   border-top: transparent;
   border-left: transparent;
   border-right: transparent;
-  border-bottom: solid #00d4b1;
+  border-bottom: solid #00d4b1 1px;
+}
+.regNameInputPosition {
+  margin-top: 50px;
 }
 .regInputs:focus {
   outline: none;
@@ -381,30 +395,140 @@ hr {
   background-color: #e3faf6;
 }
 .regButton {
-  background-color: #00d4b1;
+  display: block;
+  background-color: white;
   /* text-align: right; */
   float: right;
-  margin-top: 25px;
-  margin-right: 36px;
-  font-size: 17px;
-  color: white;
+  margin-top: 70px;
+  margin-right: 10px;
+  font-size: 30px;
+  color: #00d4b1;
   border: solid white;
-  border-radius: 3px;
+  border-radius: 0.3px;
+  cursor: pointer;
+}
+
+.regButton:hover {
+  color: #a4ece0;
   cursor: pointer;
 }
 .regH3 {
   margin-left: 24px;
 }
 .numbersUnderCheckmark {
+  display: block;
     position: absolute;
     border: 2.5px;
-    color: orange;
-    top: 75px;
-    left: 21px;
-    padding: 1px;
-    font-size: 16px;
+    color: white;
+    padding: 10px 0px 0px 0px;
+    font-size: 24px;
   }
-.resultStyle {
-  font-family: Arial, Helvetica, sans-serif;
-  padding-left: 20px;
+.bar {
+  fill: rgba(255, 111, 108, 0.5);
+  transition: fill .3s ease;
+  stroke: white;
+  stroke-width: 0.010;
+  stroke-linecap: round;
+  }
+.bar1 {
+    fill: #e4f5f8b9;
+    stroke: #e4f5f8b9;
+    stroke-width: 0.02;
 }
+.scale {
+  fill: transparent;
+  stroke: rgb(243, 243, 243);
+  stroke-width: 0.02;
+}
+.bar1 text {
+fill: transparent;
+stroke: transparent;
+font-size: 3%;
+}
+.bar1:hover text {
+  fill: black;
+  font-size: 3%;
+}
+.bar text {
+fill: transparent;
+stroke: transparent;
+font-size: 3%;
+background-color: #c9ebf2;
+}
+.hovercolor:hover {
+  fill: inherit;
+  stroke: black;
+}
+.bar:hover text {
+  fill: rgb(255, 255, 255);
+  font-size: 4.5%;
+}
+.chart {
+    grid-area: chart;
+}
+.kategori {
+  font-size: 25px;
+  grid-area: kategori;
+  text-align: center;
+  align-self: flex-end;
+  color: black;
+}
+.explain {
+  padding: 10px 10px 10px 50px;
+  grid-area: explain;
+}
+.points {
+  font-size: 19px;
+  grid-area: points;
+  color: black;
+}
+.divContainer {
+  padding-left: 40px;
+  display: grid;
+  float: left;
+  width: 700px;
+  height: 600px;
+  grid-template-columns: 50px 500px;
+  grid-template-rows: 70px 15px 400px 50px;
+  grid-template-areas:'kategori kategori'
+                      'points null'
+                      'points chart'
+                      'explain explain'
+}
+.pointa {
+  height: 10px;
+  border: solid transparent 2px;
+  padding: 5px 0px 47px 23px;
+}
+@font-face {
+  font-family: Gravity-Light;
+  src:url("Gravity-Light.otf");
+}
+* {
+  font-family: Gravity-Light;
+}
+
+/* the numbersinside surveybuttons */
+.nuc1  {
+  padding-left: 21px;
+}
+.nuc2  {
+padding-left: 16px;
+}
+.nuc3  {
+padding-left: 13px;
+}
+.nuc4  {
+padding-left: 10px;
+}
+.nuc5  {
+padding-left: 13px;
+}
+.nuc6  {
+padding-left: 16px;
+}
+.nuc7  {
+padding-left: 21px;
+}
+
+

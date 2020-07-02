@@ -28,7 +28,7 @@ function tempForwardButton() {
                 })
             .catch((err) => console.log(err))
             })
-            model.page = 'resultView';
+            model.page = 'resultView2';
             return updateView();
         }
         if ([3,7,11,15,19].includes(model.questionCounter)) model.themeCounter++;
@@ -63,6 +63,6 @@ window.addEventListener('click', (event) => {
     if (model.page == 'surveyView' && !popup.contains(event.target) && !popbutton.contains(event.target) && popup.style.display == 'block') popup.style.display = "none";
 })
 
-window.onbeforeunload = function(){
-    if (model.page == 'surveyView') return 'Are you sure you want to leave?';
-  };
+// window.onbeforeunload = function(){
+//     if (model.page == 'surveyView') return 'Are you sure you want to leave?';
+//   };

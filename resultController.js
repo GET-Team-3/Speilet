@@ -8,6 +8,7 @@ function plotQuestion() {
         array.push(childArray);
     }
     return array;
+    
 }
 
 function plotData(index) {
@@ -25,9 +26,19 @@ function changeColors(index) {
         else if(bar < 6) array.push('rgb(255, 255, 92)');
         else if(bar < 8) array.push('rgb(53, 170, 53)');
     }
-    console.log(array)
     return array;
     
+}
+function alternativtResultat() {
+    if (model.page == "resultView1") {
+        model.page = "resultView2";
+        resultView2();
+    }
+    else if (model.page == "resultView2") {
+        model.page = "resultView1";
+        resultView1();
+    }
+    console.log(model.page)
 }
 // function plotQuestion() {
 //     let array = [];
