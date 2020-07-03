@@ -11,26 +11,19 @@ function tempForwardButton() {
         pushNotes();
         if (model.questionCounter == 23) {
             if (!confirm('Er du sikker på at du vil levere?')) return;
-            db.collection(model.session).add({
-                firstName: model.user.firstName,
-                lastName: model.user.lastName,
-                date: new Date().toISOString().substr(0, 10),
-                answer: model.user.answer,
-                note: model.user.note,
-            })
-            .then((outline) => {
-                db.collection(model.session).doc(outline.id).get().then(doc => {
-                    if (doc.exists) {
-                        console.log(doc.data());
-                        model.userId = doc.id
-                    } else {
-                        console.log("No such document!");
-                    }
+            try {
+                db.collection(model.session).add({
+                    firstName: model.user.firstName,
+                    lastName: model.user.lastName,
+                    date: new Date().toISOString().substr(0, 10),
+                    answer: model.user.answer,
+                    note: model.user.note,
                 })
-            .catch((err) => console.log(err))
-            })
-            model.page = 'resultView2';
-            return updateView();
+            } catch (err) {
+                console.log(err)
+            }
+        model.page = 'resultView2';
+        return updateView();
         }
         if ([3,7,11,15,19].includes(model.questionCounter)) model.themeCounter++;
         model.questionCounter++;
